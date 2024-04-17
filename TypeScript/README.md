@@ -249,5 +249,260 @@
 
 ---
 
-#### 接口
+#### 接口类型
 
+- 注: 接口是TypeScript的一部分, 不能被转化为JavaScript
+
+  ```ts
+  interface interface_name { 
+      ...
+  }
+      
+  //示例
+  interface IPerson { 
+      firstName:string, 
+      lastName:string, 
+      sayHi: ()=>string 
+  } 
+   
+  var customer:IPerson = {         // 定义customer变量
+      firstName:"Tom",
+      lastName:"Hanks", 
+      sayHi: ():string =>{return "Hi there"} 
+  } 
+   
+  console.log("Customer 对象 ") 
+  console.log(customer.firstName) 
+  console.log(customer.lastName) 
+  console.log(customer.sayHi())  
+  ```
+
+- 联合类型和接口
+
+  ```ts
+  interface RunOptions { 
+      program:string; 
+      commandline:string[]|string|(()=>string); 
+  } 
+   
+  // commandline 是字符串
+  var options:RunOptions = {program:"test1",commandline:"Hello"}; 
+  console.log(options.commandline)  
+   
+  // commandline 是字符串数组
+  options = {program:"test1",commandline:["Hello","World"]}; 
+  console.log(options.commandline[0]); 
+  console.log(options.commandline[1]);  
+   
+  // commandline 是一个函数表达式
+  options = {program:"test1",commandline:()=>{return "**Hello World**";}}; 
+   
+  var fn:any = options.commandline; 
+  console.log(fn());
+  ```
+
+- 接口和数组
+
+  ```ts
+  //接口中我们可以将数组的索引值和元素设置为不同类型，索引值可以是数字或字符串。
+  interface namelist { 
+     [index:number]:string 
+  } 
+   
+  // 类型一致，正确
+  var list2:namelist = ["Google","Runoob","Taobao"]
+  // 错误元素 1 不是 string 类型
+  // var list2:namelist = ["Runoob",1,"Taobao"]
+  
+  //用字符串做索引
+  interface ages { 
+     [index:string]:number 
+  } 
+   
+  var agelist:ages; 
+   // 类型正确 
+  agelist["runoob"] = 15  
+   
+  // 类型错误，输出  error TS2322: Type '"google"' is not assignable to type 'number'.
+  // agelist[2] = "google"
+  ```
+
+- 接口继承
+
+  ```ts
+  //ts中允许多继承接口来拓展
+  interface IParent1 { 
+      v1:number 
+  } 
+   
+  interface IParent2 { 
+      v2:number 
+  } 
+   
+  interface Child extends IParent1, IParent2 { } 
+  var Iobj:Child = { v1:12, v2:23} 
+  console.log("value 1: "+Iobj.v1+" value 2: "+Iobj.v2)
+  ```
+
+  
+
+#### 类和对象
+
+---
+
+- ```ts
+  class Car { 
+      // 字段 
+      engine:string; 
+   
+      // 构造函数 
+      constructor(engine:string) { 
+          this.engine = engine 
+      }  
+   
+      // 方法 
+      disp():void { 
+          console.log("发动机为 :   "+this.engine) 
+      } 
+  }
+  ```
+
+- 继承
+
+  ```ts
+  //ts使用extends进行单继承, 不支持多继承, 私有成员不可被继承
+  
+  class PrinterClass { 
+     private device : string; // 私有变量, 不可被继承
+     static num:number;   // 静态变量
+     doPrint():void {
+        console.log("父类的 doPrint() 方法。") 
+     } 
+  } 
+   
+  //继承并重写方法
+  class StringPrinter extends PrinterClass { 
+     doPrint():void { 
+        super.doPrint() // 调用父类的函数
+        console.log("子类的 doPrint()方法。")
+     } 
+  }
+  
+  StringPrinter.num = 21;
+  ```
+
+- 访问修饰符
+
+  - **public（默认）** : 公有，可以在任何地方被访问。
+  - **protected** : 受保护，可以被其自身以及其子类访问。
+  - **private** : 私有，只能被其定义所在的类访问。
+
+- 实现接口
+
+  ```ts
+  //使用implements
+  interface ILoan { 
+     interest:number 
+  } 
+   
+  class AgriLoan implements ILoan { 
+     interest:number 
+     rebate:number 
+     
+     constructor(interest:number,rebate:number) { 
+        this.interest = interest 
+        this.rebate = rebate 
+     } 
+  } 
+   
+  var obj = new AgriLoan(10,1) 
+  console.log("利润为 : "+obj.interest+"，抽成为 : "+obj.rebate )
+  //利润为 : 10，抽成为 : 1
+  ```
+
+
+
+#### 泛型
+
+---
+
+- 泛型标识符
+
+  在泛型中，通常使用一些约定俗成的标识符，比如常见的 `T`（表示 Type）、`U`、`V` 等，但实际上你可以使用任何标识符。
+
+  T: 代表 "Type"，是最常见的泛型类型参数名。
+
+  ```ts
+  function identity<T>(arg: T): T {
+      return arg;
+  }
+  ```
+
+  K, V: 用于表示键（Key）和值（Value）的泛型类型参数。
+
+  ```ts
+  interface KeyValuePair<K, V> {
+      key: K;
+      value: V;
+  }
+  ```
+
+  E: 用于表示数组元素的泛型类型参数。
+
+  ```ts
+  function printArray<E>(arr: E[]): void {
+      arr.forEach(item => console.log(item));
+  }
+  ```
+
+  R: 用于表示函数返回值的泛型类型参数。
+
+  ```ts
+  function getResult<R>(value: R): R {
+      return value;
+  }
+  ```
+
+  U, V: 通常用于表示第二、第三个泛型类型参数。
+
+  ```ts
+  function combine<U, V>(first: U, second: V): string {
+      return `${first} ${second}`;
+  }
+  ```
+
+- 泛型约束
+
+  ```ts
+  // 基本语法
+  interface Lengthwise {
+      length: number;
+  }
+  
+  
+  // T 必须实现 Lengthwise 接口，该接口要求有 length 属性。
+  function logLength<T extends Lengthwise>(arg: T): void {
+      console.log(arg.length);
+  }
+  
+  // 正确的使用, 字符串类型有length属性且为number类型
+  logLength("hello"); // 输出: 5
+  
+  // 错误的使用，因为数字没有 length 属性
+  logLength(42); // 错误
+  ```
+
+- 泛型默认值
+
+  ```ts
+  // 基本语法
+  function defaultValue<T = string>(arg: T): T {
+      return arg;
+  }
+  
+  // 使用带默认值的泛型函数
+  let result1 = defaultValue("hello"); // 推断为 string 类型
+  let result2 = defaultValue(42);      // 推断为 number 类型
+  ```
+
+  
