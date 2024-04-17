@@ -14,11 +14,9 @@
   - 枚举
   - Mixin
   - 泛型编程
-  - 名字空间
+  - 命名空间
   - 元组
   - Await
-
-## Basic
 
 ### 基本语法
 
@@ -166,8 +164,6 @@
   console.log(a?.b)  // 表仅当a存在时才会返回a.b的值, 否则输出undefined
   ```
 
-  
-
 - 变量作用域
 
   - 全局作用域 − 全局变量定义在程序结构的外部，它可以在你代码的任何位置使用。
@@ -247,4 +243,11 @@
   let employeeName = buildName("Joseph", "Samuel", "Lucas", "MacKinzie");
   ```
 
-- 
+
+
+### 面向对象
+
+---
+
+#### 接口
+
