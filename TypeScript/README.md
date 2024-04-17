@@ -506,3 +506,75 @@
   ```
 
   
+
+#### 命名空间
+
+---
+
+- TypeScript 中命名空间使用 namespace 来定义，语法格式如下：
+
+  ```ts
+  namespace SomeNameSpaceName {  
+      //添加export以便外界访问
+  	export interface ISomeInterfaceName {}     
+  	export class SomeClassName {}  
+  }
+  
+  //命名空间支持嵌套
+  namespace namespace_name1 { 
+      export namespace namespace_name2 {
+          export class class_name {    } 
+      } 
+  }
+  ```
+
+  以上定义了一个命名空间 SomeNameSpaceName，如果我们需要在外部可以调用 SomeNameSpaceName 中的类和接口，则需要在类和接口添加 export 关键字。
+
+  要在另外一个命名空间调用语法格式为：
+
+  ```ts
+  SomeNameSpaceName.SomeClassName;
+  ```
+
+  如果一个命名空间在一个单独的 TypeScript 文件中，则应使用三斜杠 /// 引用它，语法格式如下：
+
+  ```ts
+  /// <reference path = "SomeFileName.ts" />
+  ```
+
+
+
+#### 模块
+
+---
+
+- 两个模块之间的关系是通过在文件级别上使用 import 和 export 建立的。
+
+  ```ts
+  //示例
+  
+  // 文件名 : SomeInterface.ts 
+  export interface SomeInterface { 
+     // 代码部分
+  }
+  
+  //另一个文件中使用
+  import someInterfaceRef = require("./SomeInterface");
+  ```
+
+- ```ts
+  //实例
+  //IShape.ts 文件代码：
+  /// <reference path = "IShape.ts" /> 
+  export interface IShape { 
+     draw(); 
+  }
+  
+  //Circle.ts 文件代码：
+  import shape = require("./IShape"); 
+  export class Circle implements shape.IShape { 
+     public draw() { 
+        console.log("Cirlce is drawn (external module)"); 
+     } 
+  }
+  ```
