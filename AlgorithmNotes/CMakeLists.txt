@@ -3,5 +3,8 @@ project(AlgorithmNotes)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# RecursionPartition chapter
+# 2.RecursionPartition chapter
 add_executable(Factorial RecursionPartition/Factorial.cpp)
+add_executable(Fibonacci RecursionPartition/Fibonacci.cpp)
+add_executable(Perm RecursionPartition/Perm.cpp)
+add_executable(divide RecursionPartition/divide.cpp)
