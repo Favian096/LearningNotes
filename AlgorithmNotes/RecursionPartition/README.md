@@ -60,3 +60,11 @@
 
 
 
+#### 4. 大整数乘法
+
+##### 4.1 [大整数的乘法](./bigNumMultiply.cpp)
+
+> 计算两个大整数X和Y的积, 基本原理如下: 
+>
+> ![问题分解](./Assets/bigNumMutiply.png)
+
