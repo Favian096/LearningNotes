@@ -373,7 +373,19 @@ color b = blur;   //其中 r = 0, b = 6
     - cout 标准输出流
     - cerr 非缓冲标准错误流 (控制台显示为红色)
     - clog 缓冲标准错误流/标准日志流(控制台显示红色)
-  - \<iomanip\> 如: setw和setprecision
+    
+  - \<iomanip\> 下属对象: 
+
+    - std::setw(n)    
+
+      n 表示宽度，用数字表示。
+
+      setw() 函数只对紧接着的输出产生作用。
+
+      可以使用setfill('*)配合进行填充
+
+      ` cout << setfill('*')  << setw(14) << "aaaa" << endl;`
+
   - \<fstream\>
 
 - C++的struct基本同C(注意结构体指针要用->访问成员)
