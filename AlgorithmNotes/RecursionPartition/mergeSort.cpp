@@ -32,7 +32,7 @@ void mergeArray(std::vector<T> &arr, int left, int mid, int right) {
     }
 
     while (rightIndex <= right) {
-        temp[tempIndex] = arr[rightIndex++];
+        temp[tempIndex++] = arr[rightIndex++];
     }
 
     for (int mergeIndex = 0; mergeIndex < temp.size(); mergeIndex++) {
@@ -60,7 +60,7 @@ void mergeSort(std::vector<T> &arr, int left, int right) {
 
 
 int main() {
-    std::vector<int> arr = {3, 4, 7, 8, 5, 1, 9, 0, 2, 6};
+    std::vector<int> arr = {3, 4, 7, 8, 5, 1, 9, 0, 2, 6, 8, 8, 8};
     mergeSort(arr, 0, int(arr.size()) - 1);
 
     for (auto element : arr) {
