@@ -15,3 +15,4 @@ add_executable(strassenMatrixMutiply RecursionPartition/strassenMatrixMutiply.cp
 add_executable(chessBoard RecursionPartition/chessBoard.cpp)
 add_executable(mergeSort RecursionPartition/mergeSort.cpp)
 add_executable(quickSort RecursionPartition/quickSort.cpp)
+add_executable(kSmallestElement RecursionPartition/kSmallestElement.cpp)
