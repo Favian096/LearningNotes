@@ -1,72 +1,66 @@
+/**
+ * 循环赛日程表
+ */
 #include<iostream>
+#include <iomanip>
 #include<vector>
-using namespace std;
 
-void schedule(vector< vector<int> > &table, int n, int k){
-
-    for(int i = 1; i <= n; i++){
-        //初始化表格第一行
-        table[1][i] = i;
-    }
-
-    int m = 1;
-
-    for(int s = 1; s <= k; s++){
-
-        n /= 2;
-
-        for(int t = 1; t <= n; t++){  //对每一部分进行划分（达到分治目的）
-
-            for(int i = 1 + m; i <= 2*m; i++){ //控制行
-
-                for(int j = 1 + m; j <= 2*m; j++){   //控制列
-
-                    table[i][j + (t-1)*m*2] = table[i - m][j + (t-1)*m*2 - m];  //右下角等左于上角的值
-                    table[i][j + (t-1)*m*2 - m] = table[i - m][j + (t-1)*m*2];  //左下角等于右上角的值
-                }
-            }
+/**
+ * 展示日程表
+ * @param table
+ */
+void showTable(std::vector<std::vector<int>> &table) {
+    for (auto &row : table) {
+        for (auto element : row) {
+            std::cout << std::setw(2) << element << " ";
         }
-        m *= 2;
+        std::cout << std::endl;
     }
 }
 
-int input(int n, int k){
 
-    do{
-
-        n = n / 2;
-        k++;
-    }while(n > 1);
-
-    return k;
-}
-
-void display(vector< vector<int> > &table, int n){
-
-    cout << "schedule: " << endl;
-    for(int i = 1; i <= n; i++){
-
-        for(int j = 1; j <= n; j++){
-
-            cout << table[i][j] << " ";
-            if(j == 1) cout << "| ";
-
+/**
+ * 对角交换区块
+ * @param table
+ * @param srcRow
+ * @param srcCol
+ * @param size
+ */
+void exchangePosition(std::vector<std::vector<int>> &table, int srcRow, int srcCol, int size) {
+    for (int row = 0; row < size; ++row) {
+        for (int col = 0; col < size; ++col) {
+            table[srcRow + size + row][srcCol + size + col] = table[srcRow + row][srcCol + col];
+            table[srcRow + size + row][srcCol + col] = table[srcRow + row][srcCol + size + col];
         }
-        cout << endl;
     }
-
 }
 
-int main(){
+/**
+ * 根据人数计算日程表
+ * @param table
+ * @param num
+ */
+void schedule(std::vector<std::vector<int>> &table, int num) {
+    //初始化首行元素
+    for (int firstRowElement = 0; firstRowElement < num; firstRowElement++) {
+        table[0][firstRowElement] = firstRowElement + 1;
+    }
+    //变更交换块大小和列索引位置
+    int colIndex = 2;
+    for (int size = 1; size <= num >> 1; size <<= 1) {
+        for (int block = 0; block < num; block += colIndex) {
+            exchangePosition(table, 0, block, size);
+        }
+        colIndex <<= 1;
+    }
+}
 
-    int k = 0;
-    int n = 0;
-    cout << "num: ";
-    cin >> n;
-    vector< vector<int> > table(n+1, vector<int>(n+1)); //创建一个二维数组表示日程表
-    k = input(n, k);  //2的K次方
-    schedule(table, n, k);
-    display(table, n);
+int main() {
+    int num = 8;
+    std::vector<std::vector<int>> table(num, std::vector<int>(num, 0));
+
+    schedule(table, num);
+    showTable(table);
 
     return 0;
 }
