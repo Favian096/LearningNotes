@@ -4,7 +4,7 @@
 
 #### 2. 递归与分治策略: [RecursionPartition](./RecursionPartition/README.md)
 
-
+#### 3. 递归与分治策略: [DynamicProgram](./DynamicProgram/README.md)
 
 
 
