@@ -6,7 +6,7 @@
 
 #### 3. 递归与分治策略: [DynamicProgramming](./DynamicProgramming/README.md)
 
-
+#### 4. 贪心算法: [GreedyAlgorithm](./GreedyAlgorithm/README.md)
 
 
 
