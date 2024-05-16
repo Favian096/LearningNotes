@@ -394,6 +394,28 @@
 
 - 同样, **C#不支持多继承, 支持多实现, 但写法相同**
 
+  ```c#
+  //重写成员
+  
+  public class Animal{
+      public virtual float speed = 1.0f;
+      
+      public virtual fun(){
+          Console.WriteLine(speed);
+      }
+  }
+  
+  //继承并重写方法
+  public class cat : Animal{
+      public override fun(){
+          this.speed = 10.0f;
+          base.fun();
+      }
+  }
+  ```
+
+  
+
 
 
 ### 多态
