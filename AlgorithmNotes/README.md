@@ -4,7 +4,7 @@
 
 #### 2. 递归与分治策略: [RecursionPartition](./RecursionPartition/README.md)
 
-#### 3. 递归与分治策略: [DynamicProgramming](./DynamicProgramming/README.md)
+#### 3. 动态规划: [DynamicProgramming](./DynamicProgramming/README.md)
 
 #### 4. 贪心算法: [GreedyAlgorithm](./GreedyAlgorithm/README.md)
 
