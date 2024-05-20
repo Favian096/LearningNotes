@@ -1,4 +1,4 @@
-# TypeScript Notes
+## TypeScript Notes
 
 - TypeScript 是 JavaScript 的一个超集，支持 ECMAScript 6 标准
 
@@ -578,3 +578,31 @@
      } 
   }
   ```
+
+
+
+
+
+
+
+## JS Notes
+
+---
+
+#### 数组filter
+
+- filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。
+
+  filter() 不会对空数组进行检测。
+
+  filter() 不会改变原始数组。
+
+- 基本用法`array.filter((item,index,arr)=>{...}, thisValue)`
+
+  | 参数    | 描述                         |
+  | ------- | ---------------------------- |
+  | *item*  | 必须。当前元素的值           |
+  | *index* | 可选。当前元素的索引值       |
+  | *arr*   | 可选。当前元素属于的数组对象 |
+
+- 返回: item满足条件返回这个item, 如`return item >= 4`
