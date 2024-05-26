@@ -683,3 +683,44 @@
   | *arr*          | 可选。当前元素属于的数组对象 |
 
 - 如果所有元素都通过检测返回 true，否则返回 false。
+
+
+
+#### 数组reduce
+
+- reduce() 方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终计算为一个值。
+
+  reduce() 可以作为一个高阶函数，用于函数的 compose。
+
+  reduce() 对于空数组是不会执行回调函数的。
+
+- 基本用法`array.reduce(function(total, currentValue, currentIndex, arr), initialValue)`
+
+  | 参数           | 描述                                     |
+  | -------------- | ---------------------------------------- |
+  | *total*        | 必需。*初始值*, 或者计算结束后的返回值。 |
+  | *currentValue* | 必需。当前元素                           |
+  | *currentIndex* | 可选。当前元素的索引                     |
+  | *arr*          | 可选。当前元素所属的数组对象。           |
+
+- 函数的返回值是迭代计算后的结果
+
+- 示例
+
+  ```js
+  let arr = [1, 2, 3, 4];
+  let sum = arr.reduce((prev, cur, index, arr)=> {
+      console.log(prev, cur, index);
+      return prev + cur;
+  })
+  console.log(arr, sum); // 最终返回值是累加的和  10 
+  
+  //输出: 
+  //0 1 0
+  //1 2 1
+  //3 3 2
+  //6 4 3
+  //[1, 2, 3, 4] 10
+  ```
+
+  
