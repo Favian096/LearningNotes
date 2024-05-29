@@ -2106,3 +2106,30 @@ int main() {
 
 
 
+#### pair
+
+- 其标准库类型#include <utility\>头文件中，定义如下：
+
+  类模板：`template<class T1,class T2> struct pair`
+
+  参数：T1是第一个值的数据类型，T2是第二个值的数据类型。
+
+  功能：pair将一对值(T1和T2)组合成一个值，
+
+  这一对值可以具有不同的数据类型（T1和T2），两个值可以分别用pair的两个公有函数first和second访问。
+
+
+- 基本使用:
+
+  ```c++
+  #include <utility>
+  
+  pair<string, int> word_count; 
+  pair<string, string> author("James","Joy");
+  
+  //访问两个元素操作可以通过first和second访问
+  author.first = 1;
+  std::cout << author.second;
+  ```
+
+  
