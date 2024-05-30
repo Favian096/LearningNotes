@@ -743,11 +743,12 @@
 
   ```js
   var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  //console.log(fruits.splice(0, 1)) //输出为 ["Banana"]
   fruits.splice(2,1,"Lemon","Kiwi");
   
   console.log(fruits)
   
   //Banana,Orange,Lemon,Kiwi,Mango
   ```
-
+  
   
