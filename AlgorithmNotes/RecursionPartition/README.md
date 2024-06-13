@@ -70,7 +70,7 @@
 
 
 
-#### 5.[基于分治的Strassen矩阵乘法](./strassenMatrixMutiply.cpp)
+#### 5.[基于分治的Strassen矩阵乘法](strassenMatrixMultiply.cpp)
 
 >设A和B是两个 n × n的矩阵，其中 n可以写成 2[^k]。将A和B分别等分成4个小矩阵，此时如果把A和B都当成 2 × 2矩阵来看,每个元素就是一个 ( n / 2 ) × ( n / 2 )的矩阵C
 >
