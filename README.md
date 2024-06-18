@@ -13,3 +13,7 @@
 #### 5. [CSharp](./CSharp/README.md)
 
 #### 6. [AlgorithmNotes](./AlgorithmNotes/README.md)
+
+#### 7. [SoftwareEngineering](./SoftwareEngineering/README.md)
+
+#### 8. [English](./English/README.md)
