@@ -2025,7 +2025,7 @@
 
 > 用例图 转 活动图	
 >
-> ![](./Assets/Activity Dagram.png)
+> ![](./Assets/ActivityDagram.png)
 
 
 
