@@ -505,3 +505,187 @@
       except StopIteration:
           sys.exit()
   ```
+
+
+
+#### 函数和Lambda
+
+- 可变参数
+
+  ```python
+  # 一个 * 以元组形式导入
+  def functionname([formal_args,] *var_args_tuple ):
+     "函数_文档字符串"
+     function_suite
+     return [expression]
+  
+  
+  # 两个 ** 以字典形式导入
+  def functionname([formal_args,] **var_args_dict ):
+     "函数_文档字符串"
+     function_suite
+     return [expression]
+  
+  
+    
+  # 可写函数说明
+  def printinfo( arg1, *vartuple ):
+     "打印任何传入的参数"
+     print ("输出: ")
+     print (arg1)
+     print (vartuple)
+   
+  # 调用printinfo 函数
+  printinfo( 70, 60, 50 )
+  
+  # 输出 输出: 
+  70
+  (60, 50)
+  
+  
+  
+    
+  # 可写函数说明
+  def printinfo( arg1, **vardict ):
+     "打印任何传入的参数"
+     print ("输出: ")
+     print (arg1)
+     print (vardict)
+   
+  # 调用printinfo 函数
+  printinfo(1, a=2,b=3)
+  
+  # 输出: 
+  1
+  {'a': 2, 'b': 3}
+  
+  ```
+
+- 匿名函数
+
+  ```python
+  # 使用lambda 定义一行的函数(相似但不等同于内联函数)
+  
+  lambda [arg1 [,arg2,.....argn]]:expression
+  
+  # 示例1
+  f = lambda: "Hello, world!"
+  print(f())  # 输出: Hello, world!
+  x = lambda a : a + 10
+  print(x(5))
+  
+  
+  # 示例2
+  #!/usr/bin/python3
+   
+  # 可写函数说明
+  sum = lambda arg1, arg2: arg1 + arg2
+   
+  # 调用sum函数
+  print ("相加后的值为 : ", sum( 10, 20 ))
+  print ("相加后的值为 : ", sum( 20, 20 ))
+  
+  # 示例3
+  def myfunc(n):
+    return lambda a : a * n
+   
+  mydoubler = myfunc(2)
+  mytripler = myfunc(3)
+   
+  print(mydoubler(11))
+  print(mytripler(11))
+  
+  # 示例4 map filter 和 reduce
+  numbers = [1, 2, 3, 4, 5]
+  squared = list(map(lambda x: x**2, numbers))
+  print(squared)  # 输出: [1, 4, 9, 16, 25]
+  
+  
+  numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+  even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+  print(even_numbers)  # 输出：[2, 4, 6, 8]
+  
+  
+  from functools import reduce
+  numbers = [1, 2, 3, 4, 5]
+  # 计算乘积
+  product = reduce(lambda x, y: x * y, numbers)
+  print(product)  # 输出：120
+  ```
+
+
+
+
+
+#### 文件读写和异常
+
+- 读写模式
+
+  | 模式 | 描述                                                         |
+  | ---- | ------------------------------------------------------------ |
+  | r    | 以只读方式打开文件。文件的指针将会放在文件的开头。这是默认模式。 |
+  | rb   | 以二进制格式打开一个文件用于只读。文件指针将会放在文件的开头。 |
+  | r+   | 打开一个文件用于读写。文件指针将会放在文件的开头。           |
+  | rb+  | 以二进制格式打开一个文件用于读写。文件指针将会放在文件的开头。 |
+  | w    | 打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。 |
+  | wb   | 以二进制格式打开一个文件只用于写入。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。 |
+  | w+   | 打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。 |
+  | wb+  | 以二进制格式打开一个文件用于读写。如果该文件已存在则打开文件，并从开头开始编辑，即原有内容会被删除。如果该文件不存在，创建新文件。 |
+  | a    | 打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。 |
+  | ab   | 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。也就是说，新的内容将会被写入到已有内容之后。如果该文件不存在，创建新文件进行写入。 |
+  | a+   | 打开一个文件用于读写。如果该文件已存在，文件指针将会放在文件的结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。 |
+  | ab+  | 以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。 |
+
+- 使用with
+
+  ```python
+  with open('/tmp/foo.txt', 'r') as f:
+       read_data = f.read()
+          
+  
+          """
+  open(file, mode, buffering, encoding, errors, newline, closefd, opener)
+      file: 必需，文件路径（相对或者绝对路径）。
+      mode: 可选，文件打开模式
+      buffering: 设置缓冲
+      encoding: 一般使用utf8
+      errors: 报错级别
+      newline: 区分换行符
+      closefd: 传入的file参数类型
+      opener: 设置自定义开启器，开启器的返回值必须是一个打开的文件描述符。
+  		"""
+          
+          
+          
+  f.write("content...") # 将 string 写入到文件中, 然后返回写入的字符数
+  f.read() # 读取一定数目的数据, 然后作为字符串或字节对象返回
+  f.readline() # 从文件中读取单独的一行
+  f.readlines(sizehint) # 可选参数 sizehint,读取指定长度的字节
+  ```
+
+
+
+- 异常处理
+
+  - 抛出异常 `raise`
+
+    ```python
+    x = 10
+    if x > 5:
+        raise Exception('x 不能大于 5。x 的值为: {}'.format(x))
+    ```
+
+  - 捕获和处理try except finally
+
+    ```python
+    try: 
+        # 执行代码...
+    except: # 可含多个except子句,最后一个except子句可以忽略异常的名称作通配符使用
+        # 发生异常时执行的代码, 
+    else: # else 子句将在 try 子句没有发生任何异常的时候执行
+        # 没有异常时执行的代码
+    finally: 
+        #无论有没有异常都执行
+    ```
+
+    
