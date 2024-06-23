@@ -292,17 +292,23 @@
 
   ```python
   b = [item for item in a]
+  
+  # 三元表达式
+  x, y = 3, 4
+  print(x if x > y else y)
   ```
 
 
 
 
 
-#### 数据类型
+#### 基本数据类型
 
 - Number
 
-  数值的除法包含两个运算符：/ 返回一个浮点数，// 返回一个整数
+  数值的除法包含两个运算符：/ 返回一个浮点数，// 返回一个整数(往下取)
+
+  x**y 表示x的y次幂
 
   - int
 
@@ -373,4 +379,129 @@
   # ord(char) 返回ASCII字符的数值 ord('A')即 65
   ```
 
+
+
+- **运算符**
+
+  `:=` 海象运算符, 同时进行赋值和返回赋值的值
+
+  ```python
+  if (n := len(a)) > 10:
+      print(f'给n赋值同时用返回n的值 = { n }')
+  ```
+
+  ```python
+  # 位运算赋 | & ^ ~ << >>
+  # 逻辑运算符 and or not 即&& || ! 还是可以使用!= 表示
+  # 成员运算符 in	not in 判断元素在序列中否(if a in arr: ...)
+  # 身份运算符 is	is not 比较两个对象的存储单元(地址, 即id())
+  ```
+
+
+
+- 随机数
+
+  | 函数                              | 描述                                                         |
+  | --------------------------------- | ------------------------------------------------------------ |
+  | choice(seq)                       | 从序列的元素中随机挑选一个元素，比如random.choice(range(10))，从0到9中随机挑选一个整数 |
+  | randrange([start,\] stop [,step]) | 从指定范围内，按指定基数递增的集合中获取一个随机数，基数默认值为 1 |
+  | random()                          | 随机生成下一个实数，它在[0,1)范围内。                        |
+  | seed([x\])                        | 改变随机数生成器的种子seed。如果你不了解其原理，你不必特别去设定seed，Python会帮你选择seed。 |
+  | shuffle(lst)                      | 将序列的所有元素随机排序                                     |
+  | uniform(x, y)                     | 随机生成下一个实数，它在[x,y]范围内。                        |
+
+
+
+
+
+#### 迭代器和生成器
+
+- 迭代器
+
+  ```python
+  # 迭代器有两个基本的方法：iter() 和 next()
   
+  list=[1,2,3,4]
+  it = iter(list)    # 创建迭代器对象 下一次调用时迭代
+  print (next(it))   # 输出迭代器的下一个元素 1
+  print (next(it))   # 2
+  
+  
+  list=[1,2,3,4]
+  it = iter(list)    # 创建迭代器对象
+  for x in it:       # 循环中使用
+      print (x, end=" ")
+      
+  # 迭代完毕后再调用会 StopIteration
+  ```
+
+  ```python
+  #创建
+  class MyNumbers:
+    def __iter__(self):
+      self.a = 1
+      return self
+   
+    def __next__(self):
+      if self.a <= 20:
+        x = self.a
+        self.a += 1
+        return x
+      else:
+        raise StopIteration
+   
+  myclass = MyNumbers()
+  myiter = iter(myclass)
+   
+  print(next(myiter))
+  print(next(myiter))
+  print(next(myiter))
+  print(next(myiter))
+  print(next(myiter))
+  ```
+
+  
+
+- 生成器
+
+  ```python
+  # 生成器函数中使用 yield 语句时，函数的执行将会暂停，并将 yield 后面的表达式作为当前迭代的值返回, 在此调用函数时, 函数会从上次暂停的地方继续执行，直到再次遇到 yield 语句形成循环
+  
+  def countdown(n):
+      while n > 0:
+          yield n
+          n -= 1
+   
+  # 创建生成器对象
+  generator = countdown(5)
+   
+  # 通过迭代生成器获取值
+  print(next(generator))  # 输出: 5 在 yield n 为5处暂停返回
+  print(next(generator))  # 输出: 4 继续运行 n-=1 后循环到 yield n 为4处暂停返回
+  print(next(generator))  # 输出: 3
+   
+  # 使用 for 循环迭代生成器
+  for value in generator:
+      print(value)  # 输出: 2 1
+      
+      
+  # Fibonacci数列示例
+   
+  import sys
+   
+  def fibonacci(n): # 生成器函数 - 斐波那契
+      a, b, counter = 0, 1, 0
+      while True:
+          if (counter > n): 
+              return
+          yield a
+          a, b = b, a + b
+          counter += 1
+  f = fibonacci(10) # f 是一个迭代器，由生成器返回生成
+   
+  while True:
+      try:
+          print (next(f), end=" ")
+      except StopIteration:
+          sys.exit()
+  ```
