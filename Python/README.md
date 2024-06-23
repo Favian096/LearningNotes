@@ -335,6 +335,16 @@
 
 - Dictionary
 
+  - dict() 函数用于创建一个字典。
+
+    ```python
+    class dict(**kwarg)
+    class dict(mapping, **kwarg)
+    class dict(iterable, **kwarg)
+    ```
+
+
+
 
 
 - **数据类型的转换**
@@ -358,6 +368,9 @@
   
   # set([iterable]) 可迭代序列转换为Set
   
+  # chr(num) 返回数字的ASCII字符 chr(65)即 'A'
+  
+  # ord(char) 返回ASCII字符的数值 ord('A')即 65
   ```
 
   
