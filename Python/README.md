@@ -102,6 +102,52 @@
   conda remove package_name
   ```
 
+
+
+
+---
+
+- **window端的TensorFlow最该支持到2.10.0版本**
+
+  配置TensorFlow步骤:
+
+  ```shell
+   // 配置最高的3.7py环境
+   conda create --name tfpy37 python=3.7
+   
+   // 激活进入环境
+   conda activate tfpy37
+   
+   // 检索cuda的加速包
+   conda search cudnn
+   
+   // 检索cuda工具包
+   conda serch cudatoolkit
+  ```
+
+- 安装工具包[对于版本](https://tensorflow.google.cn/install/source_windows?hl=zh-cn)
+
+  ```bash
+  conda install -c conda-forge cudatoolkit=10.1.243 cudnn=7.6.5
+  ```
+
+- 安装window的最高版本TensorFlow 2.10.0
+
+  ```bash
+  conda install tensorflow==2.10.0
+  ```
+
+  测试
+
+  ```shell
+  python
+  
+  import tensorflow as tf
+  gpus = tf.config.experimental.list_physical_devices(device_type='GPU')
+  cpus = tf.config.experimental.list_physical_devices(device_type='CPU')
+  print(tf.test.is_built_with_cuda(), gpus, cpus)
+  ```
+
   
 
 
