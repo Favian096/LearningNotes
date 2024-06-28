@@ -109,6 +109,37 @@
 
 - **window端的TensorFlow最该支持到2.10.0版本**
 
+  [先安装cudatoolkit和cudnn并配置环境变量:](https://blog.csdn.net/weixin_43412762/article/details/129824339)
+
+  [TensorFlow, cudatoolkit, cudnn的版本查询](https://tensorflow.google.cn/install/source_windows?hl=en#gpu)
+
+  [下载cudatoolkie工具包](https://developer.nvidia.com/cuda-toolkit-archive)
+
+  [下载cudnn加速包](https://developer.nvidia.com/rdp/cudnn-archive)
+
+  配置cudnn后再配置环境变量:
+
+  ```
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\bin
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\libnvvp
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\lib\x64
+  ```
+
+  ```
+  配置环境变量完成后到目录下cmd
+  Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\extras\demo_suite
+  
+  依次执行命令
+  .\bandwidthTest.exe
+  
+  .\deviceQuery.exe
+  
+  都显示PASS即为配置成功
+  ```
+
+  
+
   配置TensorFlow步骤:
 
   ```shell
