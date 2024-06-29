@@ -168,17 +168,21 @@
   conda install tensorflow==2.10.0
   ```
 
-  测试
+  测试配置状态是否成功
 
   ```shell
   python
   
   import tensorflow as tf
-  gpus = tf.config.experimental.list_physical_devices(device_type='GPU')
   cpus = tf.config.experimental.list_physical_devices(device_type='CPU')
-  print(tf.test.is_built_with_cuda(), gpus, cpus)
+  gpus = tf.config.experimental.list_physical_devices(device_type='GPU')
+  print('CPU List : ', cpus)
+  print('GPU List : ', gpus)
+  print('built with cuda : 'tf.test.is_built_with_cuda())
+  print('can access a GPU : 'tf.test.is_gpu_available())
+  print('built with GPU : 'tf.test.is_built_with_gpu_support())
   ```
-
+  
   
 
 
