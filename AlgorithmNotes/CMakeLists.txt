@@ -27,3 +27,4 @@ add_executable(MinWeightTriangulation DynamicProgramming/MinWeightTriangulation.
 add_executable(PolygonMaxima DynamicProgramming/PolygonMaxima.cpp)
 add_executable(ImageCompress DynamicProgramming/ImageCompress.cpp)
 add_executable(CircuitWiring DynamicProgramming/CircuitWiring.cpp)
+add_executable(FlowShop DynamicProgramming/FlowShop.cpp)
