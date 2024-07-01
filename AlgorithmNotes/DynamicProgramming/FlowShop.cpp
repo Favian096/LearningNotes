@@ -5,12 +5,14 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <utility>
 
 using namespace std;
 
 struct Job {
 public:
-    int key, index;
+    int time;
+    int index;
     bool job;
 };
 
@@ -18,45 +20,51 @@ public:
  * 计算最短时间
  * @param a m1每项耗时
  * @param b m2每项耗时
- * @param c
- * @return
+ * @param order 项目流水顺序
+ * @return 最短耗时和顺序
  */
-int flowShop(vector<int> a, vector<int> b, vector<int> c) {
-    int j, k, n = a.size();
-    vector<Job> d(n);
+pair<int, vector<int>> flowShop(vector<int> a, vector<int> b) {
+   int time = 0, n = a.size();
+   vector<int> order(n, 0);
+   vector<Job> jobs(n);
 
-    for (int i = 0; i < n; i++) {
-        d[i].index = i;
-        if (a[i] < b[i]) {
-            d[i].job = true;
-            d[i].key = a[i];
+   for(int i= 0; i < n; i++){
+      jobs[i].index = i;
+
+      if(a[i] < b[i]) {
+          jobs[i].time = a[i];
+          jobs[i].job = true;
+      }else{
+          jobs[i].time = b[i];
+          jobs[i].job = false;
+      }
+   }
+    sort(jobs.begin(), jobs.end(), [](Job a, Job b)-> bool {return a.time < b.time;});
+
+    for (int left = 0, right = n - 1, i = 0; i < n; i++) {
+        if (jobs[i].job) {
+            order[left++] = jobs[i].index;
         } else {
-            d[i].job = false;
-            d[i].key = b[i];
+            order[right--] = jobs[i].index;
         }
     }
 
-    sort(d.begin(), d.end(), [](Job a, Job b) -> bool { return a.key < b.key; });
-
-    j = 0, k = n - 1;
-    for (int i = 0; i < n; i++) {
-        if (d[i].job == true)
-            c[j++] = d[i].index;
-        else
-            c[k--] = d[i].index;
+    for (int tmp = 0, i = 0; i < n; i++) {
+        tmp += a[order[i]];
+        time = time > tmp? time + b[order[i]] : tmp + b[order[i]];
     }
-    j = a[c[0]];
-    k = j + b[c[0]];
-    for (int i = 1; i < n; i++) {
-        j = j + a[c[i]];
-        k = j < k ? k + b[c[i]] : j + b[c[i]];
-    }
-    return k;
+    return pair<int, vector<int>>(time, order);
 }
 
 int main() {
     vector<int> a = {5, 3, 6, 4, 8, 9, 6},
-            b = {2, 4, 7, 2, 9, 7, 3}, c(a.size(), 0);
-    cout << flowShop(a, b, c);
+            b = {2, 4, 7, 2, 9, 7, 3};
+
+    pair<int, vector<int>> minOrder = flowShop(a, b);
+
+    cout << "min time : " << minOrder.first << endl;
+    cout << "min order : ";
+    for_each(minOrder.second.begin(), minOrder.second.end(), [](auto var) -> void { cout << var << " "; });
+
     return 0;
 }
