@@ -343,3 +343,185 @@ L-->Li["mail"]
 >
 > tail -f -5 test.txt	在终端中持续显示尾部的5行内容(变更)
 
+
+
+
+
+
+
+## 用户权限
+
+> root 用户拥有系统最高权限
+>
+> 普通用户的权限一般在home目录是不受限的(出了home目录, 普通用户仅有只读和执行权限)
+>
+> 命令切换到 root 用户(su - userName), 按 \<ctrl + D \>回到原用户
+>
+> ```bash
+> # su - userName	用于切换用户
+> # - 表加载环境变量
+> # su 不加任何参数默认切换到root用户
+> 
+> # 以下命令都表示切换到 root
+> su 
+> su -
+> su - root
+> ```
+>
+> > 通常普通用户试用 sudo command 需要输入密码, 可在 root 用户下配置无需密码: 
+> >
+> > 1. 切换到 root 用户(或使用 sudo visudo  或 sudo vi /etc/sudoers )
+> >
+> > 2. 输入命令修改sudo的配置文档/etc/sudoers
+> >
+> >    ```bash
+> >    # 输入visudo进入配置文档的vi编辑页面(或者 sudo vi /etc/sudoers)
+> >    visudo
+> >    
+> >    # 在文档的最后添加一行(注意有tab和空格)
+> >    #<userName> ALL=(ALL)	NOPASSWD: ALL
+> >    favian ALL=(ALL)	NOPASSWD: ALL
+> >    ```
+> >
+> > 3. 移除权限同样只需删除此行即可
+
+
+
+### 用户和用户组
+
+> linux系统可以: 
+>
+> - 配置多个用户
+> - 配置多个用户组
+> - 用户可以加入多个用户组
+>
+>  
+>
+> linux 权限管控的 2 个级别: 
+>
+> - 针对用户的权限控制
+> - 针对用户组的权限控制
+
+
+
+#### 用户组管理
+
+> 需要 root 权限
+>
+> 查看当前系统中有哪些用户组(返回:	**组名称:组认证:组ID** )
+>
+> ```bash
+> getent group
+> ```
+
+- 创建用户组
+
+  ```bash
+  groupadd <userGroupName>
+  ```
+
+- 删除用户组
+
+  ```bash
+  groupdel <userGroupName>
+  ```
+
+  
+
+#### 用户管理
+
+> 需要 root 权限
+>
+> 查看当前系统中有哪些用户(返回: **用户名:密码(x):用户ID:组ID:描述信息:HOME目录:执行终端**)
+>
+> ```bash
+> getent passwd
+> ```
+
+- 创建用户
+
+  ```bash
+  useradd [ -g -d ] <userName>
+  
+  # -g 表示用户的组, 不指定-g会自动创建同名组并自动加入
+  #	 指定-g需要组已经存在, 若已存在同名组, 必须使用-g
+  #	 如 useradd -g testGroup userTest
+  
+  # -d 表示指定用户的home路径, 若不指定默认在 /home/<userName>
+  # 	 如 useradd -g testGroup -d /home/testGroup userTest 
+  ```
+
+- 删除用户
+
+  ```bash
+  userdel [ -r ] <userName>
+  
+  # -r 表示删除用户的home目录, 不使用的话, home目录会保留
+  ```
+
+- 查看用户所属组
+
+  ```bash
+  id [<userName>]
+  
+  # 不写参数则查看自身
+  ```
+
+- 修改用户所属组
+
+  ```bash
+  usermod -aG <userGroupName> <userName>
+  
+  # 指定用户加入某一用户组
+  ```
+
+  
+
+
+
+### 权限控制信息
+
+> - r 表读权限(对于文件夹, 可查看其内容)
+> - w 表写权限(对于文件夹, 可创建, 修改, 删除, 重命名)
+> - x 即execute, 表执行权限(对于文件夹, 可将其作为工作目录, cd )
+
+- 使用命令 `ll` 输入的列表信息内容
+
+  ```bash
+  # 示例
+  drwxr-xr-x. 3 favian favian 17 jul 2 01:28 Desktop
+  
+  
+  ```
+
+  ```mermaid
+  graph TB
+  A["7 列内容"]
+  A-->B["类型和权限(10个槽位)"]
+  B-->Ba["文件类型1位"]
+  B-->Bb["所属用户权限3位"]
+  B-->Bc["所属用户组权限3位"]
+  B-->Bd["其他用户权限3位"]
+  A-->C["第一级子目录的个数"]
+  A-->D["所属用户"]
+  A-->E["所属用户组"]
+  A-->F["文件大小"]
+  A-->G["最后更新时间"]
+  A-->H["文件|夹名称"]
+  ```
+
+- 其中文件类型: 
+  - “-”表示普通文件；
+  - “d”表示目录；
+  - “l”表示链接文件；
+  - “p”表示管理文件；
+  - "b”表示块设备文件；
+  - “c”表示字符设备文件
+  - “s”表示套接字文件；
+- 对于文件名称: 
+  - 灰白色表示普通文件；
+  - 亮绿色表示可执行文件；
+  - 亮红色表示压缩文件；
+  - 灰蓝色表示目录；
+  - 亮蓝色表示链接文件；
+  - 亮黄色表示设备文件；
