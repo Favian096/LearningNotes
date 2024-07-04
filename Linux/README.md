@@ -490,10 +490,8 @@ L-->Li["mail"]
   ```bash
   # 示例
   drwxr-xr-x. 3 favian favian 17 jul 2 01:28 Desktop
-  
-  
   ```
-
+  
   ```mermaid
   graph TB
   A["7 列内容"]
@@ -509,7 +507,7 @@ L-->Li["mail"]
   A-->G["最后更新时间"]
   A-->H["文件|夹名称"]
   ```
-
+  
 - 其中文件类型: 
   - “-”表示普通文件；
   - “d”表示目录；
@@ -525,3 +523,127 @@ L-->Li["mail"]
   - 灰蓝色表示目录；
   - 亮蓝色表示链接文件；
   - 亮黄色表示设备文件；
+
+
+
+
+
+### 修改权限控制
+
+> 仅当前用户 和 root 用户可修改目录下的文件权限
+>
+> 仅 root 用户可修改文件|夹所属用户
+
+---
+
+#### chmod [ -R ] permission path
+
+- **修改用户、用户组、其他用户的文件|夹权限**
+
+> - R表示递归修改文件夹内的全部文件权限
+>
+> path	为文件或文件夹
+>
+> permission 表权限, 有两种表示法: 
+>
+> - chmod u=rwx, g=rx, o=x test.txt	表将test.txt文件权限修改为等号后的
+>
+>   - u	即 user, 表当前用户权限修改
+>   - g    即 group, 表用户组权限修改
+>   - o    即 other, 表其他用户权限修改
+>
+> - chmod 751 test.txt    功能同上, 依次表u g o
+>
+>   - 即采用二进制数表示权限rwx
+>
+>     0 表无权限, 即 ---
+>
+>     1 表有x权限, 即 --x
+>
+>     2 表有w权限, 即 -w-
+>
+>     3 表有wx权限, 即 -wx
+>
+>     4 表有r权限, 即 r--
+>
+>     5 表有rx权限, 即r-x
+>
+>     6 表有rw权限, 即rw-
+>
+>     7表有rxw权限, 即 rwx
+
+
+
+#### chown [ -R ] [userName] [ : ] [userGroupName] path
+
+- **修改文件|夹所属用户|组**
+
+> - -R表示递归修改文件夹下全部文件
+>
+> 示例: 
+>
+> chown root test.txt	表仅将test.txt的用户修改为root
+>
+> chown :root test.txt	表仅将test.txt的用户组修改为root
+>
+> chown root:favian test.txt 	表将test.txt的用户修改为root, 用户组修改为favian
+
+
+
+
+
+## 系统操作
+
+> 快捷键和快捷命令
+>
+> - **\<ctrl\> + c**	强行停止 | 退出当前命令
+>
+> - **\<ctrl\> + d**    快速退出账户登录 | 退出特定程序页面(如python)
+>
+> - **history**         产看历史输入过的命令
+>
+>   history | grap ch	表搜索历史命令中以 ch 开头的命令
+>
+> - **!command**    对history命令自下而上的匹配(最近)以command开头的命令
+>
+>   如 之前输入过python命令, 可使用 !p 实现命令自动输入(相当于输入python回车 )
+>
+> - **\<Ctrl\> + r**      输入内容模糊匹配历史命令, 对匹配的命令回车可直接执行(左右方向键修改)
+>
+> - **\<Ctrl\> + a**      跳转命令开头
+>
+> - **\<Ctrl\> + e**       跳转命令结尾处
+>
+> - **\<Ctrl\> + left**    向左跳一个单词
+>
+> - **\<Ctrl\> + right**  向右跳一个单词
+>
+> - **\<Ctrl\> + l**         清空终端内容(即 clear)
+
+
+
+### 程序配置
+
+#### yum [ -y ] [ install | remove | search ] softwareName
+
+>yum : RPM包软件管理器, 用户自动化安装配置Linux软件, 需要 root 权限, 
+>
+>​		适用 Fedora，centos，BClinux，RedHat 以及 CentOS 中
+>
+>-y	表自动确认, 无需手动确认安装和卸载过程
+>
+>[镜像配置](https://blog.csdn.net/qq_43475285/article/details/129479198)
+
+
+
+
+#### apt [ -y ] [ install | remove | search ] softwareName
+
+>apt : RPM包软件管理器, 用户自动化安装配置Linux软件, 需要 root 权限
+>
+>​		适用于 Ubuntu 
+>
+>-y	表自动确认, 无需手动确认安装和卸载过程
+
+
+
