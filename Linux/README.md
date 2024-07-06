@@ -647,3 +647,281 @@ L-->Li["mail"]
 
 
 
+
+
+### systemctl
+
+> linux 系统中有很多软件支持使用 systemctl命令: 启动， 停止， 开机自启
+>
+> 能够被systemctl管理的软件一般也称为**服务**
+>
+> 例如系统内置的服务： 
+>
+> - NetworkManager	主网络服务
+> - network                     副网络服务
+> - firewalld                     防火墙服务
+> - sshd                            ssh服务
+
+
+
+#### systemctl [ start | stop | status | enable | disable ] \<serverName\>
+
+- **systemctl用于控制系统内置服务的启停(ctl 即 control)**
+
+>start	启动
+>
+>stop	关闭
+>
+>status	查看状态
+>
+>enable	开启开机自启
+>
+>disable	关闭开机自启
+>
+>系统内置服务均可以被systemctl控制
+>
+>第三方软件若注册了系统服务可以被systemctl控制, 若没有注册则可以手动注册
+
+`systemctl`是 Systemd 的主命令，用于管理系统。
+
+> ```bash
+> # 重启系统
+> sudo systemctl reboot
+> 
+> # 关闭系统，切断电源
+> sudo systemctl poweroff
+> 
+> # CPU停止工作
+> sudo systemctl halt
+> 
+> # 暂停系统
+> sudo systemctl suspend
+> 
+> # 让系统进入冬眠状态
+> sudo systemctl hibernate
+> 
+> # 让系统进入交互式休眠状态
+> sudo systemctl hybrid-sleep
+> 
+> # 启动进入救援状态（单用户状态）
+> sudo systemctl rescue
+> ```
+
+`systemd-analyze`命令用于查看启动耗时。
+
+> ```bash
+> # 查看启动耗时
+> systemd-analyze                                                                                       
+> 
+> # 查看每个服务的启动耗时
+> systemd-analyze blame
+> 
+> # 显示瀑布状的启动过程流
+> systemd-analyze critical-chain
+> 
+> # 显示指定服务的启动流
+> systemd-analyze critical-chain atd.service
+> ```
+
+`hostnamectl`命令用于查看当前主机的信息。
+
+> ```bash
+> # 显示当前主机的信息
+> hostnamectl
+> 
+> # 设置主机名。
+> sudo hostnamectl set-hostname rhel7
+> ```
+
+`localectl`命令用于查看本地化设置。
+
+> ```bash
+> # 查看本地化设置
+> localectl
+> 
+> # 设置本地化参数。
+> sudo localectl set-locale LANG=en_GB.utf8
+> sudo localectl set-keymap en_GB
+> ```
+
+`timedatectl`命令用于查看当前时区设置。
+
+> ```bash
+> # 查看当前时区设置
+> timedatectl
+> 
+> # 显示所有可用的时区
+> timedatectl list-timezones                                                                                   
+> 
+> # 设置当前时区
+> sudo timedatectl set-timezone America/New_York
+> sudo timedatectl set-time YYYY-MM-DD
+> sudo timedatectl set-time HH:MM:SS
+> ```
+
+`loginctl`命令用于查看当前登录的用户。
+
+> ```bash
+> # 列出当前session
+> loginctl list-sessions
+> 
+> # 列出当前登录用户
+> loginctl list-users
+> 
+> # 列出显示指定用户的信息
+> loginctl show-user ruanyf
+> ```
+
+
+
+
+
+### 软硬连接
+
+> 软硬链接区别
+>
+> ##### 1. 原理与本质
+>
+> - **硬链接**：硬链接实际上是同一文件系统中同一个文件的多个“入口”。每个硬链接指向的是同一个文件的inode（索引节点），所有硬链接共享相同的inode和数据块。当所有硬链接都被删除（以及没有其他引用）时，文件内容才会真正被删除。
+> - **软链接**：软链接则是一个独立的特殊类型的文件，它存储的是目标文件或目录的路径。如果原文件被删除或移动，软链接将失效，因为系统找不到其所指向的目标。
+>
+> ##### 2. 文件系统范围
+>
+> - **硬链接**：只能在同一文件系统内部创建，不支持跨文件系统操作。
+> - **软链接**：可以跨越不同的文件系统，不受此限制。
+>
+> ##### 3. 目录链接
+>
+> - **硬链接**：不支持对目录创建硬链接，虽然现代一些Linux版本允许对目录做硬链接, 因为可能导致循环引用等问题。
+> - **软链接**：可以对文件或目录创建软链接，经常被用来链接目录。
+>
+> ##### 4. 删除源文件的影响
+>
+> - **硬链接**：即使源文件（即其他硬链接所指向的文件）被删除，只要存在至少一个硬链接，文件内容仍能通过其它硬链接访问，不会消失。
+> - **软链接**：如果删除了软链接所指向的源文件，那么通过软链接尝试访问文件将会失败，因为软链接失去了有效的指向。
+>
+> ##### 5. inode 号
+>
+> - **硬链接**：所有硬链接共享同一个inode号。
+> - **软链接**：软链接拥有自己的inode号，不同于它所指向的文件。
+>
+> ##### 6. 使用场景
+>
+> - **硬链接**：通常用于确保重要的文件不会因误删或重命名而丢失，尤其适合备份和保护关键数据。
+> - **软链接**：更多地用于灵活的文件组织结构，例如提供程序的别名或创建易于维护的软件环境，因为它能够跟随源文件的移动和更改。
+>
+> ##### 7. 创建方式
+>
+> - **硬链接**：使用 `ln` 命令创建，无需 `-s` 参数，例如：`ln source_file target_link`
+> - **软链接**：使用 `ln -s` 命令创建，例如：`ln -s /path/to/source_file target_link`
+>
+> 综上所述，硬链接提供了对同一文件的多个访问点，而软链接则是对文件路径的一个引用或指示器。在决定使用哪种链接时，需要根据实际需求和上下文来考虑它们之间的差异。
+>
+> 在系统中可以创建软链接, 将文件|夹 链接到其他位置, 以路径形式存在(快捷方式)
+
+#### ln -s -b -d -f -i -n -v originPath targetPath
+
+> -s	 创建软链接
+>
+> -b 	删除，覆盖以前建立的链接
+>
+> -d 	允许超级用户制作目录的硬链接
+>
+> -f 	强制执行
+>
+> -i 	交互模式，文件存在则提示用户是否覆盖
+>
+> -n 	把符号链接视为一般目录
+>
+> -v 	显示详细的处理过程
+>
+> originPath	被链接的文件|夹
+>
+> targetPath	新创建的软链接位置
+>
+> 示例:
+>
+> `ln -s /etc/yum	~/yum`
+
+
+
+
+
+### 日期时区
+
+> 修改linux时区: 
+>
+> ```bash
+> # 删除原时区
+> rm -f /etc/localtime
+> 
+> # 置新时区链接
+> sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+> ```
+>
+> 使用 ntp 联网校正时间: 
+>
+> - 安装 ntp
+>
+>   ```bash
+>   sudo yum -y install ntp
+>   ```
+>
+> - 设置启动
+>
+>   ```bash
+>   systemctl start ntpd
+>   
+>   systemctl enable ntpd
+>   ```
+>
+> - 手动校正
+>
+>   ```bash
+>   ntpdate -u ntp.aliyun.com
+>   ```
+
+ 
+
+#### date [ -d ] [ +\<formatString\> ]
+
+- **格式化显示时间**
+
+> -d 	用于日期加减, 支持: 
+>
+> - year
+> - month
+> - day
+> - hour
+> - minute
+> - second
+>
+> 示例: 
+>
+> `data -d "+1 day" +%Y%-m%-%d`
+>
+> formatString
+>
+> - %Y	年 
+> - %y    年份的后两位数
+> - %m   月份
+> - %d    日期
+> - %H    小时
+> - %M    分钟
+> - %S      秒
+> - %s       时间戳的秒
+>
+> 示例: 
+>
+> `date +%Y%-m%-%d`
+>
+> `date "+%Y 年 %m 月 %d 日 %H 时 %M 分 %S 秒 时间戳: %s"`
+
+
+
+
+
+### 主机和IP
+
+
+
