@@ -1134,3 +1134,153 @@ L-->Li["mail"]
 - **查看硬盘占用情况**
 
 > -h	人性化显示
+
+
+
+
+
+### 环境变量
+
+> 环境变量是操作系统运行时, 记录一些关键的信息, 以辅助系统运行
+>
+> `env`命令可查看系统中记录的环境变量
+>
+> **环境变量是一种 KeyValue 型的结构**
+
+
+
+#### $符号
+
+> **$**符号用于去变量的值
+>
+> 示例: 
+>
+> ```bash
+> # 取值
+> echo $PATH
+> 
+> # 取值
+> echo ${PATH}AAA
+> ```
+
+
+
+#### 自定义
+
+> linux自定义环境变量有临时设置和永久设置:
+>
+> - 临时设置(退出登录后失效): 
+>
+>   ```bash
+>   export varable=123
+>   
+>   # 测试
+>   echo $varable
+>   # 输出: 123
+>   ```
+>
+> - 永久设置(设置后 `source <congfigFile>` 生效): 
+>
+>   - 针对当前用户生效: 
+>
+>     ```bash
+>     # 配置在当前用户的 ~/.bashrc 文件中
+>     # 例如在文件最后添加
+>     varable = 123
+>     ```
+>
+>   - 针对所有用户生效:
+>
+>     ```bash
+>     # 配置在系统的 /etc/profile 文件中
+>     ```
+
+- **自定义环境变量PATH**
+
+> PATH中存储了系统中执行命令的搜索路径
+>
+> 可以自行添加搜索路径到PATH中
+>
+> **临时修改: **
+>
+> ```bash
+> export PATH=$PATH:/home/favian/myenv
+> ```
+>
+> **永久添加:**
+>
+> ```bash
+> # 将PATH=$PATH:/home/favian/myenv 添加到/etc/profile中
+> # 注: 一定要加 $PATH , 路径前添加冒号分隔
+> ```
+
+
+
+
+
+### 解压压缩
+
+> linux 常用的两种压缩格式: 
+>
+> - **.tar** 即tarball归档文件, 简单的将文件封账到一个 .tar 的文件内, 并没有太多文件体积的减少
+> - **.gz** 即gzip格式压缩文件, 常见为.tar.gz, 使用gzip压缩算法将文件压缩到一个文件夹内, 极大压缩体积
+
+
+
+#### tar [ -c -v -x -f -z -C ] param1 param2 ...
+
+- **用于压缩和解压文件**
+
+> -c	创建压缩文件, 用于压缩模式
+>
+> -v	显示压缩过程, 用于查看进度
+>
+> -x	解压模式
+>
+> -f	要创建或要解压的文件, **-f 选项必须在所有选项中位置处于最后一个**
+>
+> -z	即gzip模式, 不使用-z则为tarball格式, **-z通常在所有选项中位置处于第一个**
+>
+> -C	选择解压的目的地, 用于解压模式, **-C选项要单独使用, 用于接收路径参数**
+
+> 压缩示例: 
+>
+> `tar -cvf test.tar 1.txt 2.txt 3.txt`将三个txt文件以tarball格式压缩到test.tar文件中
+>
+> `tar -zcvf test.tar.gz 1.txt 2.txt 3.txt`将三个txt文件以gzip格式压缩到test.tar.gz文件中
+
+> 解压示例:
+>
+> `tar -xvf test.tar`解压至当前目录
+>
+> `tar -xvf test.tar -C /home/favian` 解压到指定目录
+>
+> `tar -zxvf test.tar -C /home/favian` 以gzip模式解压到指定目录
+
+
+
+#### zip [ -r ] param1 param2 ...
+
+- **对文件压缩, 到zip格式压缩包**
+
+> -r	表递归压缩, 用于文件夹
+>
+> 示例:
+>
+> `zip test.zip 1.txt 2.txt 3.txt`将三个txt文件以zip格式压缩到test.zip文件中
+>
+> `zip -r test.zip 1.txt res download`将txt文件和两个文件夹以zip格式压缩到test.zip文件中
+
+
+
+#### unzip [ -d ] param
+
+- **对zip压缩包解压**
+
+> -d	表设置解压路径
+>
+> 示例:
+>
+> `unzip test.zip`将test.zip压缩包解压到当前文件夹(解压后有同名内容会被替换)
+>
+> `unzip test.zip -d ~/res`将test.zip压缩包解压到~/res文件夹下
