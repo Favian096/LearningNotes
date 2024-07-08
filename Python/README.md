@@ -591,6 +591,21 @@
 
 #### 函数和Lambda
 
+- Type Hint
+
+  ```python
+  # 在python中可以使用 : <type> 对变量的类型进行标注
+  # 使用 -> <type> 对函数的返回值进行标注
+  def add(a : int, b : int) -> int:
+      ...
+      
+  # 若存在多种类型, 可以使用 | 
+  def sub(a : int | float, b : int | float) -> int | float:
+      ...
+  ```
+
+  
+
 - 可变参数
 
   ```python
