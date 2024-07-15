@@ -308,8 +308,6 @@ B-->Bf["半元音2个 [w] [j]"]
 > 动词：先看时态， 再看主语
 >
 > **主语是单数第三人称时，动词有第三人称单数的变化**
->
-> **主语非单数第三人称时，动词为原型**
 
 - **动词的第三人称单数变化**：
   1. 在动词尾直接加 **s**
@@ -453,13 +451,128 @@ B-->Bf["半元音2个 [w] [j]"]
 
 
 
+### 情态动词
+
+#### **can  |  could**
+
+> can | could 表示能力, 可使用 be able to 来代替
+>
+> 表现在 | 过去的能力, 
+>
+> 表示客观可能性(can可能性大, could比较委婉), 
+>
+> 表请求和允许
 
 
 
+#### may | might
+
+> may | might 表可能性(may的可能性大, might比较委婉)
+>
+> 表请求, 允许
 
 
 
+#### must | have to
+
+> must | have to 表必须, 必要(must表主观多一点, have to表客观多一点)
+>
+> have to 有时态和数量的变化
+>
+> must和have to的否定意义不太相同:
+>
+> - mustn't	表不准, 禁止
+> - don’t have to    表不必, 同needn't
 
 
 
+#### shoud | ought to
 
+> should | ought to 表应该, 劝告, 建议, 命令(should强调主观看法, ought to强调客观要求)
+>
+> 疑问句中, 通常用should代替ought to
+
+
+
+#### need
+
+> 表需要, 可以作情态动词和实义动词:
+>
+> - 情态动词: 后接动词原型(he need come here)
+> - 实义动词: 有第三人称单数和时态的变化, 后可接to的不定式(he needs to come here)
+
+
+
+#### had better
+
+> had better表 最好做某事
+>
+> had 虽然是过去式, 但不表过去, better 后接动词原型
+>
+> 否定: had better not
+
+
+
+#### would rather
+
+> would rather 表 宁愿, 宁可, 最好, 还是...为好
+>
+> 语感上比had better轻一些
+>
+> 否定: would rather not
+
+
+
+#### userd to |would to
+
+> userd to , would 表 过去习惯性动作, 可译为 过去常常......
+>
+> - userd to 可指过去的状态和情况, would则不能
+> - would 表 反复发生的动作, 若某一动作没有反复性, 就不能用would, 只能用used to
+> - userd to 表 过去经常性或习惯性的动作或状态现在已经结束, would则表示有可能再发生
+
+
+
+#### 否定和疑问
+
+> - 情态动词的否定
+>
+>   情态动词 + not + 动词原形, 
+>
+>   have to 否定为 don't | doesn't have to
+>
+> - 情态动词的疑问
+>
+>   情态动词 + 主语 + 动词原形
+>
+>   have to 要使用助动词 do | does 提前
+>
+>   > Does he have to go there ?
+
+
+
+#### 情态动词 + have + 过去分词
+
+> 即: **情态动词 + 完成时**
+>
+> - 表 过去事实
+>
+> - 表 推测的含义(should除外)
+>
+>   > He can | could | may | might have arrived. 可能到
+>
+> - should + have + 过去分词:  表本应该 ... ...
+>
+>   > He should have arrived. 本应该到了(否定, 表未到)
+>
+> - needn't have + 过去分词:  本不应该 ... ...
+>
+>   > You needn't have done so. 本不需要那么做的(表否定, 要这么做)
+>
+> - must + have + 过去分词: 准是已经 ... ...
+>
+>   > He must have arrived. 准是已经到了
+>
+> - can't + have + 过去分词:  不可能已经 ... ...
+>
+>   > He can’t have arrived.不可能已经到了
