@@ -311,7 +311,7 @@ B-->Bf["半元音2个 [w] [j]"]
 
 - **动词的第三人称单数变化**：
   1. 在动词尾直接加 **s**
-  2. 以字母 **s**、**x**、**ch**或 **o** 结尾的动词加 **es**
+  2. 以字母 **s**、**x**、**ch**、**sh**或 **o** 结尾的动词加 **es**
   3. 以辅音字母 **+y** 结尾的动词， 该 y 为 i 再加 **es**
 
 
@@ -599,7 +599,7 @@ B-->Bf["半元音2个 [w] [j]"]
 >   >
 >   > 完成: The computer has been used by her.
 >   >
->   > 综上:  **[情态] + [时态] + [状态] + 被动语态(be+p.p) + [by sb.]**
+>   > 综上:  **[情态] + [时态] + [状态be] + 被动语态(p.p) + [by sb.]**
 
 
 
@@ -677,23 +677,23 @@ B-->Bf["半元音2个 [w] [j]"]
 
 > 示例:
 >
-> > <u>It</u>'s a great honor <u>to be invited</u>
-> >
-> > <u>It</u> is use <u>crying over spilt milk</u>.
+> <u>It</u>'s a great honor <u>to be invited</u>
+> 
+> <u>It</u> is use <u>crying over spilt milk</u>.
 
 - 动词不定式 和 动名词在宾语的位置上, 用it代替作形式宾语
 
 > 示例:
 >
-> > We think <u>it</u> important <u>to learn English</u>.
+> We think <u>it</u> important <u>to learn English</u>.
 
 - 动词不定式 和 动名词否定时, 前加 not 即可
 
 > 示例:
 >
-> > He pretended <u>not to see her.</u>
-> >
-> > He regrets <u>not joining them.</u>
+> He pretended <u>not to see her.</u>
+> 
+> He regrets <u>not joining them.</u>
 
 
 
@@ -704,9 +704,9 @@ B-->Bf["半元音2个 [w] [j]"]
 
 > 示例:
 >
-> > I have written it down <u>in forder [not] to</u> remember it.
-> >
-> > He shouted and waved <u>so as [not] to</u> be noticed.
+> I have written it down <u>in forder [not] to</u> remember it.
+> 
+> He shouted and waved <u>so as [not] to</u> be noticed.
 
 
 
@@ -737,3 +737,150 @@ B-->Bf["半元音2个 [w] [j]"]
 - **have a hard time ~ing 做~艰难**(动名词)
 
   > The have a hard time solving the problem.
+
+
+
+### 原型不定
+
+#### 使役动词
+
+- 使役动词, 表 使|让 ... ...
+
+  **have, make, let 作使役动词, 构成形式:  have|make|let + 宾语 + v**
+
+> 示例: 
+>
+> He made me laugh.
+>
+> I let him go.
+>
+> Please have him come here.
+
+- **get|help作使役动词, 表 让|使 … … **
+
+  **get使役动词句式:  get + 宾语 + to + v**
+
+  **help使役动词句式:  help + 宾语 + (to) + v**
+
+> 示例:
+>
+> I can't get anyone to do the work properly
+>
+> I helped him (to) repair the car.
+
+- **使役动词 + 宾语 + 过去分词  , 表  让某物|人被别人 ... ...**
+
+> 示例:
+>
+> I must get my hair cut.
+
+
+
+#### 感官动词
+
+- **see|watch|observe|notice|hear|smell|taste|fell + 宾语 + 动词原型|现在分词**
+
+  **+ 动词原型  表动作的真实性**
+
+  **+ 现在分词  表动作的连续性, 进行性**
+
+> 示例:
+>
+> I saw him work in thegarden yesterday. (在工作, 表达真实情况)
+>
+> I saw him working in thegarden yesterday.(在一直工作, 表达工作情况, 连续性)
+
+- **感官动词 + 宾语 + 过去分词  表达被动含义, 宾语被  ... ...**
+
+> 示例:
+>
+> John saw the man knocked down by the car.
+>
+> I heard sam sent to the hospital.
+
+
+
+### 假设
+
+#### 单纯条件假设
+
+- 条件状语从句, 用 if 引导条件状语从句, 从句为现在时(主句为将来时), 表 如果 ... ...
+
+> If you get up early, you will catch up with train.
+
+- **if 引导条件状语从句可放在句首或句尾(主句用将来时)**
+
+> She will be upset if you fail the exam. 
+
+
+
+#### 与现在事实相反的虚拟假设
+
+- if从句是一种虚拟的条件或假设， 和现在事实相反
+
+  **从句：动词过去式(be用were)**, 即表达对过去的假设
+
+  **主句:  would|could|should|might**
+
+> 示例:
+>
+> If I were you, I would join them.
+>
+> She would come with you if you invited her.
+
+
+
+#### 与过去事实相反的虚拟假设
+
+- if从句是一种虚拟的条件或假设， 和过去事实相反
+
+  **从句: had + 动词过去分词** 即 过去完成
+
+  **would|could|should|might  + have + 动词过去分词** 即 情态动词+现在完成时
+
+> 示例:
+>
+> If I had got there early, I should have meet her.
+>
+> If he had taken my advice , he would no have made such a mistake.
+
+
+
+#### wish
+
+> 译为 :  希望 ... ... 就好了
+
+- 与现在事实相反愿望
+
+> I wish I were as tall as you.
+
+- 与过去事实相反愿望
+
+> He wished he hadn't said that.
+
+- 表达不太可能实现的愿望
+
+> I wish it would rain tomorrow.
+
+
+
+#### as if
+
+> 译为: 看起来好像 ... ... 
+
+- 若从句表示与**现在**事实相反(从句过去时)
+
+> You look as if you didn't care.
+
+- 从句表示与**过去**事实相反(从句过去完成时)
+
+> He talks about Rome as if he had been there before.
+
+- 从句表示与**将来**事实相反(从句情态动词+现在时)
+
+> He opened his mouth as if he would say something.
+
+
+
+
+
