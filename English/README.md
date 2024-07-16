@@ -2,7 +2,7 @@
 
 
 
-## Basic & Vocabulary
+## Basic Verb
 
 ### 音标
 
@@ -523,13 +523,13 @@ B-->Bf["半元音2个 [w] [j]"]
 
 
 
-#### userd to |would to
+#### used to |would to
 
-> userd to , would 表 过去习惯性动作, 可译为 过去常常......
+> used to , would 表 过去习惯性动作, 可译为 过去常常......
 >
 > - userd to 可指过去的状态和情况, would则不能
 > - would 表 反复发生的动作, 若某一动作没有反复性, 就不能用would, 只能用used to
-> - userd to 表 过去经常性或习惯性的动作或状态现在已经结束, would则表示有可能再发生
+> - used to 表 过去经常性或习惯性的动作或状态现在已经结束, would则表示有可能再发生
 
 
 
@@ -576,3 +576,8 @@ B-->Bf["半元音2个 [w] [j]"]
 > - can't + have + 过去分词:  不可能已经 ... ...
 >
 >   > He can’t have arrived.不可能已经到了
+
+
+
+
+
