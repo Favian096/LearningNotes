@@ -581,3 +581,159 @@ B-->Bf["半元音2个 [w] [j]"]
 
 
 
+## Voice Grammar
+
+### 被动语态
+
+> - 如果主语是动作的承受者, 则用动词的被动语态做谓语
+>
+> - 构成 : **be + 动词的过去分词 + ... + by sb.**    若动作行为者不分明或不重要或上下文已提及, 可省略by sb.
+>
+> - 被动语态有各种时态
+>
+>   > 现在:  The information is needed by us.
+>   >
+>   > 过去进行: The book was being read by him.
+>   >
+>   > 将来: The room will be cleaned.
+>   >
+>   > 完成: The computer has been used by her.
+>   >
+>   > 综上:  **[情态] + [时态] + [状态] + 被动语态(be+p.p) + [by sb.]**
+
+
+
+#### 被动语态和情态动词
+
+> can|could + be + 动词的过去分词
+>
+> 注:  need + doing|to do + 动词过去分词
+>
+> 示例: 
+>
+> > The food could be taken away.
+> >
+> > The food had batter be taken away.
+> >
+> > The food needs taking away.(表达客观事件, need为实义动词, 不是情态动词)
+
+
+
+#### 被动语态的疑问
+
+> 一般疑问句:	**(第一个)助动词 + 主语 + (其他助动词) + 动词的过去分词 + 其他 ?**
+>
+> > Is the information needed?
+> >
+> > Has the computer been used ?
+>
+> 特殊疑问句:	 **疑问词 + (第一个)助动词 + 主语 + (其他助动词) + 动词的过去分词 + 其他 ?**
+
+
+
+
+
+### 非谓语动词
+
+#### 基本形式
+
+- **动词不定式: to + 动词原形**
+
+> 由 to + 动词原形 构成, 可做主语、宾语，宾补、定语、表语和状语
+>
+> 示例:
+>
+> > 主语: To get there by bike will take us an hour.
+> >
+> > 宾语: The driver failed to see the car in time.
+> >
+> > 宾补: We believe him to be guility.
+> >
+> > 定语: The next train to arrive is from Seoul.
+> >
+> > 表语: My suggestion is to put off the meeting.
+> >
+> > 状语: I come here only to see you.
+> >
+> > 分句: The students went out of the classroom, laughing and talking.
+
+- **动名词: 动词 + ing**
+
+> 动词 + ing 可做名称用, 具有动词的特征和变换形式, 
+>
+> 句中用法类似名词, 可做主语、宾语、表语、定语，也可被副词修饰或支配宾语
+>
+> 示例：
+>
+> > 主语：Reading is an art.
+> >
+> > 定语:  This is a reading room.
+
+
+
+#### 形式主宾语
+
+- 动词不定式 和 动名词 可在主语的位置上, 但一般用 **It** 代替它作形式主语, 这种情况 it 叫形式主语
+
+> 示例:
+>
+> > <u>It</u>'s a great honor <u>to be invited</u>
+> >
+> > <u>It</u> is use <u>crying over spilt milk</u>.
+
+- 动词不定式 和 动名词在宾语的位置上, 用it代替作形式宾语
+
+> 示例:
+>
+> > We think <u>it</u> important <u>to learn English</u>.
+
+- 动词不定式 和 动名词否定时, 前加 not 即可
+
+> 示例:
+>
+> > He pretended <u>not to see her.</u>
+> >
+> > He regrets <u>not joining them.</u>
+
+
+
+#### 不定式表目的
+
+- **in order to + v 表目的** , 引导的目的状语置于句首句尾都可以, 否定形式为 to 前加 not
+- **so as to + v 表目的**, 引导的目的状语只能置于句尾, 否定形式为 to 前加 not
+
+> 示例:
+>
+> > I have written it down <u>in forder [not] to</u> remember it.
+> >
+> > He shouted and waved <u>so as [not] to</u> be noticed.
+
+
+
+#### 常用搭配
+
+- **too ~ to ... 太 ~ 而不能 ...**(有否定含义)
+
+  > The room too small to live.
+
+- **enough + n + to + v | adj + enough + to + v 足够 ... 可以**
+
+  > There is <u>enough food to</u> eat.
+  >
+  > The box is <u>big enough to</u> contain six apples.	
+
+- **On ~ing 一 ... 就...**(on + 动名词)
+
+  > On seeing the snake,  the girl was very frightened.
+
+- **There is no hope of ~ing 没希望...**(动名词)
+
+  > There is no hope of seeing him.
+
+- **feel like ~ing 想要...**(动名词)
+
+  > I feel like eating ice cream now.
+
+- **have a hard time ~ing 做~艰难**(动名词)
+
+  > The have a hard time solving the problem.
