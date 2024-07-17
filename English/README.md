@@ -884,3 +884,113 @@ B-->Bf["半元音2个 [w] [j]"]
 
 
 
+### 定语从句
+
+> 定语从句: 用一个句子来修饰限定一个名称或代词, 
+>
+> 被修饰的词称为**先行词**, 其后的句子为定语从句, 由**关系代词|副词**来连接
+
+#### 关系代词
+
+> 在句中做一定的成分, 代替先行词, 起到链接先行词和从句的作用
+>
+> 常见关系代词: **that、who、which、whom、whose**
+>
+> 示例:  
+>
+> > The girl <u>whom|that I spoke to</u> is my cousin.(the girl 是 I spoke to 的宾语)
+> >
+> > He is the man <u>whose wife is a teacher.</u>
+>
+> ---
+>
+> | 关系代词 | 指人            | 指物        |
+> | -------- | --------------- | ----------- |
+> | 主格     | who\|that       | which\|that |
+> | 宾格     | whom\|who\|that | which\|that |
+> | 属格     | whose           | whose       |
+>
+> - 先行词是人的话用 that, who, whom, whose(谁的, 用于属格)来引导定语从句
+>
+>   **whom 在句中作宾语**
+>
+>   **who和that在从句中即可做主语又可作宾语**
+>
+> - 先行词是动物|事物的话, 用which、that、whose来引导定语从句
+>
+>   **which和that在句中可作主语和宾语, 作宾语时可以省略**
+
+#### 关系副词
+
+> 关系副词: **why, when, where**
+
+- **why  用于修饰表示原因的名词**
+
+> We don't know the reason <u>why he didn’t show up.</u>
+
+- **when  修饰表示时间的名词**
+
+> We'll put off the picnic until next week, <u>when the weather may be beetter.</u>
+
+- **where  修饰表示地点的名词**
+
+> We don't know the place <u>where he lives.</u> 
+
+
+
+### 宾语从句
+
+> 在句子中起宾语作用的从句
+>
+> **从属连词:  that、if、whether**
+>
+> > He doesn't know if|whether he was there
+>
+> **连接代词：who、whom、whose、what**
+>
+> > Do you know who has won the games ?(who 是主语)
+> >
+> > Do you know whom he likes ?(whom不是主语, 作为疑问词提前)
+>
+> **连接副词：when、where、why、how**
+>
+> > He wants to know where the part is.
+
+
+
+### 比较|最高级
+
+- **通常在形容词|副词后面加 er**
+
+> hard  -  harder  -  hardest
+
+- **词尾是不发音的单音节 e 时, 加 r**
+
+> nice  -  nicer  -  nicest
+
+- **词尾是辅音 +y 的双音节时, 改 y 为 i 加 er | est**
+
+> dry  -  drier  -  driest
+
+- **以一个辅音字母结尾的重读闭音节时, 双写最后一个字母, 加 er | est**
+
+> hot  -  hotter  -  hottest
+
+- **多音节和双音节, 在形容词|副词前加: **
+  - **程度加强:  more	the most**
+  - **程度减弱:  less    the least**
+
+> insterestting  -  more|less interesting  -  the most|least interesting
+
+- **不规则变化: **
+
+> good  -  better  -  the best
+>
+> many  -  more  -  the most
+>
+> little  -  less  -  the least
+
+  
+
+
+
