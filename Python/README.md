@@ -8,7 +8,7 @@
 
 ---
 
-- ###### user目录下的.condarc文件配置镜像(复制粘贴即可)
+- ###### user目录下的.condarc文件配置镜像([参考URL](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/))
 
   ```bash
   channels:
