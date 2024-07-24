@@ -882,6 +882,44 @@ B-->Bf["半元音2个 [w] [j]"]
 
 
 
+### 比较|最高级
+
+- **通常在形容词|副词后面加 er**
+
+> hard  -  harder  -  hardest
+
+- **词尾是不发音的单音节 e 时, 加 r**
+
+> nice  -  nicer  -  nicest
+
+- **词尾是辅音 +y 的双音节时, 改 y 为 i 加 er | est**
+
+> dry  -  drier  -  driest
+
+- **以一个辅音字母结尾的重读闭音节时, 双写最后一个字母, 加 er | est**
+
+> hot  -  hotter  -  hottest
+
+- **多音节和双音节, 在形容词|副词前加: **
+  - **程度加强:  more	the most**
+  - **程度减弱:  less    the least**
+
+> insterestting  -  more|less interesting  -  the most|least interesting
+
+- **不规则变化: **
+
+> good  -  better  -  the best
+>
+> many  -  more  -  the most
+>
+> little  -  less  -  the least
+
+  
+
+
+
+## Clauses
+
 
 
 ### 定语从句
@@ -958,39 +996,7 @@ B-->Bf["半元音2个 [w] [j]"]
 
 
 
-### 比较|最高级
 
-- **通常在形容词|副词后面加 er**
-
-> hard  -  harder  -  hardest
-
-- **词尾是不发音的单音节 e 时, 加 r**
-
-> nice  -  nicer  -  nicest
-
-- **词尾是辅音 +y 的双音节时, 改 y 为 i 加 er | est**
-
-> dry  -  drier  -  driest
-
-- **以一个辅音字母结尾的重读闭音节时, 双写最后一个字母, 加 er | est**
-
-> hot  -  hotter  -  hottest
-
-- **多音节和双音节, 在形容词|副词前加: **
-  - **程度加强:  more	the most**
-  - **程度减弱:  less    the least**
-
-> insterestting  -  more|less interesting  -  the most|least interesting
-
-- **不规则变化: **
-
-> good  -  better  -  the best
->
-> many  -  more  -  the most
->
-> little  -  less  -  the least
-
-  
 
 
 
