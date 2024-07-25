@@ -31,14 +31,12 @@ B-->Bf["半元音2个 [w] [j]"]
 
 - 示例组合:
 
-  | 单词  | 音标   | 组合               |
-  | ----- | ------ | ------------------ |
-  | I     | [aɪ]   | 单个元音           |
-  | and   | [ænd]  | 元音 + 辅音        |
-  | she   | [ʃi:]  | 辅音 + 元音        |
-  | check | [tʃek] | 辅音 + 元音 + 辅音 |
-
-  
+| 单词  | 音标   | 组合               |
+| ----- | ------ | ------------------ |
+| I     | [aɪ]   | 单个元音           |
+| and   | [ænd]  | 元音 + 辅音        |
+| she   | [ʃi:]  | 辅音 + 元音        |
+| check | [tʃek] | 辅音 + 元音 + 辅音 |
 
 
 
@@ -220,7 +218,7 @@ B-->Bf["半元音2个 [w] [j]"]
 
 ##### 一般疑问句
 
-- 谓语动词是Be动词时:	**Am/Is/Are + 主语 + 其他 ? **
+- 谓语动词是Be动词时:	**Am/Is/Are + 主语 + 其他 ?**
 - 谓语动词是实义动词时: **助动词 + 主语 + 其他 ?**
 
 
@@ -248,7 +246,7 @@ B-->Bf["半元音2个 [w] [j]"]
 
 4. **all** 后接可数名词复数
 
-5. **both ** 可做形容词, 代词和副词
+5. **both** 可做形容词, 代词和副词
 
    **either**       两者之一, 后动词用单数
 
@@ -258,21 +256,21 @@ B-->Bf["半元音2个 [w] [j]"]
 
    **much** 修饰不可数名词
 
-   **a lot of | lots of | plenty of ** 均可修饰可数和不可数
+   **a lot of | lots of | plenty of** 均可修饰可数和不可数
 
 7. **a few** 表 "几个",
 
-   **few ** 表 "没几个"
+   **few** 表 "没几个"
 
    二者均和*可数名词复数*连用
 
-8. **a little ** 表肯定含义"一点儿", 用于肯定句
+8. **a little** 表肯定含义"一点儿", 用于肯定句
 
    **little**  表否定含义 "没多点", 用于否定句
 
    二者均可与*可数或不可数名词*连用
 
-9. **none ** 和 **no one** 都表"一个也不, 一点也不"
+9. **none** 和 **no one** 都表"一个也不, 一点也不"
 
    none 可接 of 短语, 动词可用单数或复数(None of us ...)
 
@@ -285,6 +283,10 @@ B-->Bf["半元音2个 [w] [j]"]
 - There | Here + (be) , 表"有, 是", 为倒装句, 后面的名词才是主语
 
   be动词根据后面的名词有单复数变化
+
+---
+
+
 
 
 
@@ -352,7 +354,7 @@ B-->Bf["半元音2个 [w] [j]"]
 >
 > - **主语 + 动词过去式 + 其他**
 
-- **动词过去分词变换: **
+- **动词过去分词变换:**
   1. 一般动词后加 **ed**
   2. 字母以 **e** 结尾的加 **d**
   3. 以 辅音字母 +y 结尾的动词, 改 **y 为 i 加 ed**
@@ -404,7 +406,7 @@ B-->Bf["半元音2个 [w] [j]"]
 
 ### 完成时
 
-> **现在完成时: **
+> **现在完成时:**
 >
 > 表动作过去发生, 已经完成, 对现在造成影响, 动作可能还会持续
 >
@@ -446,6 +448,8 @@ B-->Bf["半元音2个 [w] [j]"]
   | play | palys        | playing  | played | played   |
   | have | has          | having   | had    | had      |
   | go   | goes         | going    | went   | gone     |
+
+---
 
 
 
@@ -577,6 +581,8 @@ B-->Bf["半元音2个 [w] [j]"]
 >
 >   > He can’t have arrived.不可能已经到了
 
+---
+
 
 
 
@@ -704,7 +710,7 @@ B-->Bf["半元音2个 [w] [j]"]
 
 > 示例:
 >
-> I have written it down <u>in forder [not] to</u> remember it.
+> I have written it down <u>in order [not] to</u> remember it.
 > 
 > He shouted and waved <u>so as [not] to</u> be noticed.
 
@@ -730,11 +736,11 @@ B-->Bf["半元音2个 [w] [j]"]
 
   > There is no hope of seeing him.
 
-- **feel like ~ing 想要...**(动名词)
+- **feel like \~ing 想要...**(动名词)
 
   > I feel like eating ice cream now.
 
-- **have a hard time ~ing 做~艰难**(动名词)
+- **have a hard time ~ing 做 … 艰难**(动名词)
 
   > The have a hard time solving the problem.
 
@@ -756,7 +762,7 @@ B-->Bf["半元音2个 [w] [j]"]
 >
 > Please have him come here.
 
-- **get|help作使役动词, 表 让|使 … … **
+- **get|help作使役动词, 表 让|使 … …**
 
   **get使役动词句式:  get + 宾语 + to + v**
 
@@ -900,13 +906,13 @@ B-->Bf["半元音2个 [w] [j]"]
 
 > hot  -  hotter  -  hottest
 
-- **多音节和双音节, 在形容词|副词前加: **
+- **多音节和双音节, 在形容词|副词前加:**
   - **程度加强:  more	the most**
   - **程度减弱:  less    the least**
 
 > insterestting  -  more|less interesting  -  the most|least interesting
 
-- **不规则变化: **
+- **不规则变化:**
 
 > good  -  better  -  the best
 >
@@ -914,7 +920,9 @@ B-->Bf["半元音2个 [w] [j]"]
 >
 > little  -  less  -  the least
 
-  
+---
+
+
 
 
 
