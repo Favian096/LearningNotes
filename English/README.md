@@ -928,13 +928,25 @@ B-->Bf["半元音2个 [w] [j]"]
 
 ## Clauses
 
+> 从句是主句中的作为某种词性或句子成分的句子
+>
+> 可以按从句在主句中充当的成分或词性来划分从句类型
+>
+> **按词性划分:**
+>
+> - 名词从句
+> - 形容词从句
+> - 副词从句
 
 
-### 定语从句
 
-> 定语从句: 用一个句子来修饰限定一个名称或代词, 
+### 形容词从句-定语从句
+
+> 定语从句(又称形容词从句, 关系从句): 用一个句子来修饰限定一个名称或代词, 
 >
 > 被修饰的词称为**先行词**, 其后的句子为定语从句, 由**关系代词|副词**来连接
+>
+> 根据限定形式又分为**限定性定语从句和非限定性定语从句**
 
 #### 关系代词
 
@@ -965,10 +977,17 @@ B-->Bf["半元音2个 [w] [j]"]
 > - 先行词是动物|事物的话, 用which、that、whose来引导定语从句
 >
 >   **which和that在句中可作主语和宾语, 作宾语时可以省略**
+>   
+>   通常, that和which可以互换, 先行词是唯一的用that, 先行词是多选一的用which
 
 #### 关系副词
 
-> 关系副词: **why, when, where**
+> 关系副词: **why, when, where, 可使用 介词 + which替换**
+> why->for which
+>
+> when->on which
+>
+> where->at which
 
 - **why  用于修饰表示原因的名词**
 
@@ -982,13 +1001,70 @@ B-->Bf["半元音2个 [w] [j]"]
 
 > We don't know the place <u>where he lives.</u> 
 
+#### 限定性和非限定性
+
+- **限定性定语从句**
+
+  明确限定了先行词的作用|范围|性质等
+
+  > The rabbit ate the carrot which was on the table.(限定carrot的范围)
+
+- **非限定性定语从句**
+  从句使用**逗号链接**, 其实没有限定, 只是接着说另一个信息(对上一句子的补充), 作插入语(直接去掉也不影响)
+
+  关系词可以补充上一句子的先行词, 甚至指代整个句子
+
+  > The rabbit ate the carrot, which was on the table.(which补充the carrot状态)
+  >
+  > The rabbit ate the carrot, which was not surprising. (which指代整句话)
+
+---
 
 
-### 宾语从句
 
-> 在句子中起宾语作用的从句
+### 名词从句-主语从句
+
+> 主语从句: 由引导词开头的从句作句子的主语
+
+#### 引导词(连接代词)
+
+> 可以使用: that、whether、when、how、who、what等
 >
-> **从属连词:  that、if、whether**
+> 示例：
+>
+> <u>That[Whether|when|how|who|what] the rabbit ate a carrot</u> is obvious.
+>
+> <u>That the rabbit ate a carrot</u> is a secret.
+>
+> <u>That the rabbit ate a carrot</u> happened.
+
+#### 形式主语
+
+> 显然, <u>That the rabbit ate a carrot</u> is obvious.这样的句子不利于阅读
+>
+> 通常使用 It 作为形式主语来实现主语从句: 
+>
+> 示例: 
+>
+> It is obvious <u>that the rabbit ate a carrot</u>.
+>
+> It’s a secret <u>that the rabbit ate a carrot</u>.
+>
+> It happened <u>that the rabbit ate a carrot</u>.
+
+
+
+### 名词从句-宾语从句
+
+> 宾语从句: 在句子中作为宾语的从句, 引导词同样在从句开头
+>
+> 从句通常和主语时态一致, 除非从句描述的是客观事实
+>
+> be + 形容词 + that ... 根据句意, 有时可归属为宾语|同位语|状语从句
+
+#### 引导词
+
+> **从属连词:  that、if、whether**, 引导词that常常可以省略
 >
 > > He doesn't know if|whether he was there
 >
@@ -1004,7 +1080,52 @@ B-->Bf["半元音2个 [w] [j]"]
 
 
 
+### 名词从句-表语从句
+
+>表语从句: 表语即主语补语, 表语从句即用一个句子充当系动词(不一定是be)后的表语
+>
+>主 + 系 + 引导词 + 从句
+
+#### 引导词
+
+>同主语从句, 引导词开头
+>
+>示例: 
+>
+>The problem is <u>that the rabbit is hungry.</u>
+>
+>It seams <u>that the rabbit is hungry.</u>
+
+### 名词从句-同位语从句
+
+> 同位语: 即用不同的方式把一个概念再说一遍, 用逗号隔开
+>
+> 示例: 示例: I love her, my wife. (句中, my wife即为her的同位语)
+>
+> 同位语从句: 用从句充当句中的同位语, 用引导词隔开可以不用逗号
+
+#### 引导词
+
+> 同主语从句
+>
+> 示例:
+>
+> The fact <u>that the rabbit ate the carrot</u> did not surprise me.(由that引导, 不需要用逗号隔开)
+>
+> The question <u>whether the rabbit will eat the carrot is on all our minds</u>
+>
+> I have no idea <u>who ate the carrot.</u>
 
 
 
+### 名词从句-宾语补语从句
+
+> 宾语补语从句: 用于补充说明宾语, 引导词同主语从句, 有形容词从句的性质
+>
+> 示例: 
+>
+> You can call me <u>what you like.</u>
+> My education made me <u>smart.</u>(形容词充当, 即使役动词用法中)
+
+---
 
