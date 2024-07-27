@@ -216,14 +216,14 @@ B-->Bf["半元音2个 [w] [j]"]
 
 ### 疑问句
 
-##### 一般疑问句
+**一般疑问句**
 
 - 谓语动词是Be动词时:	**Am/Is/Are + 主语 + 其他 ?**
 - 谓语动词是实义动词时: **助动词 + 主语 + 其他 ?**
 
 
 
-##### 特殊疑问句(5w1h)
+**特殊疑问句(5w1h)**
 
 - 当**提问对象是主语**时: 	**特殊疑问词 + 动词 + 其他 ?**
 
@@ -283,6 +283,98 @@ B-->Bf["半元音2个 [w] [j]"]
 - There | Here + (be) , 表"有, 是", 为倒装句, 后面的名词才是主语
 
   be动词根据后面的名词有单复数变化
+
+
+
+### 倒装句
+
+> 即为了强调某些信息而颠倒了原有的语序
+>
+> 分三类: 
+>
+> - 完全倒装(谓语动词完全在主语前)
+> - 部分倒装(助动词和谓语动词分离, 仅助动词提前)
+> - 形式倒装(谓语动词不提前)
+
+- **完全倒装**
+
+> 完全倒装分类:
+>
+> - 副词|介词短语在句首的倒装
+>
+>   - 地点副词在句首的倒装
+>
+>     > There goes the last bus.
+>
+>   - 时间副词在句首的倒装
+>
+>     > Now comes the wolf's turn.
+>
+>   - 表运动方向的副词在句首的倒装
+>
+>     > Up went the carrots into the air.
+>
+>   - 介词短语在句首的倒装
+>
+>     > At the table set a woman.
+>
+> - 主语补语(表语)的倒装
+>
+>   > 将作表语的形容词、分词、介词短语、such等完成倒装
+>   >
+>   > 示例：
+>   >
+>   > Seated on the ground is a grounp of students.
+
+- **部分倒装**
+
+> 部分倒装分类:
+>
+> - 句首有否定意义词的倒装
+>
+>   > Never before <u>have</u> I eaten such delicious food.
+>
+> - 句首有 **only** 时的倒装
+>
+>   > Only in this way <u>can</u> we grow beautiful flowers.
+>   >
+>   > Only then <u>did</u> the rabbit meet the wolf.
+>
+> - **if... should...** 构成虚拟语气的倒装
+>
+>   > If I should win the lottery, I would buy it.(这是原句)
+>   >
+>   > <u>Should</u> I win the lottery, I would buy it.(去掉if后倒装should)
+>
+> - 固定句型中的倒装
+>
+>   > 示例:
+>   >
+>   > So was I. (我也是)
+>   >
+>   > so do I.(我也一样)
+>   >
+>   > Neither|nor can the teacher.(老师也不会)
+
+- **形式倒装**
+
+> 形式倒装分类:
+>
+> - 感叹句中的倒装
+>
+>   > What a delicious carrot it is!
+>
+> - 比较句型中的倒装
+>
+>   > The more vegetables you eat, the more healthier you become.
+>
+> - **however, whatever** ...引导让步状语从句时的倒装
+>
+>   > However long the rout is, you should stay the course.
+>
+> - **as, though** ...引导让步状语从句时的倒装
+>
+>   > Much as he likes the movie, he doesn’t want to watch it. 
 
 ---
 
@@ -677,7 +769,7 @@ B-->Bf["半元音2个 [w] [j]"]
 
 
 
-#### 形式主宾语
+#### 形式主宾表语
 
 - 动词不定式 和 动名词 可在主语的位置上, 但一般用 **It** 代替它作形式主语, 这种情况 it 叫形式主语
 
@@ -698,8 +790,20 @@ B-->Bf["半元音2个 [w] [j]"]
 > 示例:
 >
 > He pretended <u>not to see her.</u>
-> 
+>
 > He regrets <u>not joining them.</u>
+
+- 形式表语
+
+> 主系表中使用 **There + 系动词** 句式
+>
+> 示例: 
+>
+> There is a book <u>on the table.</u> (There 是形式表语, on the table 是真正的表语)
+>
+> There stands a tree <u>on the hill.</u>
+>
+> There exists no air <u>on the moon.</u>
 
 
 
@@ -1219,7 +1323,7 @@ B-->Bf["半元音2个 [w] [j]"]
 
 > 比较状语从句: 用比较的方式对主句进行补充说明
 >
-> 引导词: **then(更 ...) , as 比较级 as (同样的 ...), the 比较级 ... the 比较级(越... 就越...) **
+> 引导词: **then(更 ...) , as 比较级 as (同样的 ...), the 比较级 ... the 比较级(越... 就越...)**
 >
 > 示例:
 >
@@ -1229,7 +1333,7 @@ B-->Bf["半元音2个 [w] [j]"]
 >
 > He is <u>as smarter as I am.(me)</u>
 >
-> The more you practice, the fluent you become.
+> The more you practice, the more fluent you become.
 
 
 
