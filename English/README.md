@@ -1129,3 +1129,213 @@ B-->Bf["半元音2个 [w] [j]"]
 
 ---
 
+
+
+### 副词从句-时间状语从句
+
+> 时间状语从句: 用于补充说明动词, 形容词, 副词等, 在句中充当时间状语
+
+#### 在某一时间点之前
+
+> 引导词: **before(在 ... 之前)**
+>
+> 示例: 
+>
+> The rabbit ate a carrot at home <u>before the wolf stopped by.</u>
+>
+> <u>Before the wolf stopped by</u>, the rabbit ate a carrot at home.(需要假如逗号用于断句)
+
+#### 在某一时间点之中
+
+> 引导词: **when(强调时间点, 有突然之意), while(强调时间段内, 在 ... 时), as(强调同时, 一边...一边)**
+>
+> 示例: 
+>
+> The rabbit was eating a carrot <u>when I reached home.</u>
+>
+> The rabbit was eating a carrot <u>while I was cooking.</u>
+>
+> I ate a carrot <u>as I made the video.</u>
+
+#### 在某一时间点之后
+
+> 引导词: **after(在 ... 之后)**
+>
+> 示例: 
+>
+> The rabbit ate a carrot at home <u>after the wolf stopped by.</u>
+
+#### 从之前某一时间点开始算
+
+> 引导词: **since(暗示对之后有影响, 一般用完成时态, 自从 ... )**
+>
+> 示例:
+>
+> The rabbit has shared three carrots <u>since the wolf stopped by.</u>
+
+#### 直到之后某一时间点
+
+> 引导词: **until(像是since对立面, 直到...)**
+>
+> 示例:
+>
+> The rabbit wated <u>until the wolf stopped by.</u>
+
+#### 一 ... 就 ... 
+
+> 引导词: **as soon as(一个动作紧跟着另一个动作发生)**
+>
+> 示例:
+>
+> The rabbit will eat a cattot <u>as soon as the wolf leaves.</u>
+
+#### 下次 ...
+
+> 引导词: **the next time**
+>
+> 示例:
+>
+> The rabbit will share the biggest carrot <u>the next time the wolf stops by.</u>
+
+
+
+### 副词从句-地点状语从句
+
+> 地点副词从句: 用于直接替换主句中的地点位置
+>
+> 引导词: **where + 强调形式**
+>
+> 强调形式可替换为: wherever , everywhere , anywhere
+>
+> 示例: 
+>
+> The rabbit ate the carrot <u>where he found it.</u>(where he found it 直接作为地点, 这是地点副词从句)
+>
+> The rabbit ate the carrot *at the place* <u>where he found it.</u>(作为定语修饰place, 这是定语从句)
+
+
+
+### 副词从句-比较状语从句
+
+> 比较状语从句: 用比较的方式对主句进行补充说明
+>
+> 引导词: **then(更 ...) , as 比较级 as (同样的 ...), the 比较级 ... the 比较级(越... 就越...) **
+>
+> 示例:
+>
+> He is smarter **then me.**(其实这是一种省略)
+>
+> He is smarter **then I am.**(这是完整的比较状语从句)
+>
+> He is <u>as smarter as I am.(me)</u>
+>
+> The more you practice, the fluent you become.
+
+
+
+### 副词从句-条件状语从句
+
+> 条件状语从句: 用于提供不确定的条件来迎合主句
+>
+> 引导词: **if, unless(除非...), provided(提供...), as long as(只要...), in case(倘若...)**
+>
+> 示例: 
+>
+> <u>If I see a carrot,</u> I will eat it.(主将从现)
+>
+> <u>If I saw a carrot,</u> I would eate it.
+>
+> 从句比主句落后一个时间段, 主将从现
+
+
+
+### 副词从句-让步状语从句
+
+> 让步状语从句: 类似条件状语从句, **但进一步作出相反假设**, 即通常主语用否定
+>
+> 引导词: 
+>
+> **Even if(即使|就算...也不...),**
+>
+> **Although/though/even though(即使|虽然...但是…),**
+>
+> **no matter + 疑问词(不管...都不..., 用于未知情况)**
+>
+> 示例: 
+>
+> <u>Even if I see a carrot,</u> I will not eat it.(加了even, 主句让步为否定)
+>
+> <u>Although I saw a carrot,</u> I will not eat it. (已有从句让步主句为否定, 故主句不需要but连词)
+>
+> <u>No matter what happens</u>, I will not eat the carrot.(未知情况下的让步)
+
+
+
+### 副词从句-方式状语从句
+
+> 方式状语从句: 用于作相反的假设来修饰现在的(主句)状态
+>
+> 好像某事**发生过**的方式
+>
+> 好像某事**正在发生**的方式
+>
+> 引导词: **as if (就好像..)**
+>
+> 示例:
+>
+> I feel good <u>as if I had just eat a carrot.</u>(从句内容并没有发生, 但用于修饰主句已发生状态)
+>
+> If I had eaten a carrot, I would have felt good.(对比, 条件状语从句内容没有发生, 主句内容也没有发生)
+
+
+
+### 副词从句-原因状语从句
+
+> 原因状语从句: 作为原因补充说明主句
+>
+> 引导词: **because(因为...), since(既然... 此处的since不指时间), as(因为...此处as表原因)**
+>
+> because(明确因果, 可在主句前后) > since(众多周知, 只能在主句前引导) > as(显而易见, 只能在主句前引导)
+>
+> 注: for不可替换because, for用于构成复合句来推测上一个句子的原因
+>
+> 示例: 
+>
+> The rabbit ate the carrot <u>because he was hungry.</u>
+>
+> 用because不用so, because引导从句构成复杂句, 而so是连词用于构成复合句
+>
+> <u>Since you are hungry,</u> you can eat the carrot.
+>
+> <u>As you were not here,</u> we aet the carrot without you.
+
+
+
+### 副词从句-目的状语从句
+
+> 目的状语从句: 作为目的补充说明主句, 即主句做某事, 达到从句目的
+>
+> 引导词: **in order that, so that, in case, for fear等** 常用情态动词辅助
+>
+> 示例: 
+>
+> <u>In order that I could finish work in time,</u> I pulled an all-nighter.
+>
+> I pulled an all-nighter <u>so that I could finish work in time.</u>(等价上方句子)
+>
+> <u>In case he comes,</u> let me know.
+
+
+
+### 副词从句-结果状语从句
+
+> 结果状语从句: 类似目的状语从句, 作为结果补充说明主句, 即主句做某事, 达到从句结果
+>
+> 引导词: **so that(若有形容词, 要放在so之后, 即有so修饰, that展现结果)**
+>
+> 示例: 
+>
+> The temperature was low <u>so that the lake froze.</u>(表结果, 而不是目的)
+>
+> I ate <u>so</u> many carrots for launch <u>that I felt sick afterwards.</u>(so修饰many, that引导结果)
+
