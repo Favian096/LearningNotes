@@ -1,6 +1,6 @@
 ## 动态规划
 
-#### 1. [矩阵连乘](./matrixChain.cpp)
+#### 1. [矩阵连乘](MatrixChain.cpp)
 
 > 给定n个矩阵{A1,A2,…,An}, 其中Ai与Ai+1 是可乘的i=1,2,…n-1,
 > 考察这n个矩阵的连乘积 ： A1A2…An, 确定计算矩阵连乘积的计算次序，使数乘次数最少
@@ -14,7 +14,7 @@
 > > | (A(B(CD))) | ((AB)(CD)) |
 > > | (((AB)C)D) |            |
 
-> ![](./Assets/matrixChain.png)
+> ![](Assets/MatrixChain.png)
 
 
 
@@ -44,7 +44,7 @@
 
 
 
-#### 3. [最长公共子序列](./longestCommonSubsequence.cpp)
+#### 3. [最长公共子序列](LongestCommonSubsequence.cpp)
 
 > 子序列是源序列中删去若干元素后得到的序列
 >
@@ -79,7 +79,7 @@
 #### 5. [凸多边形最优三角划分](minWeightTriangulation.cpp)
 
 > 凸多边形即任意两定点有连线(弦)不会落在凸多边形的外部(图1)
-> ![](./Assets/minWeightTriangulation.png)
+> ![](Assets/MinWeightTriangulation.png)
 >
 > > 多边形划分为互补相交的三角形的**弦**的集合 T 中, 各弦互不相交且 T 已达到最大(任意不在 T 中的弦必与 T 中的某一弦相交), *在有 n 个定点的凸多边形的三角划分中, 恰有 n - 3 条弦和 n - 2 个三角形*
 > > 显然, 三角形权值之和 = 弦之和 + 凸多边形边权之和
