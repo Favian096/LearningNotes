@@ -28,7 +28,7 @@ add_executable(PolygonMaxima DynamicProgramming/PolygonMaxima.cpp)
 add_executable(ImageCompress DynamicProgramming/ImageCompress.cpp)
 add_executable(CircuitWiring DynamicProgramming/CircuitWiring.cpp)
 add_executable(FlowShop DynamicProgramming/FlowShop.cpp)
-add_executable(Knapsack DynamicProgramming/Knapsack.cpp)
+add_executable(Knapsack DynamicProgramming/0-1KnapsackProblem.cpp)
 add_executable(OptimalBinarySearchTree DynamicProgramming/OptimalBinarySearchTree.cpp)
 
 # 4. GreedyAlgorithm
