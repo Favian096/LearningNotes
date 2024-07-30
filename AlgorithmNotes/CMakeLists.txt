@@ -34,3 +34,4 @@ add_executable(OptimalBinarySearchTree DynamicProgramming/OptimalBinarySearchTre
 # 4. GreedyAlgorithm
 add_executable(GreedySelector GreedyAlgorithm/GreedySelector.cpp)
 add_executable(KnapsackProblem GreedyAlgorithm/KnapsackProblem.cpp)
+add_executable(OptimalLoading GreedyAlgorithm/OptimalLoading.cpp)
