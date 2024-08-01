@@ -540,6 +540,14 @@ B-->Bf["半元音2个 [w] [j]"]
   | play | palys        | playing  | played | played   |
   | have | has          | having   | had    | had      |
   | go   | goes         | going    | went   | gone     |
+  
+- **谓语动词的强调**
+
+  要强调谓语动词可以直接前面加上do|does|did, 然后把谓语动词变回原型, 
+
+  do和does表强调的是现在的动作, did强调的是过去的动作, 通常强调谓语动词不用将来时态
+
+  > The court <u>did suggest</u> that accepting favors in return for opening doors is “distasteful” and “nasty”
 
 ---
 
@@ -684,6 +692,8 @@ B-->Bf["半元音2个 [w] [j]"]
 ### 被动语态
 
 > - 如果主语是动作的承受者, 则用动词的被动语态做谓语
+>
+> - **表现时态时, 主动语态中要变幻谓语动词, 被动语态中要变幻的是 be 动词, 而不是动作所对应的词**
 >
 > - 构成 : **be + 动词的过去分词 + ... + by sb.**    若动作行为者不分明或不重要或上下文已提及, 可省略by sb.
 >
