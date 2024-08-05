@@ -1246,6 +1246,12 @@ B-->Bf["半元音2个 [w] [j]"]
 >
 > > He wants to know where the part is.
 
+#### 形式宾语
+
+> 示例: 
+>
+> That kind of activity makes <u>it</u> less likely <u>that the court is decisions will be accepted as impartial judgments.</u> 
+
 
 
 ### 名词从句-表语从句
@@ -1264,9 +1270,15 @@ B-->Bf["半元音2个 [w] [j]"]
 >
 >It seams <u>that the rabbit is hungry.</u>
 
+
+
 ### 名词从句-同位语从句
 
-> 同位语: 即用不同的方式把一个概念再说一遍, 用逗号隔开
+> 同位语: 即用不同的方式把一个概念再说一遍, 用逗号隔开, 用于解释抽象名词
+>
+> 常出现的抽象名词: 
+>
+> **idea, opinion, view, fact, evidence, qiestion, doubt, reson,  demand, theory, belief, possibility, chance, hope, contention, guarantee…**
 >
 > 示例: 示例: I love her, my wife. (句中, my wife即为her的同位语)
 >
