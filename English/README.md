@@ -1185,6 +1185,10 @@ B-->Bf["半元音2个 [w] [j]"]
   > The rabbit ate the carrot, which was on the table.(which补充the carrot状态)
   >
   > The rabbit ate the carrot, which was not surprising. (which指代整句话)
+  
+  当非限制性定语从句补充说明前面整段话, 关系词只能用 which 和 as, which和as在用法上没有区别, 主要区别在位置上: **which引导的非限制性定语从句只能位于主句后, as引导的可以在主句前, 中, 后**
+  
+  > Nevertheless, <u>as any biographer knows</u>, a person's early life and its conditions are often the greatest gift to an individual.(这里在主句前, 就只能用as)
 
 ---
 
