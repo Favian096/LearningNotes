@@ -31,7 +31,7 @@ add_executable(FlowShop DynamicProgramming/FlowShop.cpp)
 add_executable(Knapsack DynamicProgramming/0-1KnapsackProblem.cpp)
 add_executable(OptimalBinarySearchTree DynamicProgramming/OptimalBinarySearchTree.cpp)
 
-# 4. GreedyAlgorithm
+# 4. GreedyAlgorithm  chapter
 add_executable(GreedySelector GreedyAlgorithm/GreedySelector.cpp)
 add_executable(KnapsackProblem GreedyAlgorithm/KnapsackProblem.cpp)
 add_executable(OptimalLoading GreedyAlgorithm/OptimalLoading.cpp)
