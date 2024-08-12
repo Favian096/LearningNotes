@@ -604,7 +604,7 @@ L-->Li["mail"]
 >
 >   history | grap ch	表搜索历史命令中以 ch 开头的命令
 >
-> - **!command**    对history命令自下而上的匹配(最近)以command开头的命令
+> - **!command 或 !命令序号**  对history命令自下而上的匹配(最近)以command开头的命令
 >
 >   如 之前输入过python命令, 可使用 !p 实现命令自动输入(相当于输入python回车 )
 >
