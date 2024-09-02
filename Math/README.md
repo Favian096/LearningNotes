@@ -228,7 +228,9 @@ $$
 
 
 
+## 一元函数微分学的应用
 
+### 单调性和极值
 
 > ![](./Assests/063.png)
 >
@@ -236,6 +238,13 @@ $$
 >
 > ![](./Assests/065.png)
 >
+
+---
+
+
+
+### 凹凸性和拐点
+
 > ![](./Assests/066.png)
 >
 > ![](./Assests/067.png)
@@ -244,4 +253,224 @@ $$
 >
 > ![](./Assests/069.png)
 >
-> ![](./Assests/070.png)
+
+---
+
+
+
+### 重要结论
+
+> ![](./Assests/070.png) 
+>
+> ![](./Assests/071.png) 
+>
+> ![](./Assests/072.png) 
+>
+> ![](./Assests/073.png) 
+>
+> ![](./Assests/074.png) 
+>
+> ![](./Assests/075.png) 
+>
+> ![](./Assests/076.png) 
+>
+> ![](./Assests/077.png) 
+>
+> ![](./Assests/078.png) 
+>
+> ![](./Assests/079.png) 
+>
+> ![](./Assests/080.png) 
+>
+> ![](./Assests/081.png) 
+>
+> ![](./Assests/082.png) 
+>
+> ![](./Assests/083.png) 
+>
+> ![](./Assests/084.png)  
+>
+> ![](./Assests/085.png) 
+>
+> ![](./Assests/086.png) 
+>
+> ![](./Assests/087.png) 
+>
+> ![](./Assests/088.png) 
+>
+> ![](./Assests/089.png) 
+>
+> ![](./Assests/090.png) 
+>
+> ![](./Assests/091.png) 
+>
+> ![](./Assests/092.png) 
+>
+> ![](./Assests/093.png) 
+>
+> ![](./Assests/094.png) 
+>
+> ![](./Assests/095.png) 
+>
+> ![](./Assests/096.png) 
+>
+> ![](./Assests/097.png) 
+>
+> ![](./Assests/098.png) 
+>
+> ![](./Assests/099.png) 
+>
+> ![](./Assests/100.png) 
+>
+> ![](./Assests/101.png) 
+>
+> ![](./Assests/102.png) 
+>
+> ![](./Assests/103.png) 
+>
+> ![](./Assests/104.png) 
+>
+> ![](./Assests/105.png) 
+>
+> ![](./Assests/106.png) 
+>
+> ![](./Assests/107.png) 
+>
+> ![](./Assests/108.png) 
+>
+> ![](./Assests/109.png) 
+>
+> ![](./Assests/110.png) 
+>
+> ![](./Assests/111.png) 
+>
+> ![](./Assests/112.png) 
+>
+> ![](./Assests/113.png) 
+>
+> ![](./Assests/114.png) 
+>
+> ![](./Assests/115.png) 
+>
+> ![](./Assests/116.png) 
+>
+> ![](./Assests/117.png) 
+>
+> ![](./Assests/118.png) 
+>
+> ![](./Assests/119.png) 
+>
+> ![](./Assests/120.png) 
+>
+> ![](./Assests/121.png) 
+>
+> ![](./Assests/122.png) 
+>
+> ![](./Assests/123.png) 
+>
+> ![](./Assests/124.png) 
+>
+> ![](./Assests/125.png) 
+>
+> ![](./Assests/126.png) 
+>
+> ![](./Assests/127.png) 
+>
+> ![](./Assests/128.png) 
+>
+> ![](./Assests/129.png) 
+>
+> ![](./Assests/130.png) 
+>
+> ![](./Assests/131.png) 
+>
+> ![](./Assests/132.png) 
+>
+> ![](./Assests/133.png) 
+>
+> ![](./Assests/134.png) 
+>
+> ![](./Assests/135.png) 
+>
+> ![](./Assests/136.png) 
+>
+> ![](./Assests/137.png) 
+>
+> ![](./Assests/138.png) 
+>
+> ![](./Assests/139.png) 
+>
+> ![](./Assests/140.png) 
+>
+> ![](./Assests/141.png) 
+>
+> ![](./Assests/142.png) 
+>
+> ![](./Assests/143.png) 
+>
+> ![](./Assests/144.png) 
+>
+> ![](./Assests/145.png) 
+>
+> ![](./Assests/146.png) 
+>
+> ![](./Assests/147.png) 
+>
+> ![](./Assests/148.png) 
+>
+> ![](./Assests/149.png) 
+>
+> ![](./Assests/150.png) 
+>
+> ![](./Assests/151.png) 
+>
+> ![](./Assests/152.png) 
+>
+> ![](./Assests/153.png) 
+>
+> ![](./Assests/154.png) 
+>
+> ![](./Assests/155.png) 
+>
+> ![](./Assests/156.png) 
+>
+> ![](./Assests/157.png) 
+>
+> ![](./Assests/158.png) 
+>
+> ![](./Assests/159.png) 
+>
+> ![](./Assests/160.png) 
+>
+> ![](./Assests/161.png) 
+>
+> ![](./Assests/162.png) 
+>
+> ![](./Assests/163.png) 
+>
+> ![](./Assests/164.png) 
+>
+> ![](./Assests/165.png) 
+>
+> ![](./Assests/166.png) 
+>
+> ![](./Assests/167.png) 
+>
+> ![](./Assests/168.png) 
+>
+> ![](./Assests/169.png) 
+>
+> ![](./Assests/170.png) 
+>
+> ![](./Assests/171.png) 
+>
+> ![](./Assests/172.png) 
+>
+> ![](./Assests/173.png) 
+>
+> ![](./Assests/174.png) 
+>
+> ![](./Assests/175.png) 
+>
+> ![](./Assests/176.png) 
+
