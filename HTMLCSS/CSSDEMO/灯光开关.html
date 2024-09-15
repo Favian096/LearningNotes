@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch light</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* 边框算在width和height里面 */
+        }
+        
+        body {
+            background: rgb(24, 27, 45);
+        }
+        
+        div.square {
+            width: 25em;
+            height: 25em;
+            border: 1px rgb(220, 220, 220) dashed;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        input[id="switch_botton"],
+        label[for="switch_botton"] {
+            cursor: pointer;
+        }
+        
+        input[id="switch_botton"] {
+            appearance: none;
+            width: 18.75em;
+            height: 9.37em;
+            background-color: rgb(59, 53, 89);
+            border-radius: 4.68em;
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            transform: translate(-50%);
+        }
+        
+        input[id="switch_botton"]::after {
+            content: '';
+            width: 8.12em;
+            height: 8.12em;
+            border-radius: 50%;
+            background-color: rgb(123, 121, 145);
+            position: absolute;
+            top: 0.62em;
+            left: 0.62em;
+            transition: all 0.3s ease 0s;
+        }
+        
+        label[for="switch_botton"] {
+            width: 0.62em;
+            height: 6.25em;
+            background-color: rgb(59, 53, 89);
+            position: absolute;
+            top: 10em;
+            left: 8em;
+            transition: all 0.3s ease 0s;
+            z-index: -1;
+        }
+        
+        label[for="switch_botton"]:after {
+            content: '';
+            width: 0.75em;
+            height: 0;
+            border-bottom: 1.56em rgb(54, 42, 147) solid;
+            border-left: 0.62em transparent solid;
+            border-right: 0.62em transparent solid;
+            position: absolute;
+            top: 5.93em;
+            left: -0.68em;
+        }
+        
+        input[id="switch_botton"]:checked::after {
+            background-color: aliceblue;
+            left: 10em;
+            box-shadow: 0 0 8.75em rgb(196, 241, 255);
+        }
+        
+        input[id="switch_botton"]:checked+label {
+            top: 11em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="square">
+        <input type="checkbox" id="switch_botton">
+        <label for="switch_botton"></label>
+    </div>
+
+</body>
+
+</html>

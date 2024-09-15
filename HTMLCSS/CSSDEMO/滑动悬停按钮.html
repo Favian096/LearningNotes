@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑动悬停按钮</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(41, 39, 44);
+        }
+        
+        a:link {
+            text-decoration: none;
+        }
+        
+        a.botton {
+            position: relative;
+            width: 200px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.5);
+            border-top: 0.5px rgba(255, 255, 255, 0.35) solid;
+            border-left: 0.5px rgba(255, 255, 255, 0.35) solid;
+            padding-left: 40px;
+            letter-spacing: 2px;
+            transition-duration: 0.5s;
+            overflow: hidden;
+        }
+        
+        a.botton:hover {
+            color: rgba(255, 255, 255, 1);
+            padding-left: 0;
+            padding-right: 40px;
+        }
+        
+        a.botton>span {
+            position: absolute;
+            background-color: rgba(6, 252, 78);
+            left: 5px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: 0.5s ease-in-out;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            color: black;
+        }
+        
+        a.botton:hover span {
+            left: calc(100% - 55px);
+        }
+        
+        a.botton::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: translatex(-170px) skewx(30deg);
+            transition: 0.75s ease-in-out;
+            z-index: 1;
+        }
+        
+        a.botton:hover::after {
+            transform: translateX(170px) skewx(30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#" class="botton">Swipe Next
+        <span>→
+        </span>
+    </a>
+</body>
+
+</html>

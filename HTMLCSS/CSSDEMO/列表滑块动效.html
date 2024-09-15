@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表滑块动效</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(43, 43, 43);
+            overflow-x: hidden;
+        }
+        
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        section h2 {
+            position: relative;
+            color: rgb(255, 255, 255);
+            font-size: 8vm;
+            font-weight: 500;
+        }
+        
+        section h2::after {
+            content: '';
+            position: absolute;
+            width: 125%;
+            height: 15%;
+            border-radius: 50px;
+            background-color: rgb(215, 215, 215);
+            left: -14%;
+            bottom: -20%;
+        }
+        
+        .container {
+            position: relative;
+            display: grid;
+            top: -200px;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 700px;
+            grid-gap: 30px;
+        }
+        
+        .container .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transition: 0.5s;
+            background: #fff;
+            border-radius: 10px;
+            top: 50vh;
+        }
+        
+        .container .box:nth-child(3n + 1) {
+            transform: translate(-400px, 0) scale(0);
+        }
+        
+        .container .box:nth-child(3n + 2) {
+            transform: translate(0, 400px) scale(0);
+        }
+        
+        .container .box:nth-child(3n + 3) {
+            transform: translate(400px, 0) scale(0);
+        }
+        
+        .container .box.active {
+            transform: translate(0, 0) scale(1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <section>
+            <h2>向上轻扫开始
+            </h2>
+        </section>
+        <div class="container"></div>
+    </main>
+
+
+</body>
+<script>
+    for (let i = 0; i < 60; i++) {
+        let box = document.createElement('div');
+        box.classList.add('box');
+        document.querySelector('.container').append(box);
+    }
+
+    let randomColorBlock = document.querySelectorAll('.box')
+
+    function addColor() {
+        randomColorBlock.forEach(e => {
+            e.style.background = randomColor();
+        })
+    }
+
+    function randomColor() {
+        let chars = "1234567890abcdef";
+        let colorLength = 6;
+        let color = "";
+
+        for (let i = 0; i < colorLength; i++) {
+            let randomColors = Math.floor(Math.random() * chars.length);
+            color += chars.substring(randomColors, randomColors + 1)
+        }
+        return '#' + color;
+    }
+
+    addColor();
+
+
+    let boxs = document.querySelectorAll('.box');
+
+    function scrollTrigger() {
+        boxs.forEach(boxxx => {
+            if (boxxx.offsetTop < window.scrollY)
+                boxxx.classList.add('active');
+            else
+                boxxx.classList.remove('active');
+        })
+    }
+
+    window.addEventListener('scroll', scrollTrigger);
+</script>
+
+</html>

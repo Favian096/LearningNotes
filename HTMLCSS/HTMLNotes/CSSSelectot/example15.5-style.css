@@ -1,0 +1,33 @@
+* {
+    margin: 50px;
+    padding: 0px;
+}
+
+p {
+    font-size: 30px;
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+p::before {
+    content: "As you can see,";
+}
+
+p::after {
+    content: url(icon.png);
+}
+
+p::selection {
+    color: rgb(122, 251, 142);
+    background-color: rgb(255, 139, 139);
+}
+
+p::first-letter {
+    color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    font-size: 100px;
+}
+
+p::first-line {
+    color: brown
+}

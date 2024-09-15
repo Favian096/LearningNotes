@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+h2 {
+    text-align: center;
+}
+
+
+/*定义标题标签居中对齐*/
+
+p1 {
+    /*定义段落标签的样式*/
+    font-size: 16px;
+    font-family: "楷体";
+    color: rgb(255, 156, 255);
+    text-decoration: underline;
+}
+
+p2 {
+    font-size: 1000%;
+    color: rgb(241, 247, 213);
+    font-family: "黑体";
+    text-align: center;
+    text-decoration: line-through;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>啊啊</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        @font-face {
+            font-family: test_font;
+            src: url(dqc.ttf);
+        }
+        
+        #banner_box {
+            width: 100%;
+            height: 285px;
+            background-color: rgb(0, 33, 77);
+            float: relative;
+            margin-top: 13px;
+            z-index: 0;
+        }
+        
+        .left_box {
+            width: 755px;
+            height: 285px;
+            background: url(pic.gif) no-repeat;
+            float: left;
+            position: absolute;
+            left: 260px;
+            z-index: 1;
+        }
+        
+        .right_box {
+            width: 245px;
+            height: 285px;
+            background: rgba(255, 255, 255, 0.2);
+            float: right;
+            position: absolute;
+            right: 276px;
+            z-index: 1;
+        }
+        
+        .left_box_content {
+            float: right;
+            position: absolute;
+            right: 50px;
+            color: aliceblue;
+            font-weight: bolder;
+            text-align: right;
+            margin-top: 70px;
+        }
+        
+        .left_box_content_p1 {
+            font-size: small;
+        }
+        
+        .left_box_content_p2 {
+            font-size: 36px;
+            font-family: test_font;
+            padding-right: 8px;
+            border-right: 5px solid #F90;
+        }
+        
+        .left_box_content_p3 {
+            padding-top: 20px;
+        }
+        
+        .left_box_content_list {
+            position: absolute;
+            right: -10px;
+        }
+        
+        .left_box_content_list>li {
+            float: left;
+            margin-right: 10px;
+            margin-top: 30px;
+        }
+        
+        .left_box_content_list>li>a {
+            display: block;
+            width: 46px;
+            height: 3px;
+            background-color: aliceblue;
+        }
+        
+        .left_box_content_list>li>a:not(.first_a) {
+            opacity: 0.5
+        }
+        
+        .right_box_content {
+            position: absolute;
+            left: 30px;
+            top: 60px;
+        }
+        
+        .right_box_content_p2,
+        .right_box_content_p1 {
+            color: aliceblue;
+            font-size: small;
+            clear: both;
+        }
+        
+        .right_box_content_p1 {
+            font-weight: bolder;
+        }
+        
+        .right_box_content_p2 {
+            font-size: 10px;
+            line-height: 25px;
+        }
+        
+        .right_box_content_list>li {
+            float: left;
+            padding: 10px 10px 20px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="banner_box">
+        <div class="left_box">
+            <div class="left_box_content">
+                <p class="left_box_content_p1">YOUDIANSHEJI</p>
+                <p class="left_box_content_p2">有点设计</p>
+                <p class="left_box_content_p3">以就业为导向<br />打造理论与实践相结合的实战型人才</p>
+                <ul class="left_box_content_list">
+                    <li>
+                        <a href="#" class="first_a"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="right_box">
+            <div class="right_box_content">
+                <p class="right_box_content_p1">课程介绍<br />INTRODUCTION</p>
+                <ul class="right_box_content_list">
+                    <li>
+                        <a href="#"><img src="icon1.gif"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="icon2.gif"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="icon3.gif"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="icon4.gif"></a>
+                    </li>
+                </ul>
+                <p class="right_box_content_p2">掌握平面设计,网页设计,UI设 <br> 计,FLASH设计四门主流技术，让你 <br> 有点设计</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

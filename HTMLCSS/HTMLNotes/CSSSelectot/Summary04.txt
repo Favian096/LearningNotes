@@ -1,0 +1,65 @@
+CSS选择器：
+    复合选择器：
+        标签选择器： <p class="special">       使用  p.special {}
+            
+        后代选择器： <p><strong> </strong></p> 使用  p strong {}
+
+        并集选择器:  <h1></h1>                 使用  h1,
+                    <p></p>                         p,
+                    <p class="Q"></p>               .Q,
+                    <p id="W"></p>                  #W {}
+
+
+    属性选择器：
+        E[att^="value"]     指对att属性value 开头 的E作用(开头包含即可) 其中E可以省略 来匹配满足条件的标签
+        E[att$="value"]     指对att属性value 后缀 的E作用(后缀包含即可) 其中E可以省略 来匹配满足条件的标签
+        E[att*="value"]     指对att属性 含有 value的E作用(只要含有即可) 其中E可以省略 来匹配满足条件的标签
+
+    关系选择器(较复合选择器更精准)：
+        子元素选择器：<h1>123<em>456<strong>789</strong></em></h1>   使用h1>em>strong {}
+        兄弟选择器(使用+或者~)：
+            临近兄弟选择器(+)：使用+连接后方多个相临选择器，有相同的父元素，仅对+连接的最后一个生效，
+                                例如：p+h1+h2 {} 则只对相临的一个h2生效
+            普通兄弟选择器(~)：使用~连接同一个父类的选择器，对~连接的最后一个的所有生效(处于后方的)，
+                                例如：p~h2~h3 {} 则对同父类的 p和h2后方 的所有h3有效
+
+    结构化伪类选择器：
+        child选择器：
+            :only-child选择器：某父元素仅有一个子元素，则 子元素：only-child {} 生效，
+                                如：<h1><p></p></h1> 使用p:only-child {}
+            :first-child和:last-child选择器：分别选择父元素的第一个和最后一个子元素，
+                                如：子元素:first-child {}
+            :nth-child(n)和:nth-last-child(n)选择器：:nth-child(n)选择父元素的第n个子元素，
+                                               :nth-child(n)选择父元素的倒数第n个子元素
+
+            :nth-of-type(n)和:nth-last-of-type(n)选择器：用于匹配特定类型的第n个和倒数第n个子元素
+                                                        如：p:nth-last-of-type(2) {} 表示选择p标签中的倒数第二个
+                    注：odd 和 even 是可用于匹配下标是奇数或偶数的子元素的关键词，
+                        如：h2:nth-of-type(odd) {}对h2的所有奇数行生效
+                        除此之外，还可使用 h2:nth-of-type(2n-1) {}
+                                          h2:nth-of-type(2n) {} 实现奇数行和偶数行
+
+        :root选择器：用于匹配根标签(html)，所有的页面 均都生效
+        :not选择器：用于父类元素下的子类元素不使用这个样式，如 body *:not(h3) {} 则对body下的所有h3均不生效 
+        :empty选择器：用于选择没有子元素或者没有文本内容的，可设置背景，如 p:empty {background-color:red} (其中p可以不写)
+
+        伪元素选择器：
+            :before选择器(或::before)：用于在被选元素之前插入图片或内容
+            :after选择器(或::after)：用于在被选元素之前插入图片或内容
+                                    如：p::before {content:文字/url(路径)}
+
+            补充:
+            ::first-letter 	p::first-letter 	选择每个 <p> 元素的首字母。
+            ::first-line 	p::first-line 	    选择每个 <p> 元素的首行。
+            ::selection 	p::selection 	    选择用户选择的元素部分。
+        
+
+
+
+
+
+        
+                            
+
+
+    

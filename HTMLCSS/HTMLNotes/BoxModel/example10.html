@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>图片边框</title>
+    <style type="text/css">
+        p {
+            width: 362px;
+            height: 362px;
+            border-style: solid;
+            border-image-source: url(3.png);
+            /*设置边框图片路径*/
+            border-image-slice: 33%;
+            /*边框图像顶部、右侧、底部、左侧向内偏移量*/
+            border-image-width: 40px;
+            /*设置边框宽度*/
+            border-image-outset: 0;
+            /*设置边框图像区域超出边框量*/
+            border-image-repeat: repeat;
+            /*设置图片平铺方式*/
+        }
+        
+        h4 {
+            height: 200px;
+            width: 200px;
+            border-style: solid;
+            margin: 0 auto;
+            /* border-image: url(img.jpg) 33%/30px no-repeat; */
+            border-image-source: url(img.jpg);
+            border-image-slice: 33%;
+            border-image-width: 30px;
+            border-image-outset: 5px;
+            border-image-repeat: repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <p><br></p>
+    <h4>sdfgh</h4>
+</body>
+
+</html>

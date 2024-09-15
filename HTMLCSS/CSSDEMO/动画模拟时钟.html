@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画模拟时钟</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: rgb(173, 185, 203);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        div.clock {
+            width: 300px;
+            height: 300px;
+            background: rgb(202, 212, 226);
+            border-radius: 50px;
+            box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15), -1px -1px 10px rgba(0, 0, 0, 0.2), 15px 15px 10px rgba(255, 255, 255, 0.75) inset, -15px -15px 35px rgba(255, 255, 255, 0.55);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        div.clock::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: red;
+            box-shadow: 0 0 1px 1px rgb(255, 0, 0), 0 0 1px 3px rgb(255, 255, 255);
+            z-index: 2;
+        }
+        
+        div.numbers {
+            background-color: rgb(20, 42, 73);
+            inset: 35px;
+            /* inset 属性只作用于定位元素 */
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 5px 5px 15px rgba(20, 42, 73, 0.5), 5px 5px 5px rgba(255, 255, 255, 0.75) inset, -6px -6px 10px rgba(255, 255, 255, 0.75);
+        }
+        
+        div.numbers>span {
+            position: absolute;
+            inset: 5px;
+            text-align: center;
+            font-size: 1.25em;
+            color: #fff;
+            transform: rotate(calc(90deg * var(--i)));
+        }
+        
+        div.numbers>span>b {
+            font-weight: 600;
+            display: inline-block;
+            transform: rotate(calc(-90deg * var(--i)));
+        }
+        
+        div.numbers::before {
+            content: '';
+            inset: 35px;
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient( rgb(32, 144, 238), rgb(225, 31, 97));
+            animation: color_rotate 2s linear 0s infinite normal;
+        }
+        
+        @keyframes color_rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        div.numbers::after {
+            content: '';
+            inset: 38px;
+            position: absolute;
+            background-color: rgb(20, 42, 73);
+            border-radius: 50%;
+        }
+        
+        div.numbers>div.circle {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+        }
+        
+        div.numbers>div.circle>i {
+            position: absolute;
+            width: 3px;
+            height: 50%;
+            background-color: #fff;
+            transform-origin: bottom;
+            box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.5);
+        }
+        
+        div.numbers>div.circle#H>i {
+            width: 4px;
+            transform: scaleY(0.3);
+        }
+        
+        div.numbers>div.circle#M>i {
+            transform: scaleY(0.45);
+        }
+        
+        div.numbers>div.circle#S>i {
+            width: 2px;
+            transform: scaleY(0.55);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="numbers">
+            <span style="--i:0;"><b>12</b></span>
+            <span style="--i:1;"><b>3</b></span>
+            <span style="--i:2;"><b>6</b></span>
+            <span style="--i:3;"><b>9</b></span>
+            <div class="circle" id="H"><i></i></div>
+            <div class="circle" id="M"><i></i></div>
+            <div class="circle" id="S"><i></i></div>
+        </div>
+    </div>
+
+    <script>
+        let H = document.querySelector('#H');
+        let M = document.querySelector('#M');
+        let S = document.querySelector('#S');
+
+        setInterval(() => {
+            let day = new Date();
+            let Hr = day.getHours() * 30;
+            let Mn = day.getMinutes() * 6;
+            let Sc = day.getSeconds() * 6;
+
+            H.style.transform = `rotateZ(${Hr+(Mn/12)}deg)`
+            M.style.transform = `rotateZ(${Mn}deg)`
+            S.style.transform = `rotateZ(${Sc}deg)`
+        })
+    </script>
+
+</body>
+
+</html>

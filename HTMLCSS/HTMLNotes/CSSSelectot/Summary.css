@@ -1,0 +1,72 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(244, 250, 202);
+}
+
+h1 {
+    color: rgb(81, 147, 11);
+    padding-left: 40%;
+}
+
+h1::after {
+    content: '';
+    background-image: url(s.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+}
+
+h1::before {
+    content: "css"
+}
+
+h1::first-line {
+    text-transform: uppercase
+}
+
+h2 {
+    padding-left: 10%;
+    font-style: oblique 10deg
+}
+
+h2>p {
+    padding-left: 12%;
+}
+
+h2:nth-of-type(odd) {
+    color: rgb(12, 20, 62);
+}
+
+h2:nth-of-type(even) {
+    color: rgb(22, 8, 55);
+}
+
+h2>p {
+    font-size: large;
+    font-style: normal;
+}
+
+h2>p>span {
+    font-size: 10px;
+}
+
+span:only-child {
+    color: aqua;
+}
+
+h2>p.brother~p {
+    padding-left: 15%;
+}
+
+hr.line {
+    color: rgb(175, 215, 172);
+    margin-left: 12%;
+    width: 24%;
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>datalist元素</title>
+</head>
+
+<body>
+    <form action="#" method="post">
+        请输入用户名：<input type="text" list="namelist" />
+        <datalist id="namelist">
+            <option>admin</option>
+            <option>lucy</option>
+            <option>lily</option>
+        </datalist>
+        <input type="submit" value="提交" />
+    </form>
+    <form action="#" method="post" autocomplete="on">
+        <p>TEST</p><br>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email"><br>
+        <label for="url">URL:</label>
+        <input type="url" id="url" list="common_url"><br>
+        <datalist id="common_url">
+            <option>https://www.baidu.com</option>
+            <option>https://cn.bing.com</option>
+        </datalist>
+        <label for="tel">telephone:</label>
+        <input type="tel" id="tel"><br>
+        <label for="search">kewords:</label>
+        <input type="search" id="search"><br>
+        <label for="color">color:</label>
+        <input type="color" id="color" value="#00FFAA"><br>
+        <label for="number">number:</label>
+        <input type="number" id="number" min="10" max="100" value="45"><br>
+        <label for="range">number_range:</label>
+        <input type="range" min="0" max="1000000" value="0" step="10" id="range"><br>
+        <label for="date">date:</label>
+        <input type="date" id="date"><br>
+        <label for="month">month:</label>
+        <input type="month" id="month"><br>
+        <label for="week">week:</label>
+        <input type="week" id="week"><br>
+        <label for="time">time:</label>
+        <input type="time" id="time"><br>
+        <label for="datetime">datetime:</label>
+        <input type="datetime" id="datetime"><br>
+        <label for="datetime_host">datetime_local:</label>
+        <input type="datetime-local" id="datetime_host"><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进度条流动动画</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: rgb(23, 24, 27);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        div.loading {
+            position: relative;
+            width: 280px;
+            height: 12px;
+            border-radius: 5px;
+            background-image: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red);
+            background-size: 600%;
+            animation: loading 22s linear 0s infinite normal;
+        }
+        
+        div.loading::before {
+            content: '';
+            inset: 0px;
+            position: absolute;
+            border-radius: 5px;
+            background-image: linear-gradient(90deg, red, orange, yellow, green, blue, purple, red);
+            background-size: 600%;
+            filter: blur(20px);
+            animation: loading 20s linear 0s infinite normal;
+        }
+        
+        @keyframes loading {
+            to {
+                background-position: 600% 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading"></div>
+
+</body>
+
+</html>

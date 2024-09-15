@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆环旋转动效</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: rgb(34, 34, 34);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        div.circle_out {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 3px solid;
+            border-color: rgb(229, 168, 50) rgb(47, 51, 55);
+            transform-origin: center, center;
+            filter: blur(1px);
+            animation: circle_out_1 5s linear 0s infinite normal;
+        }
+        
+        @keyframes circle_out_1 {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+        
+        div.circle_out::before {
+            position: absolute;
+            content: '';
+            inset: 10px;
+            border-radius: 50%;
+            border: 3px solid;
+            border-color: rgb(229, 168, 50) rgb(47, 51, 55);
+            transform-origin: center, center;
+            transform: rotate(120deg);
+            filter: blur(1px);
+            animation: circle_out_2 3s linear 0s infinite normal;
+        }
+        
+        @keyframes circle_out_2 {
+            to {
+                transform: rotate(-1turn);
+            }
+        }
+        
+        div.circle_out::after {
+            position: absolute;
+            content: '';
+            inset: 23px;
+            border-radius: 50%;
+            border: 3px solid;
+            border-color: rgb(229, 168, 50) rgb(47, 51, 55);
+            transform-origin: center, center;
+            transform: rotate(60deg);
+            filter: blur(1px);
+            animation: circle_out_3 1s linear 0s infinite normal;
+        }
+        
+        @keyframes circle_out_3 {
+            to {
+                transform: rotate(1turn);
+            }
+        }
+        
+        div.circle_center {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 1px solid;
+            border-color: transparent rgb(220, 171, 72) rgb(217, 171, 80) transparent;
+        }
+        
+        div.circle_in {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            transform-origin: center center 0px;
+            border: 3px rgb(229, 168, 50) solid;
+            animation: circle_in_1 5s linear infinite normal;
+        }
+        
+        @keyframes circle_in_1 {
+            50% {
+                border: 2px rgb(229, 168, 50) dashed;
+            }
+            100% {
+                transform: translate(-50%, -50%) rotatez(360deg);
+            }
+        }
+        
+        div.circle_in::before {
+            content: '';
+            position: absolute;
+            inset: 0px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            transform-origin: center center 0px;
+            border: 3px rgb(229, 168, 50) solid;
+            animation: circle_in_2 2s linear infinite normal;
+        }
+        
+        @keyframes circle_in_2 {
+            50% {
+                border: 3px rgb(229, 168, 50) dotted;
+                opacity: 0.6;
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate3d(1, 1, 1, 360deg);
+            }
+        }
+        
+        div.circle_in::after {
+            content: '';
+            position: absolute;
+            inset: 0px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            transform-origin: center center 0px;
+            border: 3px rgb(229, 168, 50) solid;
+            animation: circle_in_3 2s linear 0s infinite normal;
+        }
+        
+        @keyframes circle_in_3 {
+            50% {
+                border: 3px rgb(229, 168, 50) dotted;
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate3d(1, -1, 1, 360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle_out">
+        <div class="circle_center"></div>
+    </div>
+    <div class="circle_in"></div>
+</body>
+
+</html>

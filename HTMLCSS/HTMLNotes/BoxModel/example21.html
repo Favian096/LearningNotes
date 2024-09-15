@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>相邻块元素垂直外边距的合并</title>
+    <style type="text/css">
+        .one {
+            width: 150px;
+            height: 150px;
+            background: #FC0;
+            margin-bottom: 20px;
+            /*定义第一个div的下外边距为20px*/
+        }
+        
+        .two {
+            width: 150px;
+            height: 150px;
+            background: #63F;
+            margin-top: 40px;
+            /*定义第二个div的上外边距为40px*/
+        }
+        
+        #j {
+            /* padding: 10px; */
+            margin: 15px;
+            margin-top: 10px;
+            width: 150px;
+            height: 150px;
+            background-color: #63F;
+        }
+        
+        #l {
+            width: 100px;
+            height: 100px;
+            background-color: #FC0;
+            margin: 200px;
+            margin-top: 100px;
+            /*最大的*/
+        }
+        
+        #y {
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">1</div>
+    <div class="two">2</div>
+    <div id="j">
+        <div id="l">001</div>
+        <div id="y">002</div>
+    </div>
+</body>
+
+</html>

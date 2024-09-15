@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>not选择器的使用</title>
+    <style type="text/css">
+        /* 不可覆盖 */
+        
+        body *:not(h3) {
+            color: orange;
+            font-size: 20px;
+            font-family: "宋体";
+        }
+        
+        h1 *:not(span) {
+            color: violet
+        }
+    </style>
+</head>
+
+<body>
+    <h3>《世界上最远的距离》</h3>
+    <h3>sdfkhskj</h3>
+    <p>世界上最远的距离</p>
+    <p>不是生与死的距离</p>
+    <p>而是我站在你面前</p>
+    <p>你却不知道我爱你...</p>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>七彩圆环loading</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(34, 34, 34);
+        }
+        
+        main {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform: rotatez(45deg);
+        }
+        
+        main::after {
+            content: 'LOADING...';
+            color: aliceblue;
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: rotatez(-45deg);
+            animation: text 5s ease 0s infinite normal;
+        }
+        
+        @keyframes text {
+            from {
+                opacity: 1;
+            }
+            60% {
+                opacity: 0;
+            }
+            80% {
+                opacity: 1;
+            }
+            85% {
+                opacity: 0;
+            }
+        }
+        
+        div {
+            position: absolute;
+            border: 5px solid;
+            border-radius: 50%;
+            animation: colorful 5s ease 0s infinite normal;
+        }
+        
+        @keyframes colorful {
+            0%,
+            100%,
+            40% {
+                transform: rotatez(0deg);
+            }
+            20% {
+                transform: rotatez(30deg);
+            }
+            80% {
+                transform: rotatez(390deg);
+            }
+        }
+        
+        div.loading_0 {
+            inset: 0px;
+            border-color: red transparent transparent red;
+            animation-delay: 0s;
+        }
+        
+        div.loading_1 {
+            inset: 14px;
+            border-color: orange transparent transparent orange;
+            animation-delay: 0.08s;
+        }
+        
+        div.loading_2 {
+            inset: 28px;
+            border-color: yellow transparent transparent yellow;
+            animation-delay: 0.16s;
+        }
+        
+        div.loading_3 {
+            inset: 42px;
+            border-color: green transparent transparent green;
+            animation-delay: 0.24s;
+        }
+        
+        div.loading_4 {
+            inset: 56px;
+            border-color: blue transparent transparent blue;
+            animation-delay: 0.32s;
+        }
+        
+        div.loading_5 {
+            inset: 70px;
+            border-color: Indigo transparent transparent indigo;
+            animation-delay: 0.4s
+        }
+        
+        div.loading_6 {
+            inset: 84px;
+            border-color: purple transparent transparent purple;
+            animation-delay: 0.48s
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="loading_0"></div>
+        <div class="loading_1"></div>
+        <div class="loading_2"></div>
+        <div class="loading_3"></div>
+        <div class="loading_4"></div>
+        <div class="loading_5"></div>
+        <div class="loading_6"></div>
+    </main>
+
+</body>
+
+</html>

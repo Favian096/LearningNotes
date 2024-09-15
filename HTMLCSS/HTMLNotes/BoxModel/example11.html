@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>box-shadow属性</title>
+    <style type="text/css">
+        .i {
+            padding: 20px;
+            /*内边距20px*/
+            border-radius: 50%;
+            /*将图像设置为圆形效果*/
+            border: 1px solid #666;
+            box-shadow: 5px 5px 10px 2px #999 inset, -5px -5px 10px 5px #999 inset;
+            /* 依次为：水平位置 垂直位置 阴影半径 拓展半径 颜色 inset或者outset */
+        }
+        
+        .test {
+            padding: 20px;
+            /* border: 1px solid rebeccapurple; */
+            border-radius: 30%;
+            box-shadow: 10px 10px 10px 0px rgb(19, 19, 19), -5px -5px 10px 0px rgb(71, 71, 71) inset, 5px -5px 10px 0px rgb(71, 71, 71) inset, -5px 5px 10px 0px rgb(71, 71, 71) inset;
+        }
+        
+        p {
+            height: 80px;
+            width: 300px;
+            padding: 10px;
+            margin: 10px;
+            box-shadow: -5px -5px 3px 1px rgba(168, 255, 249, 0.8) inset, 5px 5px 3px 1px rgba(168, 255, 249, 0.8) inset, 5px -5px 3px 1px rgba(168, 255, 249, 0.8) inset, -5px 5px 3px 1px rgba(168, 255, 249, 0.8) inset;
+            border-radius: 40px;
+            text-shadow: 5px 5px 10px rgb(130, 255, 245);
+            font-size: 50px;
+            text-align: center;
+            font-weight: 300;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="i" src="6.jpg" alt="爱护眼睛" />
+    <img class="test" src="6.jpg" alt="爱护眼睛" />
+    <p>爱护眼睛</p>
+</body>
+
+</html>

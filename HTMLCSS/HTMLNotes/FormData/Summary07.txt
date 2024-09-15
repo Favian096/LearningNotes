@@ -1,0 +1,224 @@
+表格与表单：
+    表格   
+        <table> ——> 用于定义表格的开始与结束，其内部可以放置 表格标题、表格行、单元格   <table>
+        <tr>    ——> 用于定义表格的一行，必须嵌套在<table><table />内                   <tr>
+        <td>    ——> 用于定义表格中的单元格，必须嵌套在<tr><tr />内，表示列                   <td></td>
+                                                                                            ...
+                                                                                    </tr>
+                                                                                   </table>
+        注：<td> 标签可以容纳所有的标签(甚至<table><table />)
+            表格默认边框为0，宽高根据单元格内容自适应
+        
+        <table>属性：border：设置边框
+                     cellspacing：设置单元格和单元格之间的空间
+                     cellpadding：设置单元格内容与单元格边框之间的空间
+                     width：设置表格宽度
+                     height：设置表格高度
+                     align：设置表格在网页中的水平对齐方式
+                     bgcolor：设置表格背景颜色
+                     background：设置表格背景图像(background="img.jpg")
+        <tr>属性：height：设置行高度
+                  align：设置一行内容的 水平对齐方式(left right center)
+                  valign：设置一行内容的 垂直对齐方式(top middle bottom)
+                  bgcolor:设置行背景颜色
+                  background：设置行背景图像(background="img.jpg")
+        <td>属性：width：设置单元格宽度
+                  height：设置单元格高度
+                  align：设置单元格内容的 水平对齐方式(left right center)
+                  valign：设置单元格内容的 垂直对齐方式(top middle bottom)
+                  bgcolor:设置单元格背景颜色
+                  background：设置单元格背景图像(background="img.jpg")
+                  colspan：正整数，设置单元格横跨的列数(用于合并水平方向的单元格)
+                  rowspan：正整数，设置单元格竖跨的行数(用于合并竖直方向的单元格)
+        <th>标签页：表头标签，属性与<td>相同，文本会默认加粗
+        <caption>标签：用于定义表格的标题<table><caption>标题</caption>...<table />
+                        默认会将“标题”居中在表格上方
+
+    表格结构：
+        <thead>:用于定于表格头部，位于<table><table />之间
+        <tfoot>:用于定于表格页脚，位于<table><table />之间<thead><thead />之后
+        <tbody>:用于定于表格主体，位于<table><table />之间<thead><thead />和<tfoot><tfoot />之后
+        注：一个表格只能定义 一对<thead><thead />、一对<tfoot><tfoot />，可以定义多对<tbody><tbody />
+            必须按顺序<thead><thead />  <tfoot><tfoot />  <tbody><tbody /> ，这样可以使得浏览器在收到数据前加载页脚
+            <table>
+                <caption>表格标题</caption>
+                <thead>
+                    <tr>
+                        <th>表头</th>
+                        <th>表头</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td>页脚</td>
+                    </tr>
+                    <tbody>
+                        <tr>
+                            <th>表头</th>
+                            <td>内容</td>
+                        </tr>
+                    </tbody>
+                </tfoot>
+            </table>
+
+    CSS控制表格样式：
+        边框：border：width style color
+              border-collapse：collapse (边框合并)
+                               separate (分离，默认值)
+        
+        边距：可通过padding设置<th>和<td>的内容与边框距离 
+                              <th>和<td>没有外边距margin
+            标签<tr>没有margin和padding属性
+
+        对同一行或同一列的单元格定义不一样的高度或宽度，最终取其中较大值
+    
+    表单
+        表单域
+            表单控件
+            提示信息
+
+        创建表单：<form action="url地址" method="提交方式" name="表单名">
+                    各种表单控件
+                 <form />
+
+                 action属性：服务器程序url地址，也可以是邮箱(action=mailto:1978699474@qq.com)
+                 method属性：设置表单数据的提交方式
+                                            get  一次性传输全部数据，有数据量限制，保密性差，会将提交的数据显示在地址栏中
+                                            post 分段式传输全部数据，无数据量限制，保密性好
+                 name属性：表单的名称
+        
+        表单控件：
+            input控件：<input type="属性值">
+                常用属性
+                    name：控件名称
+                    value：默认文本值
+                    size：正整数         input控件的显示宽度
+                    readonly：readonly  设置为只读
+                    disabled：disabled  第一次加载页面时禁用控件(显示为灰色)
+                    checked：checked    定义选择控件默认被选中的项
+                    maxlength：正整数    允许输入的最多字符数
+                    type：text      单行文本输入
+                          password  密码输入(内容显示为圆点)
+                          radio     单选按钮(同一组选项要有相同的name)
+                          checkbox  复选框
+                          button    普通按钮
+                          submit    提交按钮(应用value属性可以更改按钮文字)
+                          reset     重置按钮(应用value属性可以更改按钮文字)
+                          image     引入图像提交按钮 <input type="image" src="login.gif" />
+                          file      文件域
+                          hidden    隐藏域(对用户不可见)
+                <label>标签： 
+                    <label> 标签为 input 元素定义标注，当用户选择该标签时，浏览器就会自动将焦点转到和标签相关的表单控件上。
+                        标签的 for 属性应当与相关元素的 id 属性相同。
+                    <label for="male">Male</label>
+                    <input type="radio" name="sex" id="male" />
+
+            textarea控件：提供大量文本的输入
+                常用属性
+                    cols：正整数    每行的字符数
+                    rows：正整数    显示的行数
+                    name：控件名称
+                    readonly：readonly 设置控件内容只读
+                    disabled：disabled 第一次加载页面时禁用控件(显示为灰色) 无法点击使用该控件
+                                            <form action="#" method="post">
+                                            <textarea cols="60" rows="8">
+                                            </textarea>
+                                            </form>
+            
+            select控件：
+                常用属性
+                select
+                    size：正整数    指定下拉菜单的可见选项数
+                    multiple：multiple  多选功能(按住ctrl可以多选)
+                option
+                    selected    默认项
+                    value       与select的name呼应传递给后台
+                optgroup
+                    必要值label用以定义组名
+                                                <form action="#" method="post">
+                                                    <label for="selection">选择：</label>
+                                                    <select name="selection" id="selection">
+                                                        <option value="选择">-请选择-</option>
+                                                        <option value="j">j</option>
+                                                        <option value="l">L</option>
+                                                        <option value="y">Y</option>
+                                                        <optgroup label="JLY">
+                                                            <option value="j">J</option>
+                                                            <option value="l">l</option>
+                                                            <option value="y">y</option>
+                                                        </optgroup>
+                                                    </select>
+                                                </form>  
+
+    HTML5表单新属性：
+        autocomplete属性:用于form和input标签，会自动记录已输入过的内容，
+                         在下一次输入时将历史记录显示在一个下拉列表里，以实现自动输入
+            autocomplete="on"   开启功能
+            autocomplete="off"  关闭功能
+
+        novalidate="novalidate"     用于在from中取消表单验证
+
+        表单控件：
+            datalist控件：定义输入框选项列表(提示功能)
+                                            <form action="#" method="post">
+                                                <input type="text" list="name" />
+                                                <datalist id="name">
+                                                    <option>admin</option>
+                                                    <option>lucy</option>
+                                                    <option>lily</option>
+                                                </datalist>
+                                                <input type="submit" value="提交" />
+                                            </form>
+            新增input的type属性：
+                type="email"   用于验证输入框内容是否符合Email地址格式，不符合将提示错误
+                type="url"     用于验证输入框内容是否符合URL地址格式，不符合将提示错误
+                type="tel"     用于提供输入电话号码的文本框
+                type="search"  专门用于输入搜索词的输入框，会自动记录字符，输入内容后右侧会显示一个删除图标(可清除内容)
+                type="color"   实现颜色输入，默认为#000000，可以通过修改value属性更改默认颜色
+                type="number"  用于提供数字输入框，如果输入的内容不是数字或不在范围内则，右侧有调整数值上下的提示
+                               具体：value：指定输入框默认值
+                                     max：指定输入框可输入的最大值
+                                     min：指定输入框可输入的最小值
+                                     step：输入域的合法间隔，默认为1
+                type="range"   与number属性一样，由step设置每次滑动的步幅,在网页上显示为滑动条
+                type="date、month、week..." 用于日期和时间的输入
+                                date    选取 日、月、年
+                                month   选取 月、年
+                                week    选取 周、年
+                                time    选取 
+                                datetime    选取 日、月、年、小时、分钟(UTC时间)
+                                datetime-local    选取 日、月、年、小时、分钟(本地时间)
+
+            新增input属性：
+                autofocus属性：用于页面加载完成后是否自动获取焦点，相对于点击了输入框(autofocus="true"时自动获取)
+                form属性：用于控件在表单外使用，为表单form设置id，在input控件中<input type="text" form="id" />
+                            此属性目的是为了提交表单时可以将表单外的控件元素一并提交
+                list属性：配合datalist使用，list的值是datalist的id
+                multiple：用于多个值或文件的输入(multiple="true"),适用于email和file
+                          用于email时可以输入多个地址，用逗号","隔开
+                          用于file时可以选择多个文件
+                max、min、step属性：用于包含数字或日期的input输入类型限制(童number和range)
+                pattern属性：用于验证用户输入的内容是否与所定义的正则表达式相匹配(表单验证)
+                            适用于text、search、url、tel、email、password
+                placeholder属性：在输入框提供相关提示信息，获得焦点时提示信息消失(placeholder="请输入6位数字")
+                required属性：用于判断用户是否填写该输入框，(required="required")
+                                为空时不可提交表单(设置必填选项)
+
+
+
+
+
+
+                
+
+                            
+
+
+
+        
+    
+
+
+
+
+        

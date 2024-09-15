@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>魔力弹簧Loading</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: black;
+        }
+        
+        .springLoading {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            /* background-color: black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* animation: springLoading 3s ease-in-out 0s infinite; */
+        }
+        
+        .spring {
+            position: absolute;
+            width: calc(var(--i) * 25px);
+            height: calc(var(--i) * 25px);
+            border: 10px solid rgb(1, 200, 255);
+            border-radius: 50%;
+            transform: rotateX(70deg);
+            animation: springLoading 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+            box-shadow: 0 0 15px rgb(124, 124, 124), inset 0 0 15px rgb(124, 124, 124);
+        }
+        
+        @keyframes springLoading {
+            from,
+            to {
+                transform: rotateX(70deg) translateY(0px);
+                filter: hue-rotate(0deg);
+            }
+            50% {
+                transform: rotateX(70deg) translateY(35vh);
+                filter: hue-rotate(180deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="springLoading">
+        <div class="spring" style="--i:0"></div>
+        <div class="spring" style="--i:1"></div>
+        <div class="spring" style="--i:2"></div>
+        <div class="spring" style="--i:3"></div>
+        <div class="spring" style="--i:4"></div>
+        <div class="spring" style="--i:5"></div>
+        <div class="spring" style="--i:6"></div>
+        <div class="spring" style="--i:7"></div>
+        <div class="spring" style="--i:8"></div>
+        <div class="spring" style="--i:9"></div>
+        <div class="spring" style="--i:10"></div>
+    </div>
+</body>
+
+</html>

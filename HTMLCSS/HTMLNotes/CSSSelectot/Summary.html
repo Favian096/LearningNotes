@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary04html</title>
+    <link rel="stylesheet" href="Summary.css">
+</head>
+
+<body>
+    <h1>选择器总结</h1>
+    <h2>复合选择器 &#9998;
+        <p>标签选择器：p.strong{}</p>
+        <p>子选择器：h1 p{}</p>
+        <p>并集选择器：h1, h2, p, span, div{}</p>
+    </h2>
+
+    <h2>属性选择器 &#9998;
+        <p>E[att^="value"] ——>p[class^="one"] {}</p>
+        <p>E[att$="value"] ——>p[id$="strong"] {}</p>
+        <p>E[att*="value"] ——>h2[class*="hello"] {}</p>
+        <p><span>其中E可以省略...</span></p>
+    </h2>
+
+    <h2>关系选择器 &#9998;
+        <p>子选择器：h1>p>span</p>
+        <p class="brother">兄弟选择器
+            <p>临近兄弟选择器：h3+p(+span) {}</p>
+            <p>普通兄弟选择器：h1~h3~p {}</p>
+        </p>
+    </h2>
+
+    <h2>结构化选择器 &#9998;
+        <p>p:only-child {}</p>
+        <p>p:first-child {} | p:last-child {}</p>
+        <p>p:nth-child(n) {} | nth-last-child(n) {}</p>
+        <p>p:nth-of-type(n) {} | p:nth-last-of-type(n) {}</p>
+        <hr class="line">
+        <p>:root {}</p>
+        <p>body*:not(h1) {}</p>
+        <p>p:empty {}</p>
+    </h2>
+
+    <h2>伪元素选择器 &#9998;
+        <p>p::before {content:url}</p>
+        <p>p::after {}</p>
+        <p>p::first-letter {}</p>
+        <p>p::first-line {}</p>
+        <p>p::selection {}</p>
+    </h2>
+
+</body>
+
+
+</html>

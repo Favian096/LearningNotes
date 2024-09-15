@@ -1,0 +1,31 @@
+    <link href="style.css" type="text/css" rel="stylesheet" /> -->
+    外链式CSS样式，href为其路径(URL)，type/css为其后缀名，rel表关系(stylesheet表文件为样式表文件)
+    导入式(@import url())与外链式的区别在于网页加载式，
+        导入式会下载完css在进行网页加载
+        外链式会html和CSS一起加载(绝大对数网站用这个)
+
+    <!-- font属性：font-style font-weight font-size/line-height font-family 其中font-size和font-family不可省略-->
+    <!-- 在单独设置font-style时可选择：normal(正常) italic(斜体) oblique(斜体可设置倾斜角度,浏览器可能不显示) -->
+
+    /* text-shadow属性依次设置阴影的 水平距，垂直距，模糊半径，颜色 (可以连续追加)*/
+
+        三者一起使用:
+            white-space: nowrap;
+            /*强制文本不能换行*/d
+            overflow: hidden;
+            /*修剪溢出文本*/
+            text-overflow: ellipsis;
+            /*用省略标签标示被修剪的文本*/
+    
+    CSS复合选择器：
+        标签选择器：<p class="special">       使用  p.special {}
+         
+        后代选择器：<p><strong> </strong></p> 使用  p strong {}
+
+        并集选择器: <h1></h1>                 使用  h1,
+                <p></p>                            p,
+                <p class="Q"></p>                  .Q,
+                <p id="W"></p>                     #W {}
+
+    复合选择器无论有多少个后代(标签)选择器叠加，其优先级都不会高于类选择器;
+    复合选择器无论有多少个类选择器 后代选择器，其优先级都不会高于id选择器。

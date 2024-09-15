@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>子元素择器的应用</title>
+    <style type="text/css">
+        h1 strong {
+            color: red;
+            font-size: 20px;
+            font-family: "微软雅黑";
+        }
+        
+        h1>em>strong {
+            color: blue
+        }
+    </style>
+</head>
+
+<body>
+    <h1>这个<strong>知识点</strong>很<strong>重要</strong></h1>
+    <h1>123<em>456<strong>789</strong></em></h1>
+</body>
+
+</html>

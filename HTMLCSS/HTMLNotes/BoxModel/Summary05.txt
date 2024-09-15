@@ -1,0 +1,104 @@
+盒子模型：
+    border(-bottom、-top、-right、-left)属性：宽度 样式 颜色 width   style   color
+        style (none 单实solid 虚线dashed 点线dotted 双实double)
+        width (一个值为 上下左右、两个为 上下/左右、三个值为 上/左右/下)
+        color (一个值为 上下左右、两个为 上下/左右、三个值为 上/左右/下)
+        其中color可以设置为 transparent(透明)
+    
+    padding(-bottom、-top、-right、-left)属性：
+        padding (一个值为 上下左右、两个为 上下/左右、三个值为 上/左右/下)
+                 相关取值可以为 auto
+    
+    margin(-bottom、-top、-right、-left)属性：
+        margin (一个值为 上下左右、两个为 上下/左右、三个值为 上/左右/下)
+                 取值可以为 负值 (标签页重叠)   对于块元素使用 margin:0 auto 可以居中
+    背景属性：
+        background-color 和 background-image，其中后者会将前者覆盖掉
+        background-image默认会将图像进行水平和垂直平铺
+            由background-repeat:repeat(默认)
+                                no-repeat(不平铺)
+                                repeat-x(只沿 水平 平铺)
+                                repeat-y(只沿 垂直 平铺)
+            由background-position:水平参数1(left right、center、数值) 垂直参数1(left right、center、数值),水平2 垂直2
+            由background-attachment：scroll(默认值，随页面滚动)
+                                     fixed(固定，不随页面滚动)
+        复合 background:背景色    url()    是否平铺    定位    是否固定 
+                (其中不需要的可以不写)
+
+    颜色透明度：rgba(*, *, *, *) 第四个为透明度(0~1)
+               opacity：0~1     对任何的元素都有作用
+
+
+    圆角属性：
+        border-radius:左上水平，右上水平，右下水平，左下水平/左上垂直，右上垂直，右下垂直，左下垂直
+                      左上水平，右上左下水平，右下水平/左上垂直，右上左下垂直，右下垂直
+                      左上右下水平，左上右下垂直/左下右上水平，左下右上垂直
+                      水平/垂直
+            没有“/”时：四个值为 上/左/右/下、三个值为 上/左右/下、两个为 上下/左右、一个为 上下左右
+    
+    图片边框：
+        border-image：url() slice/width repeat
+            border-image-source: url(3.png);设置边框图片路径
+            border-image-slice: 33%;边框图像顶部、右侧、底部、左侧向内偏移量
+            border-image-width: 40px;设置边框宽度
+            border-image-outset: 0;设置边框图像区域超出边框量
+            border-image-repeat: repeat;设置图片平铺方式
+    
+    box阴影：
+        box-shadow:水平距 垂直距 模糊半径 拓展半径 颜色 inset或者outset(默认为outset)
+                    注：水平距 垂直距 可以为负值，拓展半径即阴影晕开的半径，默认不写ouset(写了反而出错)
+
+    渐变：
+        线性渐变：background-image: linear-gradient(**deg,起始颜色 *%,...,终止颜色 *%);  颜色1默认在bottom，颜色2默认在top
+                                                    每个颜色之后可设置一个百分比用于标注渐变位置
+        径向渐变：background-image: radial-gradient(shape at position,起始颜色,..,终止颜色)
+                                                position指圆心：bottom、top、right、left、center或者是 水平半径 垂直半径
+                                                shape：circle、ellipse、80px 50px(表示水平半径80px垂直半径px的椭圆)
+        重复渐变：background-image: repeating-linear-gradient(**deg,起始颜色 *%,...,终止颜色 *%)
+                                   repeating-radial-gradient(shape at position,起始颜色,..,终止颜色)
+                                                                根据起始到终止的百分比进行重复
+    
+    背景图像修改：
+        background-image: url(dog.png), url(bg1.png), url(bg2.png);前者图像会显示在后者的上方(实现重叠)
+        background-size: 属性值1 属性值2 
+                            注：可以只设置一个属性值表宽，另一个默认为auto 
+                            或者设置cover(强行将图像拉伸到完全覆盖区域)
+                                   contain(将图像拓展到最大尺寸，覆盖到区域内)
+        background-origin:padding-box;图像相对于padding来定位    
+                          border-box;图像相对于border来定位
+                          margin-box;图像相对于margin来定位
+                默认来说，position是相对于标签的左上角来定位的，background-origin可以改变这种方式
+        background-clip： border-box; 默认值，从边框区域向外裁剪背景
+                          padding-box;从内边距区域向外裁剪背景
+                          content-box；从内容区域向外裁剪背景
+        
+    display属性：
+        常见的块元素：<div> <h1>~<h6> <li> <p> <ul> <ol> ...                  可设置宽 高 对齐等属性 独占一行或多行
+        常见的行内元素：<span> <a> <b> <i> <s> <strong> <em> <del> <ins> ...  不可设置宽 高 对齐等属性 不独占独立区域
+                注：<img /> 和 <input /> 属于行内元素 但是可以定义width和height 又称行内块元素
+                    <div>可以嵌套<span> 但是<span>不能嵌套<div>
+
+        display：inline(将此元素显示为行内元素)
+                 block(将此元素显示为块元素)
+                 inline-block(将此元素显示为行内块元素，可设置 宽高和左右边距,定义上下边距无效, 不占独立区域)
+                 none(将此元素隐藏，相当于该元素不存在)
+        
+    块元素垂直外边距合并：
+        相邻块元素垂直外边距合并，若上面的设置margin-bottom下面的设置margin-top则取二者中较大的一个，并不会加起来
+        对于父子类块元素：如果父类块元素没有 上内边距(padding-top)和边框(border)，包括padding-top=0
+                                            则父子类上外边距会发生合并，合并后的外边距(margin)为二者中较大者
+
+        
+                          
+                    
+ 
+
+
+
+
+
+
+
+    
+    
+     

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>设置内边距</title>
+    <style type="text/css">
+        .border {
+            border: 5px solid #ccc;
+        }
+        /*为图像和段落设置边框*/
+        
+        img {
+            padding: 80px;
+            /*图像4个方向内边距相同*/
+            padding-bottom: 0;
+            /*单独设置下边距*/
+            /*上面两行代码等价于padding:80px 80px 0;*/
+        }
+        
+        p {
+            padding: 5%;
+        }
+        /*段落内边距为父元素宽度的5%*/
+        
+        body {
+            /* background-image: url(bg.jpg); */
+            background-color: rgb(210, 249, 188);
+        }
+        
+        #transparent {
+            padding: 0.3%;
+            border: 5px solid transparent;
+            position: absolute;
+            left: 40%;
+            border-radius: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="border" src="padding_in.png" alt="内边距" />
+    <p class="border">段落内边距为父元素宽度的5%。</p>
+    <p id="transparent">边框设置为透明的</p>
+</body>
+
+</html>

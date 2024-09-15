@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>font属性</title>
+    <!-- font属性：font-style font-weight font-size/line-height font-family 其中font-size和font-family不可省略-->
+    <!-- 在单独设置font-style时可选择：normal(正常) italic(斜体) oblique(斜体可设置倾斜角度,浏览器可能不显示) -->
+    <style type="text/css">
+        .one {
+            font: oblique 18px/30px "隶书";
+        }
+        
+        .two {
+            font: italic 25px/100px "隶书";
+        }
+        
+        #JLY {
+            font-style: oblique 90deg;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 100px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            color: rgb(1, 2, 21);
+        }
+    </style>
+</head>
+
+<body>
+    <p class="one">段落1：使用font属性综合设置段落文本的字体风格，字号，行高和字体。</p>
+    <p class="two">段落2：使用font属性综合设置段落文本的字体风格、字号和行高。由于省略了字体属性font-family，这时font属性不起作用。</p>
+    <p id="JLY">段落3：使用font属性分别设置字体的风格 字高 行高</p>
+</body>
+
+</html>

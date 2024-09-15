@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: repeating-radial-gradient(circle at center, #ccc, rgb(252, 117, 218) 20%, #ccc 35%)
+}
+
+#background {
+    width: 600px;
+    height: 550px;
+    background-image: repeating-radial-gradient(circle at center, rgb(49, 49, 49), #000 1%);
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 10px solid rgb(68, 68, 68);
+}
+
+.j {
+    width: 350px;
+    height: 480px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-top: 22px;
+    border-radius: 10%;
+    box-shadow: 10px 10px 10px 5px rgb(0, 0, 0);
+}
+
+.head {
+    width: 350px;
+    height: 210px;
+    background-image: url(yinyue.jpg), url(wenzi.jpg);
+    background-repeat: no-repeat;
+    background-position: top center, bottom center;
+}
+
+.j>p {
+    background-color: rgb(87, 87, 87);
+    color: aliceblue;
+    font-size: large;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 5px;
+}
+
+.sheet_end {
+    border-radius: 0 0 35px 35px;
+}
