@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <style>
+        div[class^="example"] {
+            width: 200px;
+            height: 100px;
+            margin-bottom: 60px;
+        }
+
+        div.divAnimate1 {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(0, 146, 255);
+        }
+
+        div.divAnimate2 {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(33, 215, 137);
+        }
+
+        div.divAnimate3 {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(255, 186, 71);
+        }
+
+        div.divAnimate4 {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(60, 63, 65);
+        }
+
+        button {
+            width: 60px;
+            height: 30px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<div class="example1">
+    <button id="showButton">show</button>
+    <button id="hideButton">hide</button>
+    <button id="toggleButton">toggle</button>
+    <div class="divAnimate1"></div>
+</div>
+
+<div class="example2">
+    <button id="slideDownButton">Down</button>
+    <button id="slideUpButton">Up</button>
+    <button id="slideToggleButton">Toggle</button>
+    <div class="divAnimate2"></div>
+</div>
+
+<div class="example3">
+    <button id="fadeInButton">FadeIn</button>
+    <button id="fadeOutButton">FadeOut</button>
+    <button id="fadeToggleButton">Toggle</button>
+    <button id="fadeToButton">fadeTo</button>
+    <div class="divAnimate3"></div>
+</div>
+
+<div class="example4">
+    <button id="animateButton">animate</button>
+    <button id="stopButton">stop</button>
+    <button id="finishButton">finish</button>
+    <div class="divAnimate4"></div>
+    <button id="stopToggleButton">stopToggle</button>
+    <button id="finishToggleButton">finishToggle</button>
+</div>
+
+</body>
+<script src="jquery.min.js"></script>
+<script src="basicAnimation.js"></script>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASICDOM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            height: 1300px;
+        }
+        
+        .header {
+            width: 100%;
+            height: 80px;
+            transition-duration: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #fff;
+            background: rgb(0, 169, 255);
+            position: fixed;
+            top: -80px;
+            left: 0
+        }
+        
+        div {
+            border: 1px solid rgb(0, 166, 255);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        .goTop {
+            width: 50px;
+            height: 50px;
+            transition-duration: 0.5s;
+            background-color: blueviolet;
+            font-size: 20px;
+            text-align: center;
+            line-height: 25px;
+            color: #fff;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            display: none;
+        }
+        
+        ul {
+            border: rgb(0, 0, 0) solid 1px;
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+        }
+        
+        ul>li {
+            width: 80px;
+            height: 30px;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 30px;
+        }
+        
+        li:nth-child(1) {
+            background-color: violet;
+        }
+        
+        li:nth-child(2) {
+            background-color: springgreen;
+        }
+        
+        li:nth-last-child(1) {
+            background-color: blueviolet;
+        }
+        
+        ol>li {
+            width: 260px;
+            height: 300px;
+            position: absolute;
+        }
+        
+        ol>li:nth-child(1) {
+            display: none;
+        }
+        
+        ol>li:nth-child(2) {
+            display: none;
+        }
+        
+        ol>li:nth-last-child(1) {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">BasicBOM</div>
+    <div id="view"></div>
+    <button id="buttonOnClick">按钮点击次数 : </button>
+    <button id="buttonStyle">点击修改此按钮样式</button>
+
+    <div class="goTop">回到顶部</div>
+    <hr>
+    <div class="box">
+        <label for="selectAll">全选/取消:</label>
+        <input type="checkbox" id="selectAll">
+        <hr>
+        <input type="checkbox">选项一
+        <hr>
+        <input type="checkbox">选项二
+        <hr>
+        <input type="checkbox">选项三
+        <hr>
+        <input type="checkbox">选项四
+        <hr>
+    </div>
+
+    <div class="boxSwitch">
+        <ul>
+            <li>block</li>
+            <li>block</li>
+            <li>block</li>
+        </ul>
+        <ol>
+            <li>pink</li>
+            <li>green</li>
+            <li>purple</li>
+        </ol>
+    </div>
+
+    <div class="tag">父标签</div>
+
+    <div>
+        <table>
+            <!-- 由JS渲染 -->
+        </table>
+    </div>
+
+
+
+</body>
+<script src="..\JSDOMDEMO\basicDOM.js"></script>
+
+</html>
