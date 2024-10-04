@@ -23,3 +23,7 @@
 #### 10. [Linux](./Linux/README.md)
 
 #### 11. [Math](./Math/README.md)
+
+#### 12.[ComputerNetwork](./ComputerNetwork/README.md)
+
+#### 13.[DataStructure](./DataStructure/README.md)
