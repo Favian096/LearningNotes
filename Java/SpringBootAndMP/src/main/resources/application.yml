@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/javaexperiment11studentdb?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: SWFU2021
+  main:
+    banner-mode: off
+
+
+
+#??mybaticplus ? id ????? auto
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+    banner: off
+
+server:
+  port: 8080
+
+
+
+
