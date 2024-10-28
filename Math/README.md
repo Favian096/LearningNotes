@@ -646,6 +646,9 @@ $$
 >
 > ![](./Assests/163.png) 
 >
+
+---
+
 > ![](./Assests/164.png) 
 >
 > ![](./Assests/165.png) 
@@ -654,6 +657,13 @@ $$
 >
 > ![](./Assests/167.png) 
 >
+
+---
+
+
+
+### 二重积分计算
+
 > ![](./Assests/168.png) 
 >
 > ![](./Assests/169.png) 
@@ -671,4 +681,165 @@ $$
 > ![](./Assests/175.png) 
 >
 > ![](./Assests/176.png) 
+>
+> ![](./Assests/177.png) 
+>
+> ![](./Assests/178.png) 
+>
+> ![](./Assests/179.png) 
+>
+> ![](./Assests/180.png) 
+>
+> ![](./Assests/181.png) 
+>
+> ![](./Assests/182.png) 
+>
+> ![](./Assests/183.png) 
+>
+> ![](./Assests/184.png) 
+>
+> ![](./Assests/185.png) 
+>
+> ![](./Assests/186.png) 
+>
+> ![](./Assests/187.png) 
+>
+> ![](./Assests/188.png) 
+>
+> ![](./Assests/189.png) 
+>
+> ![](./Assests/190.png) 
+>
+> ![](./Assests/191.png) 
+>
+> ![](./Assests/192.png) 
+>
+> ![](./Assests/193.png) 
+>
+> ![](./Assests/194.png) 
+>
+> ![](./Assests/195.png) 
+>
+> ![](./Assests/196.png) 
+>
+> ![](./Assests/197.png) 
+>
+> ![](./Assests/198.png) 
+>
+> ![](./Assests/199.png) 
+>
+> ![](./Assests/200.png) 
+>
+> ![](./Assests/201.png) 
+>
+> ![](./Assests/202.png) 
+>
+> ![](./Assests/203.png) 
+>
+> ![](./Assests/204.png) 
+>
+> ![](./Assests/205.png) 
+>
+> ![](./Assests/206.png) 
+>
+> ![](./Assests/207.png) 
+>
+> ![](./Assests/208.png) 
+>
+> ![](./Assests/209.png) 
+>
+> ![](./Assests/210.png) 
+>
+> ![](./Assests/211.png) 
+>
+> ![](./Assests/212.png) 
+>
+> ![](./Assests/213.png) 
+>
+> ![](./Assests/214.png) 
+>
+> ![](./Assests/215.png) 
+>
+> ![](./Assests/216.png) 
+>
+> ![](./Assests/217.png) 
+>
+> ![](./Assests/218.png) 
+>
+> ![](./Assests/219.png) 
+>
+> ![](./Assests/220.png) 
+>
+> ![](./Assests/221.png) 
+>
+> ![](./Assests/222.png) 
+>
+> ![](./Assests/223.png) 
+>
+> ![](./Assests/224.png) 
+>
+> ![](./Assests/225.png) 
+>
+> ![](./Assests/226.png) 
+>
+> ![](./Assests/227.png) 
+>
+> ![](./Assests/228.png) 
+>
+> ![](./Assests/229.png) 
+>
+> ![](./Assests/230.png) 
+>
+> ![](./Assests/231.png) 
+>
+> ![](./Assests/232.png) 
+>
+> ![](./Assests/233.png) 
+>
+> ![](./Assests/234.png) 
+>
+> ![](./Assests/235.png) 
+>
+> ![](./Assests/236.png) 
+>
+> ![](./Assests/237.png) 
+>
+> ![](./Assests/238.png) 
+>
+> ![](./Assests/239.png) 
+>
+> ![](./Assests/240.png) 
+>
+> ![](./Assests/241.png) 
+>
+> ![](./Assests/242.png) 
+>
+> ![](./Assests/243.png) 
+>
+> ![](./Assests/244.png) 
+>
+> ![](./Assests/245.png) 
+>
+> ![](./Assests/246.png) 
+>
+> ![](./Assests/247.png) 
+>
+> ![](./Assests/248.png) 
+>
+> ![](./Assests/249.png) 
+>
+> ![](./Assests/250.png) 
+>
+> ![](./Assests/251.png) 
+>
+> ![](./Assests/252.png) 
+>
+> ![](./Assests/253.png) 
+>
+> ![](./Assests/254.png) 
+>
+> ![](./Assests/255.png) 
+>
+> ![](./Assests/256.png) 
+>
 
