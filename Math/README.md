@@ -734,12 +734,26 @@ $$
 >
 > ![](./Assests/189.png) 
 >
+
+---
+
+
+
+### 微分方程应用
+
 > ![](./Assests/190.png) 
 >
 > ![](./Assests/191.png) 
 >
 > ![](./Assests/192.png) 
 >
+
+---
+
+
+
+
+
 > ![](./Assests/193.png) 
 >
 > ![](./Assests/194.png) 
