@@ -838,8 +838,15 @@ $$
 >
 > ![](./Assests/216.png) 
 >
-> ![](./Assests/217.png) 
+> ![](./Assests/217.png)
 >
+> ![](./Assests/218.png) 
+>
+> ![](./Assests/219.png) 
+>
+> ![](./Assests/220.png) 
+>
+> ![](./Assests/221.png)  
 
 ---
 
@@ -847,14 +854,6 @@ $$
 
 ### 函数展开成幂级数
 
-> ![](./Assests/218.png) 
->
-> ![](./Assests/219.png) 
->
-> ![](./Assests/220.png) 
->
-> ![](./Assests/221.png) 
->
 > ![](./Assests/222.png) 
 >
 > ![](./Assests/223.png) 
