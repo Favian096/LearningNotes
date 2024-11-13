@@ -63,4 +63,4 @@
     - [ ] align-self: 属性同align-items    ->控制子项自己在侧轴上排列方式
     - [ ] order:  [Number]    -> 控制子项自己的(前后)排列顺序, 默认为0, 数值越小越靠前
 
-![](./Asserts/display的flex属性.png)
+![](./Assets/display的flex属性.png)
