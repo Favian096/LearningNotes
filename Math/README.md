@@ -6,15 +6,15 @@
 
 ### 函数基本性质
 
-> ![001](./Assests/001.png)
+> ![001](./Assets/001.png)
 >
-> ![002](./Assests/002.png)
+> ![002](./Assets/002.png)
 >
-> ![003](./Assests/003.png)
+> ![003](./Assets/003.png)
 >
-> ![004](./Assests/004.png)
+> ![004](./Assets/004.png)
 >
-> ![](./Assests/005.png)
+> ![](./Assets/005.png)
 
 ---
 
@@ -22,15 +22,15 @@
 
 ### 函数图像
 
-> ![](./Assests/006.png)
+> ![](./Assets/006.png)
 >
-> ![](./Assests/007.png)
+> ![](./Assets/007.png)
 >
-> ![](./Assests/008.png)
+> ![](./Assets/008.png)
 >
-> ![](./Assests/009.png)
+> ![](./Assets/009.png)
 >
-> ![](./Assests/010.png)
+> ![](./Assets/010.png)
 
 ---
 
@@ -38,23 +38,23 @@
 
 ### 极限和性质
 
-> ![](./Assests/011.png)
+> ![](./Assets/011.png)
 >
-> ![](./Assests/012.png)
+> ![](./Assets/012.png)
 >
-> ![](./Assests/013.png)
+> ![](./Assets/013.png)
 >
-> ![](./Assests/014.png)
+> ![](./Assets/014.png)
 >
-> ![](./Assests/015.png)
+> ![](./Assets/015.png)
 >
-> ![](./Assests/016.png)
+> ![](./Assets/016.png)
 >
-> ![](./Assests/017.png)
+> ![](./Assets/017.png)
 >
-> ![](./Assests/018.png)
+> ![](./Assets/018.png)
 >
-> ![](./Assests/019.png)
+> ![](./Assets/019.png)
 
 ---
 
@@ -77,23 +77,23 @@ $$
     \end{aligned}
 $$
 
-> ![](./Assests/020.png)
+> ![](./Assets/020.png)
 >
-> ![](./Assests/021.png)
+> ![](./Assets/021.png)
 >
-> ![](./Assests/022.png)
+> ![](./Assets/022.png)
 >
-> ![](./Assests/023.png)
+> ![](./Assets/023.png)
 >
-> ![](./Assests/024.png)
+> ![](./Assets/024.png)
 >
-> ![](./Assests/025.png)
+> ![](./Assets/025.png)
 >
-> ![](./Assests/026.png)
+> ![](./Assets/026.png)
 >
-> ![](./Assests/027.png)
+> ![](./Assets/027.png)
 >
-> ![](./Assests/028.png)
+> ![](./Assets/028.png)
 
 ---
 
@@ -101,7 +101,7 @@ $$
 
 ### 极限计算
 
-> ![](./Assests/029.png)
+> ![](./Assets/029.png)
 >
 
 ---
@@ -110,9 +110,9 @@ $$
 
 
 
-> ![](./Assests/030.png)
+> ![](./Assets/030.png)
 >
-> ![](./Assests/031.png)
+> ![](./Assets/031.png)
 >
 
 ---
@@ -123,13 +123,13 @@ $$
 
 ### 数列概念和性质
 
-> ![](./Assests/032.png)
+> ![](./Assets/032.png)
 >
-> ![](./Assests/033.png)
+> ![](./Assets/033.png)
 >
-> ![](./Assests/034.png)
+> ![](./Assets/034.png)
 >
-> ![](./Assests/035.png)
+> ![](./Assets/035.png)
 >
 
 ---
@@ -138,21 +138,21 @@ $$
 
 ### 数列定理和准则
 
-> ![](./Assests/036.png)
+> ![](./Assets/036.png)
 >
-> ![](./Assests/037.png)
+> ![](./Assets/037.png)
 >
-> ![](./Assests/038.png)
+> ![](./Assets/038.png)
 >
-> ![](./Assests/039.png)
+> ![](./Assets/039.png)
 >
-> ![](./Assests/040.png)
+> ![](./Assets/040.png)
 >
-> ![](./Assests/041.png)
+> ![](./Assets/041.png)
 >
-> ![](./Assests/042.png)
+> ![](./Assets/042.png)
 >
-> ![](./Assests/043.png)
+> ![](./Assets/043.png)
 >
 
 ---
@@ -163,17 +163,17 @@ $$
 
 ### 导数概念
 
-> ![](./Assests/044.png)
+> ![](./Assets/044.png)
 >
-> ![](./Assests/045.png)
+> ![](./Assets/045.png)
 >
-> ![](./Assests/046.png)
+> ![](./Assets/046.png)
 >
-> ![](./Assests/047.png)
+> ![](./Assets/047.png)
 >
-> ![](./Assests/048.png)
+> ![](./Assets/048.png)
 >
-> ![](./Assests/049.png)
+> ![](./Assets/049.png)
 >
 
 ---
@@ -182,7 +182,7 @@ $$
 
 ### 一元微分概念
 
-> ![](./Assests/050.png)
+> ![](./Assets/050.png)
 
 ---
 
@@ -192,9 +192,9 @@ $$
 
 ### 求导公式和运算
 
-> ![](./Assests/051.png)
+> ![](./Assets/051.png)
 >
-> ![](./Assests/052.png)
+> ![](./Assets/052.png)
 >
 
 ---
@@ -203,25 +203,25 @@ $$
 
 ### 函 数导数的计算
 
-> ![](./Assests/053.png)
+> ![](./Assets/053.png)
 >
-> ![](./Assests/054.png)
+> ![](./Assets/054.png)
 >
-> ![](./Assests/055.png)
+> ![](./Assets/055.png)
 >
-> ![](./Assests/056.png)
+> ![](./Assets/056.png)
 >
-> ![](./Assests/057.png)
+> ![](./Assets/057.png)
 >
-> ![](./Assests/058.png)
+> ![](./Assets/058.png)
 >
-> ![](./Assests/059.png)
+> ![](./Assets/059.png)
 >
-> ![](./Assests/060.png)
+> ![](./Assets/060.png)
 >
-> ![](./Assests/061.png)
+> ![](./Assets/061.png)
 >
-> ![](./Assests/062.png)
+> ![](./Assets/062.png)
 >
 
 ---
@@ -232,11 +232,11 @@ $$
 
 ### 单调性和极值
 
-> ![](./Assests/063.png)
+> ![](./Assets/063.png)
 >
-> ![](./Assests/064.png)
+> ![](./Assets/064.png)
 >
-> ![](./Assests/065.png)
+> ![](./Assets/065.png)
 >
 
 ---
@@ -245,13 +245,13 @@ $$
 
 ### 凹凸性和拐点
 
-> ![](./Assests/066.png)
+> ![](./Assets/066.png)
 >
-> ![](./Assests/067.png)
+> ![](./Assets/067.png)
 >
-> ![](./Assests/068.png)
+> ![](./Assets/068.png)
 >
-> ![](./Assests/069.png)
+> ![](./Assets/069.png)
 >
 
 ---
@@ -260,15 +260,15 @@ $$
 
 ### 重要结论
 
-> ![](./Assests/070.png) 
+> ![](./Assets/070.png) 
 >
-> ![](./Assests/071.png) 
+> ![](./Assets/071.png) 
 >
-> ![](./Assests/072.png) 
+> ![](./Assets/072.png) 
 >
-> ![](./Assests/073.png) 
+> ![](./Assets/073.png) 
 >
-> ![](./Assests/074.png) 
+> ![](./Assets/074.png) 
 >
 
 ---
@@ -277,19 +277,19 @@ $$
 
 ### 函数曲线和作图
 
-> ![](./Assests/075.png) 
+> ![](./Assets/075.png) 
 >
-> ![](./Assests/076.png) 
+> ![](./Assets/076.png) 
 >
-> ![](./Assests/077.png) 
+> ![](./Assets/077.png) 
 >
-> ![](./Assests/078.png) 
+> ![](./Assets/078.png) 
 >
-> ![](./Assests/079.png) 
+> ![](./Assets/079.png) 
 >
-> ![](./Assests/080.png) 
+> ![](./Assets/080.png) 
 >
-> ![](./Assests/081.png) 
+> ![](./Assets/081.png) 
 >
 
 ---
@@ -300,23 +300,23 @@ $$
 
 ### 中值定理
 
-> ![](./Assests/082.png) 
+> ![](./Assets/082.png) 
 >
-> ![](./Assests/083.png) 
+> ![](./Assets/083.png) 
 >
-> ![](./Assests/084.png)  
+> ![](./Assets/084.png)  
 >
-> ![](./Assests/085.png) 
+> ![](./Assets/085.png) 
 >
-> ![](./Assests/086.png) 
+> ![](./Assets/086.png) 
 >
-> ![](./Assests/087.png) 
+> ![](./Assets/087.png) 
 >
-> ![](./Assests/088.png) 
+> ![](./Assets/088.png) 
 >
-> ![](./Assests/089.png) 
+> ![](./Assets/089.png) 
 >
-> ![](./Assests/090.png) 
+> ![](./Assets/090.png) 
 >
 
 ---
@@ -325,11 +325,11 @@ $$
 
 ### 微分等式和不等式
 
-> ![](./Assests/091.png) 
+> ![](./Assets/091.png) 
 >
-> ![](./Assests/092.png) 
+> ![](./Assets/092.png) 
 >
-> ![](./Assests/093.png) 
+> ![](./Assets/093.png) 
 >
 
 ---
@@ -338,7 +338,7 @@ $$
 
 ## 一元函数微分学的应用三
 
-> ![](./Assests/094.png) 
+> ![](./Assets/094.png) 
 
 ---
 
@@ -348,7 +348,7 @@ $$
 
 ### 不定积分
 
-> ![](./Assests/095.png) 
+> ![](./Assets/095.png) 
 >
 
 ---
@@ -357,13 +357,13 @@ $$
 
 ### 定积分
 
-> ![](./Assests/096.png) 
+> ![](./Assets/096.png) 
 >
-> ![](./Assests/097.png) 
+> ![](./Assets/097.png) 
 >
-> ![](./Assests/098.png) 
+> ![](./Assets/098.png) 
 >
-> ![](./Assests/099.png) 
+> ![](./Assets/099.png) 
 >
 
 ---
@@ -372,7 +372,7 @@ $$
 
 ### 变限积分
 
-> ![](./Assests/100.png) 
+> ![](./Assets/100.png) 
 >
 
 ---
@@ -381,13 +381,13 @@ $$
 
 ### 反常积分
 
-> ![](./Assests/101.png) 
+> ![](./Assets/101.png) 
 >
-> ![](./Assests/102.png) 
+> ![](./Assets/102.png) 
 >
-> ![](./Assests/103.png) 
+> ![](./Assets/103.png) 
 >
-> ![](./Assests/104.png) 
+> ![](./Assets/104.png) 
 >
 
 ---
@@ -398,7 +398,7 @@ $$
 
 ### 基本积分公式
 
-> ![](./Assests/105.png) 
+> ![](./Assets/105.png) 
 >
 
 ---
@@ -407,17 +407,17 @@ $$
 
 ### 不定积分的积分法
 
-> ![](./Assests/106.png) 
+> ![](./Assets/106.png) 
 >
-> ![](./Assests/107.png) 
+> ![](./Assets/107.png) 
 >
-> ![](./Assests/108.png) 
+> ![](./Assets/108.png) 
 >
-> ![](./Assests/109.png) 
+> ![](./Assets/109.png) 
 >
-> ![](./Assests/110.png) 
+> ![](./Assets/110.png) 
 >
-> ![](./Assests/111.png) 
+> ![](./Assets/111.png) 
 >
 
 ---
@@ -426,13 +426,13 @@ $$
 
 ### 定积分的计算
 
-> ![](./Assests/112.png) 
+> ![](./Assets/112.png) 
 >
-> ![](./Assests/113.png) 
+> ![](./Assets/113.png) 
 >
-> ![](./Assests/114.png) 
+> ![](./Assets/114.png) 
 >
-> ![](./Assests/115.png) 
+> ![](./Assets/115.png) 
 >
 
 ---
@@ -441,17 +441,17 @@ $$
 
 ### 变限积分的计算
 
-> ![](./Assests/116.png) 
+> ![](./Assets/116.png) 
 >
-> ![](./Assests/117.png) 
+> ![](./Assets/117.png) 
 >
-> ![](./Assests/118.png) 
+> ![](./Assets/118.png) 
 >
-> ![](./Assests/119.png) 
+> ![](./Assets/119.png) 
 >
-> ![](./Assests/120.png) 
+> ![](./Assets/120.png) 
 >
-> ![](./Assests/121.png) 
+> ![](./Assets/121.png) 
 >
 
 ---
@@ -460,9 +460,9 @@ $$
 
 ### 反常积分的计算
 
-> ![](./Assests/122.png) 
+> ![](./Assets/122.png) 
 >
-> ![](./Assests/123.png) 
+> ![](./Assets/123.png) 
 >
 
 ---
@@ -473,13 +473,13 @@ $$
 
 ### 平面图形的面积
 
-> ![](./Assests/124.png) 
+> ![](./Assets/124.png) 
 >
-> ![](./Assests/125.png) 
+> ![](./Assets/125.png) 
 >
-> ![](./Assests/126.png) 
+> ![](./Assets/126.png) 
 >
-> ![](./Assests/127.png) 
+> ![](./Assets/127.png) 
 >
 
 ---
@@ -488,9 +488,9 @@ $$
 
 ### 旋转体的体积
 
-> ![](./Assests/128.png) 
+> ![](./Assets/128.png) 
 >
-> ![](./Assests/129.png) 
+> ![](./Assets/129.png) 
 >
 
 ---
@@ -499,7 +499,7 @@ $$
 
 ### 函数的平均值
 
-> ![](./Assests/130.png) 
+> ![](./Assets/130.png) 
 
 ---
 
@@ -509,7 +509,7 @@ $$
 
 #### 形心坐标公式
 
-> ![](./Assests/131.png) 
+> ![](./Assets/131.png) 
 
 ---
 
@@ -517,7 +517,7 @@ $$
 
 #### 平面曲线的弧长
 
-> ![](./Assests/132.png) 
+> ![](./Assets/132.png) 
 
 ---
 
@@ -525,7 +525,7 @@ $$
 
 #### 旋转曲面的面积(侧面积)
 
-> ![](./Assests/133.png) 
+> ![](./Assets/133.png) 
 
 ---
 
@@ -533,7 +533,7 @@ $$
 
 #### 平行截面面积为已知的立体体积
 
-> ![](./Assests/134.png) 
+> ![](./Assets/134.png) 
 
 ---
 
@@ -543,19 +543,19 @@ $$
 
 ### 积分等式
 
-> ![](./Assests/135.png) 
+> ![](./Assets/135.png) 
 >
-> ![](./Assests/136.png) 
+> ![](./Assets/136.png) 
 >
-> ![](./Assests/137.png) 
+> ![](./Assets/137.png) 
 >
-> ![](./Assests/138.png) 
+> ![](./Assets/138.png) 
 >
-> ![](./Assests/139.png) 
+> ![](./Assets/139.png) 
 >
-> ![](./Assests/140.png) 
+> ![](./Assets/140.png) 
 >
-> ![](./Assests/141.png) 
+> ![](./Assets/141.png) 
 >
 
 ---
@@ -564,7 +564,7 @@ $$
 
 ### 积分不等式
 
-> ![](./Assests/142.png) 
+> ![](./Assets/142.png) 
 >
 
 ---
@@ -573,7 +573,7 @@ $$
 
 ## 一元函数积分学应用三
 
-> ![](./Assests/143.png) 
+> ![](./Assets/143.png) 
 
 ---
 
@@ -583,23 +583,23 @@ $$
 
 ### 基本概念
 
-> ![](./Assests/144.png) 
+> ![](./Assets/144.png) 
 >
-> ![](./Assests/145.png) 
+> ![](./Assets/145.png) 
 >
-> ![](./Assests/146.png) 
+> ![](./Assets/146.png) 
 >
-> ![](./Assests/147.png) 
+> ![](./Assets/147.png) 
 >
-> ![](./Assests/148.png) 
+> ![](./Assets/148.png) 
 >
-> ![](./Assests/149.png) 
+> ![](./Assets/149.png) 
 >
-> ![](./Assests/150.png) 
+> ![](./Assets/150.png) 
 >
-> ![](./Assests/151.png) 
+> ![](./Assets/151.png) 
 >
-> ![](./Assests/152.png) 
+> ![](./Assets/152.png) 
 >
 
 ---
@@ -608,11 +608,11 @@ $$
 
 ### 多元微分法则
 
-> ![](./Assests/153.png) 
+> ![](./Assets/153.png) 
 >
-> ![](./Assests/154.png) 
+> ![](./Assets/154.png) 
 >
-> ![](./Assests/155.png) 
+> ![](./Assets/155.png) 
 >
 
 ---
@@ -621,15 +621,15 @@ $$
 
 ### 多元函数的极值和最值
 
-> ![](./Assests/156.png) 
+> ![](./Assets/156.png) 
 >
-> ![](./Assests/157.png) 
+> ![](./Assets/157.png) 
 >
-> ![](./Assests/158.png) 
+> ![](./Assets/158.png) 
 >
-> ![](./Assests/159.png) 
+> ![](./Assets/159.png) 
 >
-> ![](./Assests/160.png) 
+> ![](./Assets/160.png) 
 >
 
 ---
@@ -640,22 +640,22 @@ $$
 
 ### 概念性质对称性
 
-> ![](./Assests/161.png) 
+> ![](./Assets/161.png) 
 >
-> ![](./Assests/162.png) 
+> ![](./Assets/162.png) 
 >
-> ![](./Assests/163.png) 
+> ![](./Assets/163.png) 
 >
 
 ---
 
-> ![](./Assests/164.png) 
+> ![](./Assets/164.png) 
 >
-> ![](./Assests/165.png) 
+> ![](./Assets/165.png) 
 >
-> ![](./Assests/166.png) 
+> ![](./Assets/166.png) 
 >
-> ![](./Assests/167.png) 
+> ![](./Assets/167.png) 
 >
 
 ---
@@ -664,25 +664,25 @@ $$
 
 ### 二重积分计算
 
-> ![](./Assests/168.png) 
+> ![](./Assets/168.png) 
 >
-> ![](./Assests/169.png) 
->
-
----
-
-> ![](./Assests/170.png) 
->
-> ![](./Assests/171.png) 
->
-> ![](./Assests/172.png) 
+> ![](./Assets/169.png) 
 >
 
 ---
 
-> ![](./Assests/173.png) 
+> ![](./Assets/170.png) 
 >
-> ![](./Assests/174.png) 
+> ![](./Assets/171.png) 
+>
+> ![](./Assets/172.png) 
+>
+
+---
+
+> ![](./Assets/173.png) 
+>
+> ![](./Assets/174.png) 
 >
 
 ---
@@ -693,23 +693,23 @@ $$
 
 ### 基本概念
 
-> ![](./Assests/175.png) 
+> ![](./Assets/175.png) 
 
 ---
 
 ### 一阶微分方程求解
 
-> ![](./Assests/176.png) 
+> ![](./Assets/176.png) 
 >
-> ![](./Assests/177.png) 
+> ![](./Assets/177.png) 
 >
-> ![](./Assests/178.png) 
+> ![](./Assets/178.png) 
 >
-> ![](./Assests/179.png) 
+> ![](./Assets/179.png) 
 >
-> ![](./Assests/180.png) 
+> ![](./Assets/180.png) 
 >
-> ![](./Assests/181.png) 
+> ![](./Assets/181.png) 
 >
 
 ---
@@ -718,21 +718,21 @@ $$
 
 ### 高阶线性微分方程
 
-> ![](./Assests/182.png) 
+> ![](./Assets/182.png) 
 >
-> ![](./Assests/183.png) 
+> ![](./Assets/183.png) 
 >
-> ![](./Assests/184.png) 
+> ![](./Assets/184.png) 
 >
-> ![](./Assests/185.png) 
+> ![](./Assets/185.png) 
 >
-> ![](./Assests/186.png) 
+> ![](./Assets/186.png) 
 >
-> ![](./Assests/187.png) 
+> ![](./Assets/187.png) 
 >
-> ![](./Assests/188.png) 
+> ![](./Assets/188.png) 
 >
-> ![](./Assests/189.png) 
+> ![](./Assets/189.png) 
 >
 
 ---
@@ -741,11 +741,11 @@ $$
 
 ### 微分方程应用
 
-> ![](./Assests/190.png) 
+> ![](./Assets/190.png) 
 >
-> ![](./Assests/191.png) 
+> ![](./Assets/191.png) 
 >
-> ![](./Assests/192.png) 
+> ![](./Assets/192.png) 
 >
 
 ---
@@ -756,9 +756,9 @@ $$
 
 ### 常数项级数概念性质
 
-> ![](./Assests/193.png) 
+> ![](./Assets/193.png) 
 >
-> ![](./Assests/194.png) 
+> ![](./Assets/194.png) 
 >
 
 ---
@@ -767,21 +767,21 @@ $$
 
 ### 级数敛散性判别
 
-> ![](./Assests/195.png) 
+> ![](./Assets/195.png) 
 >
-> ![](./Assests/196.png) 
+> ![](./Assets/196.png) 
 >
-> ![](./Assests/197.png) 
+> ![](./Assets/197.png) 
 >
-> ![](./Assests/198.png) 
+> ![](./Assets/198.png) 
 >
-> ![](./Assests/199.png) 
+> ![](./Assets/199.png) 
 >
-> ![](./Assests/200.png) 
+> ![](./Assets/200.png) 
 >
-> ![](./Assests/201.png) 
+> ![](./Assets/201.png) 
 >
-> ![](./Assests/202.png) 
+> ![](./Assets/202.png) 
 >
 
 ---
@@ -790,7 +790,7 @@ $$
 
 ### 交错级数敛散性判定
 
-> ![](./Assests/203.png) 
+> ![](./Assets/203.png) 
 
 ---
 
@@ -798,11 +798,11 @@ $$
 
 ### 任意项级数敛散性判定
 
-> ![](./Assests/204.png) 
+> ![](./Assets/204.png) 
 >
-> ![](./Assests/205.png) 
+> ![](./Assets/205.png) 
 >
-> ![](./Assests/206.png) 
+> ![](./Assets/206.png) 
 >
 
 ---
@@ -811,15 +811,15 @@ $$
 
 ### 幂函数及其收敛域
 
-> ![](./Assests/207.png) 
+> ![](./Assets/207.png) 
 >
-> ![](./Assests/208.png) 
+> ![](./Assets/208.png) 
 >
-> ![](./Assests/209.png) 
+> ![](./Assets/209.png) 
 >
-> ![](./Assests/210.png) 
+> ![](./Assets/210.png) 
 >
-> ![](./Assests/211.png) 
+> ![](./Assets/211.png) 
 >
 
 ---
@@ -828,25 +828,25 @@ $$
 
 ### 幂级数求和函数
 
-> ![](./Assests/212.png) 
+> ![](./Assets/212.png) 
 >
-> ![](./Assests/213.png) 
+> ![](./Assets/213.png) 
 >
-> ![](./Assests/214.png) 
+> ![](./Assets/214.png) 
 >
-> ![](./Assests/215.png) 
+> ![](./Assets/215.png) 
 >
-> ![](./Assests/216.png) 
+> ![](./Assets/216.png) 
 >
-> ![](./Assests/217.png)
+> ![](./Assets/217.png)
 >
-> ![](./Assests/218.png) 
+> ![](./Assets/218.png) 
 >
-> ![](./Assests/219.png) 
+> ![](./Assets/219.png) 
 >
-> ![](./Assests/220.png) 
+> ![](./Assets/220.png) 
 >
-> ![](./Assests/221.png)  
+> ![](./Assets/221.png)  
 
 ---
 
@@ -854,9 +854,9 @@ $$
 
 ### 函数展开成幂级数
 
-> ![](./Assests/222.png) 
+> ![](./Assets/222.png) 
 >
-> ![](./Assests/223.png) 
+> ![](./Assets/223.png) 
 >
 
 ---
@@ -865,13 +865,13 @@ $$
 
 ### 傅里叶级数
 
-> ![](./Assests/224.png) 
+> ![](./Assets/224.png) 
 >
-> ![](./Assests/225.png) 
+> ![](./Assets/225.png) 
 >
-> ![](./Assests/226.png) 
+> ![](./Assets/226.png) 
 >
-> ![](./Assests/227.png) 
+> ![](./Assets/227.png) 
 >
 
 ---
@@ -882,11 +882,26 @@ $$
 
 ### 向量代数
 
-> ![](./Assests/228.png) 
+> ![](./Assets/228.png) 
 >
-> ![](./Assests/229.png) 
+> ![](./Assets/229.png) 
 >
-> ![](./Assests/230.png) 
+> ![](./Assets/230.png) 
+>
+
+---
+
+
+
+### 空间平面与直线
+
+> ![](./Assets/231.png) 
+>
+> ![](./Assets/232.png) 
+>
+> ![](./Assets/233.png) 
+>
+> ![](./Assets/234.png) 
 >
 
 ---
@@ -895,57 +910,49 @@ $$
 
 
 
-> ![](./Assests/231.png) 
+> ![](./Assets/235.png) 
 >
-> ![](./Assests/232.png) 
+> ![](./Assets/236.png) 
 >
-> ![](./Assests/233.png) 
+> ![](./Assets/237.png) 
 >
-> ![](./Assests/234.png) 
+> ![](./Assets/238.png) 
 >
-> ![](./Assests/235.png) 
+> ![](./Assets/239.png) 
 >
-> ![](./Assests/236.png) 
+> ![](./Assets/240.png) 
 >
-> ![](./Assests/237.png) 
+> ![](./Assets/241.png) 
 >
-> ![](./Assests/238.png) 
+> ![](./Assets/242.png) 
 >
-> ![](./Assests/239.png) 
+> ![](./Assets/243.png) 
 >
-> ![](./Assests/240.png) 
+> ![](./Assets/244.png) 
 >
-> ![](./Assests/241.png) 
+> ![](./Assets/245.png) 
 >
-> ![](./Assests/242.png) 
+> ![](./Assets/246.png) 
 >
-> ![](./Assests/243.png) 
+> ![](./Assets/247.png) 
 >
-> ![](./Assests/244.png) 
+> ![](./Assets/248.png) 
 >
-> ![](./Assests/245.png) 
+> ![](./Assets/249.png) 
 >
-> ![](./Assests/246.png) 
+> ![](./Assets/250.png) 
 >
-> ![](./Assests/247.png) 
+> ![](./Assets/251.png) 
 >
-> ![](./Assests/248.png) 
+> ![](./Assets/252.png) 
 >
-> ![](./Assests/249.png) 
+> ![](./Assets/253.png) 
 >
-> ![](./Assests/250.png) 
+> ![](./Assets/254.png) 
 >
-> ![](./Assests/251.png) 
+> ![](./Assets/255.png) 
 >
-> ![](./Assests/252.png) 
->
-> ![](./Assests/253.png) 
->
-> ![](./Assests/254.png) 
->
-> ![](./Assests/255.png) 
->
-> ![](./Assests/256.png) 
+> ![](./Assets/256.png) 
 >
 
  
