@@ -960,6 +960,8 @@ $$
 
 ## 多元函数积分学
 
+### 三重积分
+
 > ![](./Assets/250.png) 
 >
 > ![](./Assets/251.png) 
@@ -973,6 +975,141 @@ $$
 > ![](./Assets/255.png) 
 >
 > ![](./Assets/256.png) 
+>
+> ![](./Assets/257.png) 
+>
+> ![](./Assets/258.png) 
+>
+
+---
+
+
+
+### 第一型曲线积分
+
+> ![](./Assets/259.png) 
+>
+> ![](./Assets/260.png) 
+>
+> ![](./Assets/261.png) 
+>
+> ![](./Assets/262.png) 
+>
+> ![](./Assets/263.png) 
+>
+> ![](./Assets/264.png) 
+>
+> ![](./Assets/265.png) 
+>
+> ![](./Assets/266.png) 
+>
+> ![](./Assets/267.png) 
+>
+> ![](./Assets/268.png) 
+>
+> ![](./Assets/269.png) 
+>
+> ![](./Assets/270.png) 
+>
+> ![](./Assets/271.png) 
+>
+> ![](./Assets/272.png) 
+>
+> ![](./Assets/273.png) 
+>
+> ![](./Assets/274.png) 
+>
+> ![](./Assets/275.png) 
+>
+> ![](./Assets/276.png) 
+>
+> ![](./Assets/277.png) 
+>
+> ![](./Assets/278.png) 
+>
+> ![](./Assets/279.png) 
+>
+> ![](./Assets/280.png) 
+>
+> ![](./Assets/281.png) 
+>
+> ![](./Assets/282.png) 
+>
+> ![](./Assets/283.png) 
+>
+> ![](./Assets/284.png) 
+>
+> ![](./Assets/285.png) 
+>
+> ![](./Assets/286.png) 
+>
+> ![](./Assets/287.png) 
+>
+> ![](./Assets/288.png) 
+>
+> ![](./Assets/289.png) 
+>
+> ![](./Assets/290.png) 
+>
+> ![](./Assets/291.png) 
+>
+> ![](./Assets/292.png) 
+>
+> ![](./Assets/293.png) 
+>
+> ![](./Assets/294.png) 
+>
+> ![](./Assets/295.png) 
+>
+> ![](./Assets/296.png) 
+>
+> ![](./Assets/297.png) 
+>
+> ![](./Assets/298.png) 
+>
+> ![](./Assets/299.png) 
+>
+> ![](./Assets/300.png) 
+>
+> ![](./Assets/301.png) 
+>
+> ![](./Assets/302.png) 
+>
+> ![](./Assets/303.png) 
+>
+> ![](./Assets/304.png) 
+>
+> ![](./Assets/305.png) 
+>
+> ![](./Assets/306.png) 
+>
+> ![](./Assets/307.png) 
+>
+> ![](./Assets/308.png) 
+>
+> ![](./Assets/309.png) 
+>
+> ![](./Assets/310.png) 
+>
+> ![](./Assets/311.png) 
+>
+> ![](./Assets/312.png) 
+>
+> ![](./Assets/313.png) 
+>
+> ![](./Assets/314.png) 
+>
+> ![](./Assets/315.png) 
+>
+> ![](./Assets/316.png) 
+>
+> ![](./Assets/317.png) 
+>
+> ![](./Assets/318.png) 
+>
+> ![](./Assets/319.png) 
+>
+> ![](./Assets/320.png) 
 >
 
  
