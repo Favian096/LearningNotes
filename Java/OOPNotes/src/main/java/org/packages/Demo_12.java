@@ -46,7 +46,7 @@ public class Demo_12 {
          *         通过FutureTask的get方法即可获取结果*/
 
         Callable<String> c = new ThreadDemo3("继承Callable的线程-执行完成-");
-        FutureTask<String> ft = new FutureTask(c);
+        FutureTask<String> ft = new FutureTask<>(c);
         Thread td3 = new Thread(ft, "3号线程->");
         td3.start();
         System.out.println(ft.get());

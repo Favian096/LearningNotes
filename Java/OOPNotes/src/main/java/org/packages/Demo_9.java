@@ -17,7 +17,7 @@ public class Demo_9 {
 
 //            file 常用API
             /*   getAbsolutePath()   返回对象的绝对路径(字符串)
-             *   getPAath()         返回创建对象时的路径(字符串)
+             *   getPath()         返回创建对象时的路径(字符串)
              *   getName()          返回对象的名称(带后缀)
              *   getLastModified()  返回对象的最后修改时间(毫秒值)
              *   isFile() 和 isDirectory()  判断是文件还是文件夹(boolean)

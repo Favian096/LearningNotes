@@ -1,6 +1,6 @@
 # 高等数学 
 
-
+[TOC]
 
 ## 函数极限与连续
 
@@ -1080,27 +1080,10 @@ $$
 >
 > ![](./Assets/291.png) 
 >
-> ![](./Assets/292.png) 
->
-> ![](./Assets/293.png) 
->
-> ![](./Assets/294.png) 
->
-> ![](./Assets/295.png) 
->
-> ![](./Assets/296.png) 
->
-> ![](./Assets/297.png) 
->
-> ![](./Assets/298.png) 
->
-> ![](./Assets/299.png) 
->
-> ![](./Assets/300.png) 
 
 ---
 
-### ENDING .
+<center>The End.</center>
 
 ---
 

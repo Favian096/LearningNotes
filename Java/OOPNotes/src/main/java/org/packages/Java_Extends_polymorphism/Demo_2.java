@@ -9,10 +9,11 @@ public class Demo_2 {
         Students s = new Students();
         s.setName(" J ");
         s.study();
+        s.exam();
         /*  注：子类不能继承父类的构造器
          *       子类只能继承一个父类
          *       Java支持多层继承
-         *       所有的累都是object的子类*/
+         *       所有的类都是object的子类*/
 
         /*  在继承过程中，
                 严格来说子类可以继承父类的私有成员方法，但不能访问(无法直接使用)
@@ -43,7 +44,7 @@ public class Demo_2 {
          *
          *             this(参, 参...) 会调用本类构造器进行数据的初始化
          *             this() 和 super() 都必须在本类构造器的第一行,但不能同时存在
-         *                                                      (负责会多次初始化)*/
+         *                                                      (会多次初始化)*/
 
         System.out.println("-----------------");
         Students s2 = new Students("JLY", 20);

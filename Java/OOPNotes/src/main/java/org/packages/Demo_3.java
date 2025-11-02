@@ -6,6 +6,7 @@ import org.packages.Test.Test5;
 import org.packages.Test.Test6;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 
 public class Demo_3 {
@@ -109,7 +110,7 @@ public class Demo_3 {
              *   ********接口中可以有方法体***********
              *   并且该方法体必须使用default修饰(test5)     ----> 类实现用
              *   或者接口中设置私有方法(只能接口内部调用)    ----> 接口内部用
-             *   或者接口中的方法使用static修饰, 只能用接口名称调用    ----> 接口名调用
+             *   或者接口中的方法使用static修饰             ----> 接口名调用
              * */
             Test5.sleep();
 
@@ -168,7 +169,7 @@ public class Demo_3 {
 //            API---------object 和 objects详见JDK文档
             /*  object方法--- toString()    默认返回当前对象在堆内存中的地址(类全名@内存地址)
              *                               该方法目的是为了让子类重写, 以此返回对象的内容
-             *                toString()    默认比较两个对象在堆内存中的地址(返回boolean)
+             *                equals()    默认比较两个对象在堆内存中的地址(返回boolean)
              *                               该方法目的是为了让子类重写, 以此比较两个对象的内容
              *              重写可以直接 右键 生成即可
              *
@@ -219,7 +220,7 @@ public class Demo_3 {
             System.out.println(a_new.add(b_new));
             System.out.println(a_new.subtract(b_new));
             System.out.println(a_new.multiply(b_new));
-            System.out.println(a_new.divide(b_new));
+            System.out.println(a_new.divide(b_new, RoundingMode.CEILING));
             /* 传值时候优先 建立 double temp = b_new.doubleValue(); 转化为double*/
 //            除不尽时
 //            可以在divide内设置取值位数
