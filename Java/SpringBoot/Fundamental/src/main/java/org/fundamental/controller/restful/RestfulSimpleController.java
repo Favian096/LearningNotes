@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
  * 基础的RESTful 简化
  */
 
-@RestController
+@RestController // => @RequestBody + @Controller
 @RequestMapping("/simple")
 public class RestfulSimpleController {
 
@@ -30,7 +30,6 @@ public class RestfulSimpleController {
     }
 
     @RequestMapping(value = "/{id}")
-    @ResponseBody
     public String deleteUser(@PathVariable Integer id) {
         System.out.println("RESTful deleteUser... ");
         return "RESTful deleteUser... ";
