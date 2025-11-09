@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Fundamental
+  main:
+    banner-mode: off
+
+server:
+  port: 9800
+
+admin:
+  name: Favian096
+  age: 22
+  subjects: [ C, Java, Python ]

@@ -6,6 +6,223 @@
 
 ## Fundamental
 
+> - SpringBoot设计目的是用来简化Spring应用的初始搭建以及开发过程
+>
+>     以`@SrpingBootApplicatoin` 作为引导, 是程序入口
+>
+> - 依赖中 starter 依赖定义项目使用所有依赖坐标, 内含许多子依赖, 以达到减少配置的目的 
+
+
+
+### REST简介
+
+> Representational State Transfer, 表现状态转换 => 描述资源的一种访问形式(风格), 即**RESTful**
+>
+> 传统风格: 
+>
+> `http://1oca1host/user/getById?id=1`
+>
+> `http://1oca1host/user/saveUse`
+>
+> REST风格: 
+>
+> `http://localhost/user/1` 书写简化
+>
+> `http://localhost/user` 隐藏资源访问行为
+
+
+
+#### [RESTful接口](./Fundamental/src/main/java/org/fundamental/controller/restful/RestfulController.java)
+
+- SpringMVC支持 8 种请求方式, 常用GET, POST, PUT, DELETE四种:
+
+|          方法           |         主要用途          |
+| :---------------------: | :-----------------------: |
+|   `RequestMethod.GET`   |         查询资源          |
+|  `RequestMethod.POST`   |         创建资源          |
+|   `RequestMethod.PUT`   |   替换资源（整体更新）    |
+| `RequestMethod.DELETE`  |         删除资源          |
+|  `RequestMethod.PATCH`  |       部分更新资源        |
+|  `RequestMethod.HEAD`   | 获取响应头（不返回 body） |
+| `RequestMethod.OPTIONS` |    查询允许的请求方法     |
+|  `RequestMethod.TRACE`  |    回环测试（调试用）     |
+
+- 参数接收
+
+|     注解      |              用途              |
+| :-----------: | :----------------------------: |
+| @PathVariable | 接收路径参数，使用{参数名}描述 |
+| @RequestBody  |   用于接收 json 数据(应用广)   |
+| @RequestParam |    用于接收止传参或表单传参    |
+
+
+
+#### [接口简化](./Fundamental/src/main/java/org/fundamental/controller/restful/RestfulSimpleController.java)
+
+- 类注解: `@RestController`, 等同`@Controller` 与`@ResponseBody`两个注解组合功能
+
+- 方法注解: `@GetMapping`,  `@PostMapping`, `@PutMapping` , `@DeleteMapping`
+
+    需要补充的路径参数填写在注解中: `@GetMapping("/{id}")`
+
+
+
+### [基础配置](https://springdoc.cn/spring-boot/application-properties.html#appendix.application-properties)
+
+> SpringBoot 默认配置文件 application.properties, 通过键值对配置对应属性, 参考官方文档
+
+
+
+#### [配置文件](./Fundamental/src/main/resources/application.yml)
+
+- SpringBoot提供了 3 种属性配置的方式, 主要使用 yml 文件: 
+
+    **application.properties**
+
+    ```properties
+    server.port=8080
+    ```
+
+    **application.yml**
+
+    ```yml
+    server:
+        port: 8080
+    ```
+
+    **application.yaml**
+
+    ```yaml
+    server: 
+        port: 8080
+    ```
+
+    相同属性解析优先级: **properties > yml > yaml**, 若存在不同的属性则保留下来(**共存叠加**)
+
+- yml和yaml都使用yaml语法: 
+
+    - 大小写敏感
+    - 属性层级关系使用多行描述，每行结尾使用冒号结束
+    - 使用缩进表示层级关系，同层级左侧对齐，只允许使用空格（**不允许使用 Tab 键**）
+    - 属性值前面添加空格（属性名与属性值之间使用冒号+空格作为分隔）
+    - `#`表示注释
+
+    ```yaml
+    boolean: TRUE           # TRUE, True, true, FALSE, False, false均可   
+    float: 3.14             # 3.1445646e+5 支持科学计数法
+    int: 123                # 支持二进制, 八进制, 十进制, 十六进制
+    null: ~                 # 用 ~ 表示null
+    string: HelloWorld      # 字符串可以直接写
+    string2: "Hello World"  # 也可以用双引号包裹特殊字符
+    date: 2025-09-01        # 日期必须用 yyyy-MM-dd 格式
+    datetime: 2025-08-24T13:02:34+08:00 # 时间和日期间使用 T 连接, 最后用 + 连接时区    
+    ```
+
+    ```yaml
+    #数组
+    subject:
+        - C
+        - Python
+        - Java
+    user:
+        name: liulili
+        age: 16
+        subject: [C, Java, Python]
+    #对象
+    users: [{name: Favian096, age: 22}, {name: liulili, age: 16}]
+    ```
+
+    ```yaml
+    #动态解析
+    windowsPath: C:\user
+    linuxPath: /home/user
+    
+    logPath: ${windowsPath}\temp   # \t不会解析
+    #使用引号包裹的转义字符可以生效
+    logPath2: "${windowsPath}\temp"   # \t 会解析为制表符
+    ```
+
+    
+
+#### [配置读取]()
+
+- `@Value`读取单个数据，属性名引用方式:
+
+    ```Java
+    @Value("${一级属性名·二级属性名...}")
+    private String attr;
+    ```
+
+-  使用`Environment`对象读取全部属性数据
+
+- 使用`@ConfigurationProperties("属性名")`加载指定数据
+
+    1. 依据yml文件中的属性定义bean
+    2. 定义为Spring管控的bean(`@Component`)
+    3. 指定加载的数据, **注: 需要在bean内有setter方法, 否则数据将为null**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
