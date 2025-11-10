@@ -163,7 +163,125 @@
 
 
 
+### 常用框架
 
+#### [Junit](https://www.runoob.com/java/java-junit-lib.html)
+
+> Java程序最小的功能单元是方法, 单元测试就是针对最小的功能单元编写测试代码
+
+##### 使用Fixture
+
+> 在测试中, 常遇到一个对象需要初始化，测试完可能还需要清理的情况
+>
+> JUnit提供了编写测试前准备、测试后清理的固定代码, 称之为Fixture
+
+- **`@BeforeEach`和`@AfterEach`**
+
+    > 由`@BeforeEach`标记的方法, 会在每个`@Test`方法执行前执行一次
+    >
+    > 由`@AfterEach`标记的方法, 会在每个`@Test`方法执行后执行一次
+    >
+    > 二者通常用来初始化和处理**实例变量**
+    >
+    > 由于每个`@Test`都执行, 因此在各个`@Test`方法中互不影响, 因为是不同的实例
+
+- **`@BeforeAll`和`@AfterAll`**
+
+    > 由`@BeforeAll`标记的方法, 在所有`@Test`方法运行前仅运行一次
+    >
+    > 由`@AfterAll`标记的方法, 在所有`@Test`方法运行后仅运行一次
+    >
+    > `@BeforeAll`和`@AfterAll`只能标注在静态方法上, 用于初始化和处理**静态变量**
+    >
+    > 由于只执行一次, 因此在各个`@Test`方法中均是唯一实例，会影响各个`@Test`方法
+
+
+
+##### 异常测试
+
+> 对于可能抛出的异常进行测试，本身就是测试的重要环节
+
+- JUnit提供`assertThrows()`来期望捕获一个指定的异常
+
+    `assertThrows()`在捕获到指定异常时表示通过测试，
+
+    未捕获到异常，或者捕获到的异常类型不对，均表示测试失败: 
+
+```java
+@Test
+void testException() {
+    assertThrows(IllegalArgumentException.class, new Executable() {
+        @Override
+        public void execute() throws Throwable {
+            //...
+        }
+    });
+}
+
+// lambda
+@Test
+void testIllegalArgumentException() {
+    assertThrows(IllegalArgumentException.class, new Executable() {
+        @Override
+        public void execute() throws Throwable {
+            //...
+        }
+    });
+}
+```
+
+
+
+##### 条件测试
+
+> JUnit根据不同的条件注解，决定是否运行当前的`@Test`方法
+
+- **`@Disable`**
+
+    如果注释掉`@Test`，JUnit就不知道这是个测试方法，
+
+    而加上`@Disabled`，JUnit仍然识别出这是个测试方法，只是暂时不运行
+
+```java
+@Disabled
+@Test
+void testBug101() {
+    // 这个测试不会运行
+}
+
+//针对两个系统的测试方法，其中一个只能在Windows上跑，另一个只能在Mac/Linux上跑：
+@Test
+@EnabledOnOs(OS.WINDOWS)
+void testWindows() {
+    assertEquals("C:\\test.ini", config.getConfigFile("test.ini"));
+}
+@Test
+@EnabledOnOs({ OS.LINUX, OS.MAC })
+void testLinuxAndMac() {
+    assertEquals("/usr/local/test.cfg", config.getConfigFile("test.cfg"));
+}
+//只在64位系统运行: @EnabledIfSystemProperty(named = "os.arch", matches = ".*64.*")
+```
+
+
+
+#### [Lombok](https://www.quanxiaoha.com/lombok/lombok-annotations/)
+
+
+
+#### [Mybatis](https://www.cainiaoplus.com/mybatis/mybatis-tutorial.html)
+
+
+
+#### [MyBatis-plus](https://baomidou.com/getting-started/)
+
+
+
+#### [Druid](https://druid.isharkfly.com/)
+
+
+
+#### 
 
 
 
