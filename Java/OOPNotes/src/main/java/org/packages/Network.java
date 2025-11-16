@@ -3,7 +3,7 @@ package org.packages;
 import java.io.IOException;
 import java.net.InetAddress;
 
-public class Demo_15 {
+public class Network {
     public static void main(String[] args) throws IOException {
         {
 //            基础网络通信

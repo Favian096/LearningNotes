@@ -3,7 +3,7 @@ package org.packages;
 import java.io.File;
 import java.io.IOException;
 
-public class Demo_9 {
+public class FileOperate {
     public static void main(String[] args) throws IOException {
         {
             //                        File 文件操作

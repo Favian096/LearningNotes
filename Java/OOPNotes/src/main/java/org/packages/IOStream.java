@@ -2,7 +2,7 @@ package org.packages;
 
 import java.io.*;
 
-public class Demo_11 {
+public class IOStream {
     public static void main(String[] args) throws IOException {
 //        I/O流(2)
         {

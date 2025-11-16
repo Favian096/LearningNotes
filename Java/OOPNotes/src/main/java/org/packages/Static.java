@@ -3,7 +3,7 @@ package org.packages;
 import org.packages.Test.Test1;
 import org.packages.Test.Test2;
 
-public class Demo_1 {
+public class Static {
 
     public static void main(String[] args) {
 

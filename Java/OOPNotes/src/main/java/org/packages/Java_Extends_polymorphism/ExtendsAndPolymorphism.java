@@ -1,6 +1,6 @@
 package org.packages.Java_Extends_polymorphism;
 
-public class Demo_2 {
+public class ExtendsAndPolymorphism {
     public static void main(String[] args) {
 //        继承(extends), 让一个类与另一个类建立父子关系(内存中开辟另一个区域)
 //        (继承后可以使用父类公共的属性和方法)

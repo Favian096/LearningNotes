@@ -5,7 +5,7 @@ import java.util.Comparator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Demo_5 {
+public class RegularExpress {
     public static void main(String[] args) {
         {
             //        正则表达式(基本)

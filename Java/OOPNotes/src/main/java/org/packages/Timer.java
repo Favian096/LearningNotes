@@ -1,12 +1,11 @@
 package org.packages;
 
-import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class Demo_14 {
+public class Timer {
     public static void main(String[] args) {
 //        定时器(任务延时调用或周期调用技术)
         /*  实现方式:
@@ -16,7 +15,7 @@ public class Demo_14 {
                 方式2 ScheduledExecutorService(线程池原理, 弥补了Timer的缺陷)
                                         创建对象 调用方法
 */
-        Timer t1 = new Timer();
+        java.util.Timer t1 = new java.util.Timer();
         t1.schedule(new TimerTask() {
             @Override
             public void run() {

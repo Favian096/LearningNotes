@@ -4,7 +4,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
-public class Demo_12 {
+public class MultiThread {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 //        多线程
 

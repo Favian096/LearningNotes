@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Demo_7 {
+public class StreamException {
     public static void main(String[] args) {
         {
 //            不可变集合

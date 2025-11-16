@@ -4,7 +4,7 @@ package org.packages;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Demo_8 {
+public class LogBasic {
     //    创建日志对象LOGGER, 选择日志技术(导入)
     public static final Logger LOGGER = (Logger) LoggerFactory.getLogger("Demo_8.class");
 

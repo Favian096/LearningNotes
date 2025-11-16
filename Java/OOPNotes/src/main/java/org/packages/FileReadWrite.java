@@ -3,7 +3,7 @@ package org.packages;
 import java.io.*;
 import java.util.Arrays;
 
-public class Demo_10 {
+public class FileReadWrite {
     public static void main(String[] args) throws Exception {
         {
 //            编码和解码

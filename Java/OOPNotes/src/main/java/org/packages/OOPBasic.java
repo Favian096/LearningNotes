@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Arrays;
 
-public class Demo_3 {
+public class OOPBasic {
     public static void main(String[] args) {
 //        Java包
         /*  相同类下的包可以直接访问,不同包下的类需要导包:

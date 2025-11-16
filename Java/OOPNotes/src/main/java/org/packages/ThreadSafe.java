@@ -3,7 +3,7 @@ package org.packages;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Demo_13 {
+public class ThreadSafe {
     public Lock lock = new ReentrantLock();
 
     public static void main(String[] args) {
@@ -79,7 +79,7 @@ class Num {
 class ThreadDemo4 extends Thread {
     @Override
     public void run() {
-        Demo_13 d = new Demo_13();
+        ThreadSafe d = new ThreadSafe();
         d.divNum();
     }
 }

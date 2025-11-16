@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
-public class Demo_6 {
+public class CollectionMap {
     public static void main(String[] args) {
         {
             //        Lambda表达式(简化匿名内部类)
