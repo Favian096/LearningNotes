@@ -48,4 +48,25 @@
 
     
 
-#### 
+### 基本类型
+
+#### String
+
+> 字符串类型，是 Redis 中最简单的存储类型, 最大不超过512MB
+>
+> 根据字符串的格式不同, 又可以分为 3 类: 
+>
+> -  string: 普通字符串
+> - int: 整数类型, 可以做自增、自减操作
+> - float: 浮点类型, 可以做自增、自减操作
+
+- **`SET`** 添加或者修改已经存在的一个 String 类型的键值对, 可同时设置TTL, 如: `SET age 22 ex 10`
+- **`GET`** 根据 key 获取 String 类型的 value
+- **`MSET`** 批量添加多个 String 类型的键值对
+- **`MGET`** 根据多个 key 获取多个 string 类型的 value
+- **`INCR`** 一个整型的 key 自增 1
+- **`INCRBY`** 让一个整型的 key 自增并指定步长, 如: `INCRBY num 2` 让 num 自增2
+- **`INCRBYFLOAT`** 让一个浮点类型的数字自增并指定步长
+- **`SETNX`** 添加一个 string 类型的键值对，前提是这个 key 不存在，否则不执行
+- **`SETEX`** 添加一个 String 类型的键值对，并且指定有效期, 如: `SETEX name 10 Favian096`
+
