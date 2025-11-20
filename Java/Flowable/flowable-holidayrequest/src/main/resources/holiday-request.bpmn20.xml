@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://flowable.org/test" exporter="Flowable Open Source Modeler" exporterVersion="6.7.2">
+  <process id="holidayRequest" name="holiday-request" isExecutable="true">
+    <startEvent id="startEvent" name="Start" flowable:formFieldValidation="true"></startEvent>
+    <userTask id="approveTask" name="Approve or reject request" flowable:candidateGroups="managers" flowable:formFieldValidation="true"></userTask>
+    <exclusiveGateway id="decision"></exclusiveGateway>
+    <serviceTask id="externalSystemCall" name="Enter holidays in external system" flowable:class="org.flowable.CallExternalSystemDelegate"></serviceTask>
+    <userTask id="holidayApprovedTask" name="Holiday approved" flowable:assignee="${employee}" flowable:formFieldValidation="true">
+      <extensionElements>
+        <modeler:initiator-can-complete xmlns:modeler="http://flowable.org/modeler"><![CDATA[false]]></modeler:initiator-can-complete>
+      </extensionElements>
+    </userTask>
+    <serviceTask id="sendRejectionMail" name="Send out rejection email" flowable:class="org.flowable.SendRejectionMail"></serviceTask>
+    <endEvent id="approveEnd" name="Approve End"></endEvent>
+    <endEvent id="rejectEnd" name="Reject End"></endEvent>
+    <sequenceFlow id="startEvent-approveTask" sourceRef="startEvent" targetRef="approveTask"></sequenceFlow>
+    <sequenceFlow id="approveTask-decision" sourceRef="approveTask" targetRef="decision"></sequenceFlow>
+    <sequenceFlow id="decision-sendRejectionMail" sourceRef="decision" targetRef="sendRejectionMail">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${!approved}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sendRejectionMail-rejectEnd" sourceRef="sendRejectionMail" targetRef="rejectEnd"></sequenceFlow>
+    <sequenceFlow id="externalSystemCall-holidayApprovedTask" sourceRef="externalSystemCall" targetRef="holidayApprovedTask"></sequenceFlow>
+    <sequenceFlow id="holidayApprovedTask-approveEnd" sourceRef="holidayApprovedTask" targetRef="approveEnd"></sequenceFlow>
+    <sequenceFlow id="decision-externalSystemCall" sourceRef="decision" targetRef="externalSystemCall">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${approved}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_holidayRequest">
+    <bpmndi:BPMNPlane bpmnElement="holidayRequest" id="BPMNPlane_holidayRequest">
+      <bpmndi:BPMNShape bpmnElement="startEvent" id="BPMNShape_startEvent">
+        <omgdc:Bounds height="30.0" width="30.0" x="0.0" y="95.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="approveTask" id="BPMNShape_approveTask">
+        <omgdc:Bounds height="81.0" width="108.0" x="76.0" y="69.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="decision" id="BPMNShape_decision">
+        <omgdc:Bounds height="40.0" width="40.0" x="230.0" y="90.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="externalSystemCall" id="BPMNShape_externalSystemCall">
+        <omgdc:Bounds height="86.0" width="115.0" x="320.0" y="160.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="holidayApprovedTask" id="BPMNShape_holidayApprovedTask">
+        <omgdc:Bounds height="89.0" width="121.0" x="465.0" y="158.5"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sendRejectionMail" id="BPMNShape_sendRejectionMail">
+        <omgdc:Bounds height="92.0" width="108.0" x="320.0" y="0.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="approveEnd" id="BPMNShape_approveEnd">
+        <omgdc:Bounds height="28.0" width="28.0" x="615.0" y="188.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="rejectEnd" id="BPMNShape_rejectEnd">
+        <omgdc:Bounds height="28.0" width="28.0" x="505.0" y="32.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="decision-externalSystemCall" id="BPMNEdge_decision-externalSystemCall" flowable:sourceDockerX="20.0" flowable:sourceDockerY="20.0" flowable:targetDockerX="57.49999999999999" flowable:targetDockerY="43.0">
+        <omgdi:waypoint x="250.0" y="129.93928571428572"></omgdi:waypoint>
+        <omgdi:waypoint x="250.0" y="203.0"></omgdi:waypoint>
+        <omgdi:waypoint x="319.99999999993327" y="203.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="decision-sendRejectionMail" id="BPMNEdge_decision-sendRejectionMail" flowable:sourceDockerX="20.0" flowable:sourceDockerY="20.0" flowable:targetDockerX="53.99999999999999" flowable:targetDockerY="46.0">
+        <omgdi:waypoint x="250.0" y="90.0"></omgdi:waypoint>
+        <omgdi:waypoint x="250.0" y="46.0"></omgdi:waypoint>
+        <omgdi:waypoint x="319.99999999999443" y="46.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="approveTask-decision" id="BPMNEdge_approveTask-decision" flowable:sourceDockerX="54.00000000000001" flowable:sourceDockerY="40.5" flowable:targetDockerX="20.0" flowable:targetDockerY="20.0">
+        <omgdi:waypoint x="183.94999999999823" y="109.72479166666668"></omgdi:waypoint>
+        <omgdi:waypoint x="230.04166666666615" y="109.91701244813278"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sendRejectionMail-rejectEnd" id="BPMNEdge_sendRejectionMail-rejectEnd" flowable:sourceDockerX="53.99999999999999" flowable:sourceDockerY="46.0" flowable:targetDockerX="14.0" flowable:targetDockerY="14.0">
+        <omgdi:waypoint x="427.9499999999965" y="46.0"></omgdi:waypoint>
+        <omgdi:waypoint x="505.0" y="46.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="externalSystemCall-holidayApprovedTask" id="BPMNEdge_externalSystemCall-holidayApprovedTask" flowable:sourceDockerX="57.49999999999999" flowable:sourceDockerY="43.0" flowable:targetDockerX="60.50000000000001" flowable:targetDockerY="44.5">
+        <omgdi:waypoint x="434.95000000000005" y="203.0"></omgdi:waypoint>
+        <omgdi:waypoint x="465.0" y="203.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="startEvent-approveTask" id="BPMNEdge_startEvent-approveTask" flowable:sourceDockerX="15.0" flowable:sourceDockerY="15.0" flowable:targetDockerX="54.00000000000001" flowable:targetDockerY="40.5">
+        <omgdi:waypoint x="29.949861680587304" y="109.93478321209572"></omgdi:waypoint>
+        <omgdi:waypoint x="76.0" y="109.73456521739129"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="holidayApprovedTask-approveEnd" id="BPMNEdge_holidayApprovedTask-approveEnd" flowable:sourceDockerX="60.50000000000001" flowable:sourceDockerY="44.5" flowable:targetDockerX="14.0" flowable:targetDockerY="14.0">
+        <omgdi:waypoint x="585.9499999999978" y="202.41545893719805"></omgdi:waypoint>
+        <omgdi:waypoint x="615.0006373303619" y="202.13477663947404"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
