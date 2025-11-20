@@ -70,3 +70,40 @@
 - **`SETNX`** 添加一个 string 类型的键值对，前提是这个 key 不存在，否则不执行
 - **`SETEX`** 添加一个 String 类型的键值对，并且指定有效期, 如: `SETEX name 10 Favian096`
 
+
+
+#### Hash
+
+> Hash 类型, 也叫散列, 其 value 是一个无序字典(`field: value`)
+>
+> | KEY  |    VALUE     |
+> | :--: | :----------: |
+> | user | name: Favian |
+
+- **`HSET key field value`** 添加或修改 hash 类型 key 的 field 的值
+- **`HGET key field`** 获取一个 hash 类型 key 的 field 的 value 的值
+- **`HMSET`** 批量添加多个 hash 类型 key 的 field 的 value 的值
+- **`HMGET`** 批量获取多个 hash 类型 key 的 field 的 value 的值
+- **`HGETALL`** 获取一个 hash 类型的 key 中的所有的 field 和 value
+- **`HKEYS`** 获取一个 hash 类型的 key 中的所有的 field
+- **`HVALS`** 获取一个 hash 类型的 key 中的所有的 value
+- **`HINCRBY`** 让一个 hash 类型 key 的字段值自增并指定步长
+- **`HSETNX`** 添加一个 hash 类型的 key 的field 的值, 前提是这个 field 存在, 否则不执行
+
+
+
+#### List
+
+> 类似LinkedList双向链表, 支持正向反向检索
+>
+> - 有序 , 元素可重复, 插入快, 查询慢
+>
+> **基于命令原理, 可以用 List 模拟实现栈和队列 **
+
+- **`LPUSH key element...`** 向列表左侧插入一个或多个元素, 如`LPUSH names t1 t2 t3`
+- **`LPOP key`** 移除并返回列表左侧的第一个元素
+- **`RPUSH key element...`** 向列表右侧插入一个或多个元素
+- **`RPOP key`** 移除并返回列表右侧的第一个元素
+- **`LRANGE key star end`** 返回一段角标范围内的所有元素
+- **`BLPOP`** 和 **`BRPOP`** 命令 **`LPOP`** 和**`RPOP`** 类似, 在没有元素时等待指定时间(**阻塞式获取**), 不直接返回nil
+
