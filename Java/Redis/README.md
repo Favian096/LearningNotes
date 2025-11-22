@@ -94,7 +94,7 @@
 
 #### List
 
-> 类似LinkedList双向链表, 支持正向反向检索
+> 类似 LinkedList 双向链表, 支持正向反向检索
 >
 > - 有序 , 元素可重复, 插入快, 查询慢
 >
@@ -104,6 +104,47 @@
 - **`LPOP key`** 移除并返回列表左侧的第一个元素
 - **`RPUSH key element...`** 向列表右侧插入一个或多个元素
 - **`RPOP key`** 移除并返回列表右侧的第一个元素
-- **`LRANGE key star end`** 返回一段角标范围内的所有元素
+- **`LRANGE key start end`** 返回一段角标范围内的所有元素
 - **`BLPOP`** 和 **`BRPOP`** 命令 **`LPOP`** 和**`RPOP`** 类似, 在没有元素时等待指定时间(**阻塞式获取**), 不直接返回nil
+
+
+
+#### Set
+
+> 类似 HashSet 的结构
+>
+> - 无序, 元素不可重复, 查找快, 支持交集, 并集, 差集
+
+- **`SADD key member...`** 向 set 中添加一个或多个元素(member)
+- **`SREM key member...`** 移除 set 中的指定元素
+- **`SCARD key`** 返回 set 中的元素的个数
+- **`SISMEMBER key member`** 判读一个元素是否存在于 set 中
+- **`SMEMBERS`** 获取 set 中的所有元素
+
+- **`SINTER key1 key2...`** 获取 key1 和 key2 的交集
+- **`SDIFF key1 key2...`** 获取 key1 和 key2 的差集(即 key1 - key2 后获得的元素)
+- **`SUNION key1 key2...`** 获取 key1 和 key2 的并集
+
+
+
+#### ZSet
+
+> 可排序的 set 集合, 底层由跳表(skipList)实现, 每个元素都带有一个 score 属性, 用于实现排序
+>
+> - 可排序, 元素不重复, 查询快
+>
+> **默认 ZSet 为升序, 可将命令的 Z 改为 ZREV 即可降序, 如 `ZREVADD key score member...`**
+
+- **`ZADD key score member...`** 添加一个或多个元素到 ZSet, 存在则更新
+- **`ZREM key member`** 移除 Zset 中的指定元素
+- **`ZSCORE key member`** 获取 ZSet 中指定元素的 score 值
+- **`ZRANK key member`** 获取 ZSet 中指定元素的排名(序号, 从0开始)
+
+- **`ZCARD key`** 获取 ZSet 中元素的个数
+- **`ZCOUNT key min max`** 统计 score 值在给定范围内的所有元素的个数
+- **`ZINCRBY key increment member`** 让 ZSet 中的指定元素自增, 步长为指定的 increment 值
+- **`ZRANGE key min max`** 按照 score 排序后, 获得指定排名范围内的元素
+- **`ZDIFF, ZINTER, ZUNION`** 同上, 求差集, 交集, 并集
+
+
 
