@@ -148,3 +148,159 @@
 
 
 
+### 客户端
+
+#### [Jedis](https://github.com/redis/jedis)
+
+> 以 Redis 命令作为方法名称/学习成本低/简单实用, 但 Jedis 实例是线程不安全的, 
+>
+> 多线程环境下需要基于**连接池**来使用
+>
+> ```java
+> pblic class JedisConnectionFactory {
+>  private static final JedisPool jedisPool;
+>  static {
+>      JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+>      //最大连接数
+>      jedisPoolConfig.setMaxTotal(8);
+>      //最大空闲连接
+>      jedisPoolConfig.setMaxIdle(4);
+>      //最小空闲连接
+>      jedisPoolConfig.setMinIdle(2);
+>      //最长等待时间 ms
+>      jedisPoolConfig.setMaxWaitMillis(200);
+>      jedisPool = new JedisPool(jedisPoolConfig, 
+>                               "localhost", 6379, 1000, "password");
+>  }
+> 
+>  public static Jedis getJedis() {
+>      return jedisPool.getResource();
+>  }
+> }
+> ```
+>
+> 
+
+- **示例**
+
+```java
+public class JedisTest{
+    private Jedis jedis;
+    
+    @BeforeEach
+    void setUp(){
+        jedis = new Jedis("localhost", 6379);
+        //jedis.auth("passowrd");
+        jedis.select(0);  
+        
+        //使用线程池对象
+        //jedis = JedisConnectionFactory.getJedis();
+    }
+    
+    @Test
+    void getSetTest(){
+        jedis.set("name", "Favian096");
+        System.out.println(
+            jedis.get("name");
+        );
+    }
+    
+    @AfterEach
+    void close(){
+        if(jedis != null){
+            jedis.close();
+        }
+    }
+}
+```
+
+
+
+#### SpringDataRedis
+
+> SpringData 是 Spring 中数据操作的模块，包含对各种数据库的集成
+>
+> 其中对 Redis 的集成模块就叫做 SpringDataRedis
+>
+> - 提供了对不同 Redis 客户端的整合 (Lettuce 和 Jedis)
+> - 提供了 RedisTemplate 统 —API 来操作 Redis
+> - 支持 Redis 的发布订阅模型
+> - 支持 Redis 哨兵和 Redis 集群
+> - 支持基于 Lettuce 的响应式编程
+> - 支持基于JDK 、JSON 、字符串、 Spring 对象的数据序列化及反序列化
+> - 支持基于 Redis 的 JDKCoIIection 实现
+
+- **RedisTemplate API**
+
+|             API             |     返回值      |        备注        |
+| :-------------------------: | :-------------: | :----------------: |
+| redisTemplate.opsForValue() | ValueOperations | 操作String类型数据 |
+| redisTemplate.opsForHash()  | HashOperations  |  操作Hash类型数据  |
+| redisTemplate.opsForList()  | ListOperations  |  操作List类型数据  |
+|  redisTemplate.opsForSet()  |  SetOperations  |  操作Set类型数据   |
+| redisTemplate.opsForZSet()  | ZSetOperations  |  操作ZSet类型数据  |
+
+- **示例**
+
+```java
+@SpringbootTest
+public class RedisTemplateTest {
+    @Resource
+    private RedisTemplate redisTemplate;
+    
+    @Test
+    void getSetTest() {
+        redisTemplate.opsForValue().set("name", "Favian096");
+        System.out.println(
+            redisTemplate.opsForValue().get("name");
+        );
+    }
+}
+```
+
+- **序列化**
+
+> 默认使用 Redistemplate 时, 对 key 和 value 都会使用 jdk 的序列化工具处理(可读性差, 内存占用大)
+>
+> 可以对 RedisTemplate 设置序列化方法, 实现对 key 和 value 的自定义序列化
+
+- **示例**
+
+    > 实现 key 序列化为 String, Value 序列化为 JSON
+    >
+    > **示例代码的实现, 为了反序列化时知道对象的类型会将类的 class 类型存入 JSON 中, 带来开销**
+    >
+    > **为节省空间, 当需要存 ava 对象时, 通常手动完成对象的序列化和反序列化**
+
+```java
+@Configuration
+public class RedisConfig {
+    @Bean
+    public RedisTemplate<String, Object> redisTemplate(
+        RedisConnectionFactory connectionFactor){
+        //创建RedisTemplate对象
+        RedisTemplate<String, Object> template = new RedisTemplate();
+        //设置连接工厂
+        template.setConnectionFactory(connectionFactory);
+        //创建json序列化工具
+        GenericJackson2JsonRedisSerializer jsonResisSerializer = 
+            new GenericJackson2JsonRedisSerializer();
+        //设置key的序列化为String类型
+        template.setKeySerializer(RedisSerializer.string());
+        template.setHashKeySerializer(RedisSerializer.string());
+        //设置Value的序列化类型为Json类型
+        template.setValueSerializer(jsonResisSerializer);
+        template.setHashValueSerializer(jsonResisSerializer);
+        
+        return template;
+    }
+}
+```
+
+
+
+- **StringRedisTemplate**
+
+> StringRedisTemplate 是官方的字符串序列化实现, 将 key 和 value 序列化为字符串
+>
+> 存入时需要手动转为字符串, 获取时需要手动解析字符串(JSON)
