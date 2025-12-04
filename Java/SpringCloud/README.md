@@ -60,3 +60,23 @@ BA --(4)远程调用--> BB
     > 服务提供者会每隔 30 秒向 Eureka-Server 发送心跳请求, 报告健康状态
     >
     > Eureka 会更新记录服务列表信息，心跳不正常会被剔除, 消费者就可以拉取到最新的信息
+
+- 基本注册流程
+
+    1. 搭建EurekaServer, Eureka也作为一个微服务
+
+        > - 引入 euraka-server 依赖
+        > - 在启动类上添加注解`@EnableEurekaServer`
+        > - 在 application.yml 中配置 Eureka 服务地址
+
+    2. 服务注册
+
+        > - 引入 eureka-client 依赖
+        > - 在 application.yml 中配置 Eureka 服务地址
+
+    3. 服务发现
+
+        > - 引入 eureka-client 依赖
+        > - 在 application.yml 中配置 Eureka 服务地址
+        > - 给 RestTemplate 添加`@LoadBlanced`(默认是轮询)
+        > - 用服务提供者的服务名称远程调用
