@@ -88,3 +88,55 @@
 
 - IP获取
 - 动态代理
+
+
+
+## Advanced
+
+### 
+
+
+
+## Expansion
+
+### 方法引用
+
+> 用于简化 Lambda 表达式
+
+- **使用条件:** 
+
+    - **Lambda表达式的主体仅包含一个表达式，且Lambda表达式只调用了一个已经存在的方法；**
+
+    - **被引用的方法的参数列表和返回值与Lambda表达式的输入输出一致**
+
+```java
+// 引用示例
+new Random().ints(10)
+	.map(Math::abs)
+	.forEach(System.out::println);
+
+// 静态方法引用
+Function<String, Integer> f = Integer::parseInt;
+
+// 构造器引用
+Supplier<List<String>> s = ArrayList::new;
+List<String> list = s.get();
+
+// 类的实例方法引用
+List<String> list = Arrays.asList("a", "bb", "ccc");
+list.sort(String::compareToIgnoreCase);
+
+// 实例对象的方法引用
+String str = "hello";
+Supplier<Integer> s = str::length;
+```
+
+- 引用的 4 种常见形式
+
+|      引用方式      |              说明               |
+| :----------------: | :-----------------------------: |
+|    静态方法引用    |  `ClassName::staticMethodName`  |
+|     构造器引用     |        `ClassName::new`         |
+|  类的实例方法引用  | `ClassName::instanceMethodName` |
+| 实例对象的方法引用 |  `instance::StaticMethodName`   |
+
