@@ -4,6 +4,22 @@
 
 ## Anaconda(minianaconda)
 
+> [!TIP]
+>
+> miniconda默认下载走的事官方的default下载(由官方稳定维护, 付费)
+>
+> miniforge是基于conda的社区维护版本, 默认下载走的是mini-forge(最大的包管理仓库)
+>
+> 由于conda由python编写(比较慢), 因此miniforge内置了 mamba 包管理命令(C++编写, 替换conda命令)
+>
+> 可以下载miniforge, 并使用mamba命令管理包和python环境
+>
+> micromamba是mamba的精简版, 不依赖python环境, 是精简版本, 可将conda命令替换为micromamba
+>
+> > miniconda是conda的精简版，mamba是conda的替代，micromamba是mamba的精简版
+
+### miniConda
+
 #### 配置镜像
 
 ---
@@ -101,6 +117,55 @@
   ```shell
   conda remove package_name
   ```
+
+
+
+# Micromamba
+
+#### 安装配置
+
+```bash
+# 官方安装命令
+"${SHELL}" <(curl -L micro.mamba.pm)
+
+Micromamba binary folder? [~/.local/bin]	#默认的二进制文件位置, 这里直接回车
+Init shell (bash)? [Y/n] Y		# 是否使用bash
+Configure conda-forge? [Y/n] Y		# 是否配置使用conda-forge
+Prefix location? [~/micromamba]		# 默认缓存包的位置, 直接回车
+
+source ~/.bashrc		# 刷新环境变量
+micromamba --version		# 安装完成
+```
+
+```bash
+# 配置清华源镜像
+vim ~/micromamba/.mambarc
+```
+
+```
+channels:
+  - defaults
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda
+custom_channels:
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+always_yes: true
+auto_activate_base: false
+```
+
+#### 基本命令
+
+> 同conda, 将conda替换为micromamba
+
+
 
 
 
