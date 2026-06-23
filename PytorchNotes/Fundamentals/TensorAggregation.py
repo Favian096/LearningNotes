@@ -37,6 +37,7 @@ print('-' * 32)
 squeeze_tensor = torch.tensor([[1, 2, 3, 4, 5]])
 squeeze_tensor = squeeze_tensor.squeeze()
 unsqueeze_tensor = squeeze_tensor.unsqueeze(0)
+print(torch.tensor([[1], [2], [3]]).squeeze())
 print(f'squeeze tensor to dimension 1: \n{squeeze_tensor}')
 print(f'unsqueeze tensor to dimension 1: \n{unsqueeze_tensor}')
 
