@@ -112,7 +112,106 @@
 
 ## 01.Workflows
 
+### [DataPrepare](./Workflows/DataPrepare.py)
 
+> 数据预备, 这里简单的配置了线性的数据点
+
+
+
+### [BuildModel](./Workflows/BuildModel.py)
+
+> [!NOTE]
+>
+> | PyTorch 模块                                                 | 功能作用                                                     |
+> | ------------------------------------------------------------ | ------------------------------------------------------------ |
+> | [`torch.nn`](https://pytorch.org/docs/stable/nn.html)        | 包含了计算图的所有基本要素                                   |
+> | [`torch.nn.Parameter`](https://pytorch.org/docs/stable/generated/torch.nn.parameter.Parameter.html#parameter) | 存储可以与 `nn.Module` 结合使用的张量, 如果自动计算出用于通过梯度下降法更新模型参数的 `requires_grad=True` 梯度值, 这通常被称为“自动梯度计算” |
+> | [`torch.nn.Module`](https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module) | 所有神经网络模块的基础类，神经网络的所有构建模块都属于此类子类, 同时，还需要实现 `forward()` 方法 |
+> | [`torch.optim`](https://pytorch.org/docs/stable/optim.html)  | 包含多种优化算法（这些算法指导存储在 `nn.Parameter` 中的模型参数如何进行调整，以优化梯度下降过程，从而降低损失） |
+> | `def forward()`                                              | 所有 `nn.Module` 子类都包含一个 `forward()` 方法，这个方法定义了将应用于传递给特定 `nn.Module` 的数据的计算过程 |
+
+- 模型的定义通常由类继承`nn.Module`, 初始化时定义模型的计算参数, 然后在`forward`中定义计算流程
+
+- 检查模型的内容, 通常可用`model.parameters()`检查其参数值, 用`model.state_dict()`检查其参数
+
+- 模型推理, 使用`torch.inference_model()`可关闭模型推理不需要的一系列功能, 使得`forward()`更快 
+
+  >     with torch.inference_mode():
+  >         pred_tensor = model(input_tensor)
+
+
+
+### [TrainModel](./Workflows/TrainModel.py)
+
+> [!Note]
+>
+> - 为了让模型能够自行更新参数, 需要*损失函数*和*优化器*
+>
+>   | 功能         | 作用                                               | 模块位置                                                     | 备注                                                         |
+>   | ------------ | -------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+>   | **损失函数** | 该指标用于衡量模型预测结果与实际标签之间的误差程度 | PyTorch 在 [`torch.nn`](https://pytorch.org/docs/stable/nn.html#loss-functions) 中提供了许多内置的损失函数 | 对于回归问题，绝对误差均值（MAE）用于衡量预测值与真实值的差距程度; 而对于二元分类问题，二元交叉熵则用于评估分类结果的准确性... |
+>   | **优化器**   | 告诉你的模型如何更新其内部参数，以尽可能降低损失   | 在 `torch.optim` 中可以找到多种优化函数的实现方式            | 随机梯度下降法（ [`torch.optim.SGD()`](https://pytorch.org/docs/stable/generated/torch.optim.SGD.html#torch.optim.SGD) ）Adam 优化器（ [`torch.optim.Adam()`](https://pytorch.org/docs/stable/generated/torch.optim.Adam.html#torch.optim.Adam) ）... |
+
+- 模型训练基本工作流:
+
+  ```mermaid
+  graph LR
+  A["forward"] --> B["calc loss"] --> C["zero grad"] --> D["backwords"] --> E["optimizer"] --> F["eval"] --> A
+  ```
+
+  ```python
+  for epoch in range(epochs):
+      model.train()	# 0. switch to train model
+      pred_tensor = model(x_tensor)	# 1. model input forward
+      loss = loss_nn(pred_tensor, y_tensor)	# 2. calculate loss
+      optimizer.zero_grad()	# 3. grad to zero. By default, grad is accumulated
+      loss.backward()		# 4. backwards
+      optimizer.step()	# 5. optimizer
+  
+      # evaluation mode with test data
+      model.eval()	# 6. evaluate
+      with torch.inference_mode():
+          test_pred = model(x_test) # test evaluate data
+          test_loss = loss_nn(test_pred, y_test)	# calculate evaluate data loss
+          print('Epoch: ', epoch, '\t train loss: ', loss, '\t test loss: ', test_loss)
+  ```
+
+
+
+### [SaveLoadModel](./Workflows/SaveLoadModel.py)
+
+> [!Note]
+>
+> - 模型的保存和加载, 主要是用`.pt`和`pth`后缀格式:
+>
+>   其中`.pt`用于保存完整的模型; `.pth`用于保存模型的权重和参数(即state_dict())
+
+- 保存和加载模型state_dict[**推荐方式**]
+
+  ```python
+  torch.save(obj=model.state_dict(), f="./model_state_dict.pth")
+  
+  state_dict_model = LinearRegressionModel()
+  state_dict_model.load_state_dict(torch.load("./model_state_dict.pth"))
+  ```
+
+- 保存和加载完整模型
+
+  ```python
+  torch.save(obj=model_0, f="./model.pt")
+  
+  whole_model:ModelClass = torch.load("./model.pt", weights_only=False)
+  ```
+
+- 保存和加载模型TorchScript
+
+  ```python
+  torch.jit.script(model).save("./model_script.pth")
+  
+  scripted_model = torch.jit.load("./model_script.pth")
+  ```
+
+  
 
 ## 02.NeuralNetworkClassification
 

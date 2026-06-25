@@ -21,7 +21,7 @@ class LinearRegressionModel(nn.Module):
 
 model_0 = LinearRegressionModel()
 printl('model_0 parameters info')
-# print(list(model_0.parameters()))
+print(list(model_0.parameters()))
 print(model_0.state_dict())
 
 if __name__ == '__main__':

@@ -25,7 +25,7 @@ def train():
         loss.backward()
         optimizer.step()
 
-        # evaluation mode for test data
+        # evaluate mode for test data
         model_0.eval()
         with torch.inference_mode():
             test_pred = model_0(x_test)
