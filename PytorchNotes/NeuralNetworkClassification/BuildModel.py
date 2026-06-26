@@ -10,13 +10,19 @@ class CircleModelV0(nn.Module):
         super().__init__()
         # create 2 layers capable of handling x and y input and output
         # 5 is a customized num, indicate hide unit num
-        # matching for x that 2 dim input 5 dim output
+        # matching for x that 2 dim input with 5 dim output
         self.layer_1 = nn.Linear(in_features=2, out_features=5)
-        # matching for y that 5 dim input 1 dim output
+        # matching for y that 5 dim input with 1 dim output
         self.layer_2 = nn.Linear(in_features=5, out_features=1)
+        # because the forward function order to layer1 -> layer2, so we could use nn.Sequential
+        # self.layer = nn.Sequential(
+        #     nn.Linear(in_features=2, out_features=5),
+        #     nn.Linear(in_features=5, out_features=1)
+        # )
 
     def forward(self, input_tensor: torch.Tensor) -> torch.Tensor:
         return self.layer_2(self.layer_1(input_tensor))
+        # return self.layer(input_tensor)
 
 
 printl('construct model_0')

@@ -215,6 +215,94 @@
 
 ## 02.NeuralNetworkClassification
 
+### [DataPrepare](./NeuralNetworkClassification/DataPrepare.py)
+
+> 使用sklearn绘制一个圆圈, 并划分训练集和测试集
+>
+> ```python
+> X, y = sklearn.datasets.make_circles(n_samples, noise=0.03, random_state=42)
+> 
+> x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(
+>     x_set, y_set,test_size=0.2,random_state=42)
+> ```
+
+
+
+
+
+### BuildModel
+
+> [!Note]
+>
+> - 初始数据是非线性的, 这里分别构建线性和非线性模型
+
+ - [线性基础模型](./NeuralNetworkClassification/BuildModel.py)
+
+   ```python
+   class CircleModelV0(nn.Module):
+       def __init__(self):
+           super().__init__()
+           self.layer_1 = nn.Linear(in_features=2, out_features=5)
+           self.layer_2 = nn.Linear(in_features=5, out_features=1)
+           
+       def forward(self, input_tensor: torch.Tensor) -> torch.Tensor:
+           return self.layer_2(self.layer_1(input_tensor))
+   ```
+
+   模型中定义了两个线性层, 传播为`layer_1`->`layer_2`的线性顺序, 
+
+   因此可以使用`nn.Sequential()`直接定义层次顺序(该函数会按参数顺序向前传播):
+
+   ```python
+   class CircleModelV0(nn.Module):
+       def __init__(self):
+           super().__init__()
+           self.layer = nn.Sequential(
+               nn.Linear(in_features=2, out_features=5),
+               nn.Linear(in_features=5, out_features=1)
+   )
+   
+   def forward(self, input_tensor: torch.Tensor) -> torch.Tensor:
+   return self.layer(input_tensor)
+
+- [非线性模型](./NeuralNetworkClassification/BuildNonLinearModel.py)
+
+  ```python
+  class CircleModelV1(nn.Module):
+      def __init__(self):
+          super().__init__()
+          self.layer_1 = nn.Linear(in_features=2, out_features=10)
+          self.layer_2 = nn.Linear(in_features=10, out_features=10)
+          self.layer_3 = nn.Linear(in_features=10, out_features=1)
+          # set a ReLU activate function
+          self.relu = nn.ReLU()
+  
+      def forward(self, input_tensor: torch.Tensor):
+          # put non-linear activate function in hide layers between in common
+          return self.layer_3(self.relu(self.layer_2(self.layer_1(input_tensor))))
+  ```
+  
+  > 非线性模型在原有的线性层中添加了[ReLU激活函数](./ActivationFunction.py))
+  
+  
+
+### TrainModel
+
+> [!Note]
+>
+> 分别训练线性和非线性模型
+>
+> - 由于模型输入为浮点数, 真实值为0或1, 故将模型的输出经过[sigmoid函数](./ActivationFunction.py)然后取整
+
+- [训练线性模型](./NeuralNetworkClassification/TrainModel.py)
+- [训练非线性模型](./NeuralNetworkClassification/TrainNonLinearModel.py)
+
+
+
+
+
+
+
 
 
 ## 03.ComputerVIsion
