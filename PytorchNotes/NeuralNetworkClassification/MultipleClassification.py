@@ -21,13 +21,13 @@ X, y = make_blobs(
     n_samples=1000,
     n_features=NUM_FEATURES,
     centers=NUM_CLASSES,
-    cluster_std=1.5,  # 表示聚类标准差, 越小则生成的数据越集中center
+    cluster_std=1.5,
     random_state=RANDOM_SEED)
 
 plt.figure(figsize=(8, 6))
 plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.RdYlBu)
 plt.title('DataSets Distribution')
-# plt.show()
+plt.show()
 
 x_blob = torch.from_numpy(X).to(device=device, dtype=torch.float)
 y_blob = torch.from_numpy(y).to(device=device, dtype=torch.long)  # CrossEntropyLoss need long type
@@ -42,8 +42,6 @@ print(x_train.shape, y_train.shape)
 
 
 # create multiple classification model
-
-
 class MultipleClassificationModel(nn.Module):
     def __init__(self, in_features: int, out_features: int, hidden_units: int):
         super().__init__()

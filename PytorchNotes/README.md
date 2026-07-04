@@ -299,9 +299,22 @@
 
 
 
+### [MultipleClassification](./NeuralNetworkClassification/MultipleClassification.py)
 
+> [!Note]
+>
+> - 这里使用sklearn的[`make_blobs()`](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_blobs.html)来创建多类别数据作多分类
 
+- 一些评估指标
 
+| **度量标准名称/评估方法**                                    | **定义**                                                     | **可参考代码**                                               |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 准确性                                                       | 在 100 个预测中，你的模型有多少次预测是正确的？例如，95%的准确率意味着模型在 100 个预测中有 95 次是正确的 | [`torchmetrics.Accuracy()`](https://torchmetrics.readthedocs.io/en/stable/classification/accuracy.html#id3) 或 [`sklearn.metrics.accuracy_score()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html) |
+| 精确性                                                       | 真阳性结果所占的比例与样本总数的比例。精度越高，误报就越少（模型在应该为 0 的情况下预测为 1 的情况就会减少） | [`torchmetrics.Precision()`](https://torchmetrics.readthedocs.io/en/stable/classification/precision.html#id4) 或 [`sklearn.metrics.precision_score()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html) |
+| 召回                                                         | 真正阳性结果所占的比例与总真正阳性结果数量的比例。模型预测为 1 时实际结果为 0 的情况就被称为假阴性。召回率越高，假阴性的数量就越少 | [`torchmetrics.Recall()`](https://torchmetrics.readthedocs.io/en/stable/classification/recall.html#id5) 或 [`sklearn.metrics.recall_score()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html) |
+| F1 分数                                                      | 将精确度和召回率合并为同一个评价指标。数值为 1 表示最佳，为 0 则表示最差 | [`torchmetrics.F1Score()`](https://torchmetrics.readthedocs.io/en/stable/classification/f1_score.html#f1score) 或 [`sklearn.metrics.f1_score()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html) |
+| [混淆矩阵](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/) | 以表格形式比较预测值与真实值。如果完全正确，则矩阵中的所有值都将从左上角到右下角显示（即对角线方向） | [`torchmetrics.ConfusionMatrix`](https://torchmetrics.readthedocs.io/en/stable/classification/confusion_matrix.html#confusionmatrix) 或 [`sklearn.metrics.plot_confusion_matrix()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ConfusionMatrixDisplay.html#sklearn.metrics.ConfusionMatrixDisplay.from_predictions) |
+| 分类报告                                                     | 收集了一些主要的分类度量指标，例如精确度、召回率以及 F1 分数 | [`sklearn.metrics.classification_report()`](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html) |
 
 
 
@@ -315,3 +328,118 @@
 
 ## 05.TransferLearning
 
+
+
+
+
+## Resources 
+
+### Onnx for Java
+
+> [!Note] 
+>
+> 模型通常使用任何知名训练框架进行训练并导出为 ONNX 格式, 代码通常使用 Java 10 及更高版本可用的语法
+>
+> - 基本流程代码
+>
+> ```java
+> import ai.onnxruntime.*;
+> import java.nio.file.Paths;
+> import java.util.Map;
+> 
+> public class OnnxInferenceExample {
+>     public static void main(String[] args) throws OrtException {
+>         OrtEnvironment env = OrtEnvironment.getEnvironment("env_name");
+>         OrtSession.SessionOptions sessionOptions = new OrtSession.SessionOptions();
+>         OrtSession session = env.createSession("./best.onnx", sessionOptions);       
+>         
+>         float[] inputData = ...; 
+>         long[] shape = {1, 3, 640, 640}; 
+> 
+>         OnnxTensor inputTensor = OnnxTensor.createTensor(env,FloatBuffer.wrap(inputData), shape);
+> 
+>         Map<String, OnnxTensor> inputs = Map.of("images", inputTensor); 
+> 		OrtSession.Result result = session.run(inputs)
+>         OnnxTensor outputTensor = (OnnxTensor) result.get(0); 
+>         float[] outputData = outputTensor.getFloatBuffer().array();
+>         System.out.println(outputTensor.getInfo().getShape());
+>     }
+> }
+> ```
+
+- 首先创建 `OrtEnvironment`, 即设定运行环境, 该环境是**单例**的, 可传入环境名称
+
+  ```java
+  OrtEnvironment env = OrtEnvironment.getEnvironment("ONNX-RUNTIME");
+  ```
+
+- 导入模型前, 需要配置参数`OrtSession.SessionOptions()`, 该参数用于配置引入模型的具体配置, 如线程数, 是否使用cuda等
+
+  通过模型文件路径和配置参数, 可在env下引入多个不同的onnx模型
+
+  ```java
+  // 默认使用 CPU
+  OrtSession.SessionOptions options = new OrtSession.SessionOptions();
+  session = env.createSession("./best.onnx", options);
+  
+  // 使用 GPU, 配置自定义参数
+  OrtSession.SessionOptions opt2 = new OrtSession.SessionOptions();
+  opt2.addCUDA(0);                    // 启用 CUDA
+  opt2.setIntraOpNumThreads(8);       // 线程配置
+  opt2.setInterOpNumThreads(4);
+  opt2.setOptimizationLevel(OrtSession.SessionOptions.OptLevel.BASIC_OPT); // 不同优化级别
+  OrtSession session2 = env.createSession("./best.onnx", opt2);
+  ```
+
+  多个`OrtSession`可以复用同一个`SessionOptions`
+
+- 定义模型后, 通常需要整理输入: 通常使用`Map<String,OnnxTensor>`
+
+  `OnnxTensor`为` session.getInputInfo()`中指定形状shape的张量对象
+
+  ```java
+  // 检查输入的形状
+  long[] shape = Arrays.toString(((TensorInfo) session.getInputInfo().get("images").getInfo()).getShape())
+      
+  // 随机数的张量示例
+  long size = 1;
+  for (long dim : shape) {
+      size *= dim;
+  }
+  float[] inputData = new float[(int) size];
+  Random rand = new Random(42);
+  for (int i = 0; i < size; i++) {
+      inputData[i] = rand.nextFloat() * 2 - 1;
+  }
+  OnnxTensor inputTensor = OnnxTensor.createTensor(env, FloatBuffer.wrap(inputData), shape);
+  ```
+  
+- 运行推理, 通常`session.run()`期待接收一个`Map<String, OnnxTensor>`格式
+
+  其中`String`为`session.getInputNames()`中的名称
+
+  ```java
+  Map<String, OnnxTensor> inputs = Map.of("images", inputTensor);
+  OrtSession.Result results = session.run(inputs);
+  ```
+
+- 推理返回的结果为`OrtSession.Result`类型, 该对象是autoClose的(包括其子对象)
+
+  ```java
+  System.out.println(imgResults.get(0));
+  System.out.println(imgResults.size());
+  imgResults.forEach(entry -> {
+      OnnxTensor outputTensor = (OnnxTensor) entry.getValue();
+      long[] outputShape = outputTensor.getInfo().getShape();
+      try {
+          System.out.println("name:" + entry.getKey());
+          System.out.println("shape:" + Arrays.toString(outputShape));
+          float[] outputData = outputTensor.getFloatBuffer().array();
+          System.out.println(Arrays.toString(outputData));
+      } catch (Exception e) {
+           throw new RuntimeException(e);
+      }
+  });
+  ```
+
+​	该结果可在python的onnxruntime框架中作输出对比, 依据情况判定后续处理方式
